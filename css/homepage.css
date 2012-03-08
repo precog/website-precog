@@ -196,24 +196,20 @@ h1 {
 }
 
 .yourapp-box-text {
+    background-image: url("../images/background-text-yourapp.png");
     position: absolute;
     z-index: 100;
     top: 70px;
     left: -170px;
-    width: 340px;
-    height: 175px;
-    background-color: #000;
-    border-radius: 6px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #808080;
-    opacity: 0.5;
+    width: 342px;
+    height: 177px;
     display: table;
     display: none;
 }
 
 .yourapp-box-text p {
     font-family: helvetica;
+    font-weight: 100;
     color: #fff;
     width: 280px;
     height: 115px;
