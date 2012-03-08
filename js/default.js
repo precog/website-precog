@@ -1,10 +1,13 @@
 $(document).ready(function(){
 
+var isalt;
 $("#background-apps .box-alt").css('opacity', 0);
+
 $("#button-yourapp").bind("mouseenter", function() {
   $("#button-yourapp").addClass("active");
   $("#button-yourapponquerio").removeClass("active");
 
+  isalt = false;
   $("#background-apps .box-alt").stop().animate({
     opacity : 0
   });
@@ -17,6 +20,7 @@ $("#button-yourapponquerio").bind("mouseenter", function() {
   $("#button-yourapponquerio").addClass("active");
   $("#button-yourapp").removeClass("active");
 
+  isalt = true;
   $("#background-apps .box").stop().animate({
     opacity : 0
   });
@@ -38,7 +42,15 @@ $(".app-link").bind("mouseenter", function() {
   })
 })
 
+$(".box-alt").mouseenter(function() {
+  var id = "app-text-" + $(this.parentNode).attr("id") + (isalt ? "-alt" : "");
+  $("#"+id).stop().animate({ opacity : 1 })
+})
 
+$(".box-alt").mouseleave(function() {
+  var id = "app-text-" + $(this.parentNode).attr("id") + (isalt ? "-alt" : "");
+  $("#"+id).stop().animate({ opacity : 0 })
+})
 
   // HOW IT WORKS
   $(".capture-lg").mouseover(function(){

@@ -204,6 +204,7 @@ h1 {
     width: 342px;
     height: 177px;
     display: table;
+    opacity: 0.0;
     display: none;
 }
 
