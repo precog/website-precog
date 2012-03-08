@@ -705,6 +705,15 @@ h1 {
     color: #4B5660;
 }
 
+#copyrights a {
+    position: absolute;
+    font-family: questrial;
+    right: 0px;
+    font-size: 7pt;
+    top: 134px;
+    color: #999999;
+}
+
 
 /*tempsection
 #count-down-page {
