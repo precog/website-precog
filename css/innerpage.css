@@ -2256,12 +2256,21 @@ h1 {
     top: 80px;
 }
 
-#copyrights p{
+#copyrights p {
     position: absolute;
     right: 0px;
     font-size: 8pt;
     top: 120px;
     color: #4B5660;
+}
+
+#copyrights a {
+    position: absolute;
+    font-family: questrial;
+    right: 0px;
+    font-size: 8pt;
+    top: 134px;
+    color: #999999;
 }
 
 #webinar-options {
