@@ -1880,6 +1880,10 @@ h1 {
     background-image: url("../images/bullet-icon-json.png");
 }
 
+.feature-vfs {
+    background-image: url("../images/bullet-icon-vfs.png");
+}
+
 .feature-multistructured {
     background-image: url("../images/bullet-icon-mstructured.png");
 }
@@ -1893,7 +1897,7 @@ h1 {
 }
 
 .feature-advancedanalysis {
-    background-image: url("../images/bullet-icon-analysis.png");
+    background-image: url("../images/bullet-icon-advanal.png");
 }
 
 .feature-fastqueries {
