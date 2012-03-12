@@ -341,10 +341,26 @@ h1 {
 }
 
 .sticker-repl-main-square {
+    background-image: url("../images/sticker-repl-play-home.png");
+    width: 164px;
+    height: 97px;
     position: absolute;
     right: -140px;
     top: -80px;
     z-index: 20;
+    cursor: pointer;
+}
+
+.sticker-repl-main-square p {
+    color: #fff;
+    font-size: 10pt;
+    font-family: questrial;
+    width: 164px;
+    padding-left: 10px;
+    padding-right: 10px;
+    top: 52px;
+    letter-spacing: 1px;
+    line-height: 1.4;
 }
 
 /*howitworks*/

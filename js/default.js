@@ -1,5 +1,17 @@
 $(document).ready(function(){
 
+$('.sticker-repl-main').click(function () {
+    window.open('queries.html','_self');
+});
+
+$('.sticker-repl-main-square').click(function () {
+    window.open('queries.html','_self');
+});
+
+$('.body-sticker-repl').click(function () {
+    window.open('queries.html','_self');
+});
+
 var isalt;
 $("#background-apps .box-alt").css('opacity', 0);
 

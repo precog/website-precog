@@ -173,6 +173,10 @@ h1 {
     position: absolute;
     right: 0px;
     z-index: 20;
+    background-image: url("../images/sticker-repl-play-2.png");
+    width: 209px;
+    height: 52px;
+    cursor: pointer;
 }
 
 /*body*/
@@ -1754,10 +1758,34 @@ h1 {
 }
 
 .body-sticker-repl {
+    background-image: url("../images/sticker-repl-play.png");
+    width: 209px;
+    height: 52px;
     position: absolute;
     right: 58px;
-    top: 10px;
+    top: 20px;
     z-index: 20;
+    cursor: pointer;
+}
+
+#body-content-left-dev-cntr .body-sticker-repl p {
+    color: #fff;
+    font-size: 10pt;
+    left: 80px;
+    width: 110px;
+    top: 4px;
+    font-family: Questrial;
+    line-height: 1.5;
+}
+
+.sticker-repl-main p {
+    color: #fff;
+    font-size: 10pt;
+    left: 80px;
+    width: 120px;
+    top: 8px;
+    font-family: questrial;
+    line-height: 1.5;
 }
 
 #body-content-left-dev-cntr h2 {
