@@ -53,7 +53,7 @@ $(document).ready(function(){
             for(var i = 0; i < content.length; i++)
             {
               var o = content[i];
-                  line = "line " + o.lineNum + ", column "+ o.colNum + ": " + o.message + "\n" + o.line + "\n";
+                  line = o.message + "\nline " + o.lineNum + ", column "+ o.colNum + ": " + o.detail + "\n" + o.line + "\n";
               for(var j = 1; j < o.colNum; j++)
                 line += " ";
               line += "^";
