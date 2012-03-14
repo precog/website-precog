@@ -1904,8 +1904,8 @@ h1 {
     padding-left: 20px; 
 }
 
-.feature-json {
-    background-image: url("../images/bullet-icon-json.png");
+.feature-circle {
+    background-image: url("../images/bullet-icon-circle.png");
 }
 
 .feature-vfs {
