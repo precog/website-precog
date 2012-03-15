@@ -12,6 +12,18 @@ $('.body-sticker-repl').click(function () {
     window.open('queries.html','_self');
 });
 
+$('#news-box-home-page').click(function () {
+    window.open('news-and-events.html','_self');
+});
+
+$('#why-box-home-page').click(function () {
+    window.open('why-precog.html','_self');
+});
+
+$('#com-box-home-page').click(function () {
+    window.open('newsletter.html','_self');
+});
+
 var isalt;
 $("#background-apps .box-alt").css('opacity', 0);
 
