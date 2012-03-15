@@ -96,6 +96,16 @@ h1 {
     width: 57px;
 }
 
+#sticker-precog-beta a {
+    background-image: url("../images/sticker-precog-beta.png");
+    width: 168px;
+    height: 169px;
+    display: block;
+    position: absolute;
+    z-index: 200;
+    cursor: pointer;
+}
+
 #contact-us a{
     background-image: url("../images/button-contactus-side.png");
     background-position: right;
