@@ -86,6 +86,7 @@ h1 {
     display: block;
     position: absolute;
     z-index: 200;
+    cursor: pointer;
 }
 
 #contact-us a{
