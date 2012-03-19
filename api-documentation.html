@@ -61,348 +61,471 @@
           <h1 class="body-title">
             API DOCUMENTATION
           </h1>
-          <table class="api-info">
-            <tr>
-              <td class="api-text-name">
-                GET
-              </td>
-              <td class="api-text-description">
-                http://api.precog.io/v1/vfs/[path]?token=[your token]
-              </td>
-            </tr>
-            <tr>
-              <td class="api-code">
-                description
-              </td>
-              <td>
-                <p>
-                  Retrieves a list of the children of the specified path. You must have permission to read from the path.
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td class="api-code">
-                query parameters
-              </td>
-              <td>
-                <div class="font-code">
+          <div class="api-language">
+            <div class="language-json">
+                <p>JSON</p>
+            </div>
+          </div>
+          <div class="api-info">
+            <table>
+              <tr>
+                <td class="api-text-name">
+                  GET
+                </td>
+                <td class="api-text-description">
+                  http://api.precog.io/v1/vfs/[path]?token=[your token]
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  description
+                </td>
+                <td>
                   <p>
-                    token=[your token]
+                    Retrieves a list of the children of the specified path. You must have permission to read from the path.
                   </p>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="api-code">
-                response
-              </td>
-              <td>
-                <div class="font-code">
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  query parameters
+                </td>
+                <td>
+                  <ul>
+                      <li>
+                          <p>token=<p>
+                      </li>
+                      <li>
+                          <p>[yourtoken]<p>
+                      </li>
+                      <li>
+                          <p>example<p>
+                      </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  response
+                </td>
+                <td>
+                  <ul>
+                      <li>
+                          <p>["/foo", "/bar"]<p>
+                      </li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="api-language">
+            <div class="language-json">
+                <p>JSON</p>
+            </div>
+          </div>
+          <div class="api-info">
+            <table>
+              <tr>
+                <td class="api-text-name">
+                  POST
+                </td>
+                <td class="api-text-description">
+                  http://api.precog.io/v1/vfs/[path]?token=[your token]
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  description
+                </td>
+                <td>
                   <p>
-                    ["/foo", "/bar"]
+                    Uploads a JSON value to the specified path. You must have permission to write to the path.
                   </p>
-                </div>
-              </td>
-            </tr>
-          </table><br>
-          <table class="api-info">
-            <tr>
-              <td class="api-text-name">
-                POST
-              </td>
-              <td class="api-text-description">
-                http://api.precog.io/v1/vfs/[path]?token=[your token]
-              </td>
-            </tr>
-            <tr>
-              <td class="api-code">
-                description
-              </td>
-              <td>
-                <p>
-                  Uploads a JSON value to the specified path. You must have permission to write to the path.
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td class="api-code">
-                request body
-              </td>
-              <td>
-                <p>
-                  The content you want to upload to the specified path.
-                </p>
-                <div class="font-code">
-                  <pre>
-<![CDATA[
-{"user": "jdoe", "age": 23, "income": 89221.00}
-]]>
-</pre>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="api-code">
-                query parameters
-              </td>
-              <td>
-                <div class="font-code">
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  request body
+                </td>
+                <td>
                   <p>
-                    token=[your token]
+                    The content you want to upload to the specified path.
                   </p>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="api-code">
-                response
-              </td>
-              <td>
-                <div class="font-code">
+                  <div class="font-code">
+                    <pre>
+  &lt;![CDATA[
+  {"user": "jdoe", "age": 23, "income": 89221.00}
+  ]]&gt;
+  </pre>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  query parameters
+                </td>
+                <td>
+                  <ul>
+                      <li>
+                          <p>token=<p>
+                      </li>
+                      <li>
+                          <p>[yourtoken]<p>
+                      </li>
+                      <li>
+                          <p>example<p>
+                      </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  response
+                </td>
+                <td>
+                  <ul>
+                      <li>
+                          <p>HTTP 200</p>
+                      </li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="api-language">
+            <div class="language-json">
+                <p>JSON</p>
+            </div>
+          </div>
+          <div class="api-info">
+            <table>
+              <tr>
+                <td class="api-text-name">
+                  GET
+                </td>
+                <td class="api-text-description">
+                  http://api.precog.io/v1/vfs/[path]?token=[your token]&amp;q=[query]
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  description
+                </td>
+                <td>
                   <p>
-                    HTTP 200
-                  </p>
-                </div>
-              </td>
-            </tr>
-          </table><br>
-          <table class="api-info">
-            <tr>
-              <td class="api-text-name">
-                GET
-              </td>
-              <td class="api-text-description">
-                http://api.precog.io/v1/vfs/[path]?token=[your token]&amp;q=[query]
-              </td>
-            </tr>
-            <tr>
-              <td class="api-code">
-                description
-              </td>
-              <td>
-                <p>
-                  Performs a fast-running query with respect to the specified base path. You must have permission to read from the path.
-                </p>
-                <p>
-                  The query must be expressed in <a href="queries.html">Quirrel</a>.
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td class="api-code">
-                query parameters
-              </td>
-              <td>
-                <div class="font-code">
-                  <p>
-                    token=[your token]
-                  </p>
-                  <p>
-                    q=[your query]
-                  </p>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="api-code">
-                response
-              </td>
-              <td>
-                <p>
-                  The JSON results of executing the query.
-                </p>
-              </td>
-            </tr>
-          </table><br>
-          <table class="api-info">
-            <tr>
-              <td class="api-text-name">
-                DELETE
-              </td>
-              <td class="api-text-description">
-                http://api.precog.io/v1/vfs/[path]?token=[your token]
-              </td>
-            </tr>
-            <tr>
-              <td class="api-code">
-                description
-              </td>
-              <td>
-                <p>
-                  Deletes an entire path. USE WITH CAUTION!
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td class="api-code">
-                query parameters
-              </td>
-              <td>
-                <div class="font-code">
-                  <p>
-                    token=[your token]
-                  </p>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="api-code">
-                response
-              </td>
-              <td>
-                <div class="font-code">
-                  <p>
-                    HTTP 200
-                  </p>
-                </div>
-              </td>
-            </tr>
-          </table><br>
-          <table class="api-info">
-            <tr>
-              <td class="api-text-name">
-                POST
-              </td>
-              <td class="api-text-description">
-                http://api.precog.io/v1/jobs/?token=[your token]
-              </td>
-            </tr>
-            <tr>
-              <td class="api-code">
-                description
-              </td>
-              <td>
-                <p>
-                  Creates a new long-running job. There are three kinds of jobs you can create:
-                </p>
-                <ul>
-                  <li>
-                    <em>A delete job</em>. A delete job is a request to delete all the events matching a specified query.
-                  </li>
-                  <li>
-                    <em>A transform job</em>. A transform job is a request to save the results of some query to a specified path.
-                  </li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <td class="api-code">
-                request body
-              </td>
-              <td>
-                <p>
-                  Create a delete job:
-                </p>
-                <div class="font-code">
-                  <pre>
-<![CDATA[
-{
-"type":  "delete",
-"query": "[query]"
-}
-]]>
-</pre>
-                </div>
-                <p>
-                  Create a transform job:
-                </p>
-                <div class="font-code">
-                  <pre>
-<![CDATA[
-{
-"type":  "transform",
-"query": "[query]",
-"path":  "/results/"
-}
-]]>
-</pre>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="api-code">
-                query parameters
-              </td>
-              <td>
-                <div class="font-code">
-                  <p>
-                    token=[your token]
+                    Performs a fast-running query with respect to the specified base path. You must have permission to read from the path.
                   </p>
                   <p>
-                    q=[your query]
+                    The query must be expressed in <a href="queries.html">Quirrel</a>.
                   </p>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="api-code">
-                response
-              </td>
-              <td>
-                <p>
-                  A job id that can be used to poll for the status of the job.
-                </p>
-                <div class="font-code">
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  query parameters
+                </td>
+                <td>
+                  <ul>
+                      <li>
+                          <p>token=<p>
+                      </li>
+                      <li>
+                          <p>[yourtoken]<p>
+                      </li>
+                      <li>
+                          <p>example<p>
+                      </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                </td>
+                <td>
+                  <ul>
+                      <li>
+                          <p>q=<p>
+                      </li>
+                      <li>
+                          <p>[your query]<p>
+                      </li>
+                      <li>
+                          <p>example<p>
+                      </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  response
+                </td>
+                <td>
                   <p>
-                    9869823123
+                    The JSON results of executing the query.
                   </p>
-                </div>
-              </td>
-            </tr>
-          </table><br>
-          <table class="api-info">
-            <tr>
-              <td class="api-text-name">
-                GET
-              </td>
-              <td class="api-text-description">
-                http://api.precog.io/v1/jobs/[job id]/status
-              </td>
-            </tr>
-            <tr>
-              <td class="api-code">
-                description
-              </td>
-              <td>
-                <p>
-                  Polls for the status of some long-running job.
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td class="api-code">
-                query parameters
-              </td>
-              <td>
-                <div class="font-code">
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="api-language">
+            <div class="language-json">
+                <p>JSON</p>
+            </div>
+          </div>
+          <div class="api-info">
+            <table>
+              <tr>
+                <td class="api-text-name">
+                  DELETE
+                </td>
+                <td class="api-text-description">
+                  http://api.precog.io/v1/vfs/[path]?token=[your token]
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  description
+                </td>
+                <td>
                   <p>
-                    token=[your token]
+                    Deletes an entire path. USE WITH CAUTION!
                   </p>
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  query parameters
+                </td>
+                <td>
+                  <ul>
+                      <li>
+                          <p>token=<p>
+                      </li>
+                      <li>
+                          <p>[yourtoken]<p>
+                      </li>
+                      <li>
+                          <p>example<p>
+                      </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  response
+                </td>
+                <td>
+                  <<ul>
+                      <li>
+                          <p>HTTP 200<p>
+                      </li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="api-language">
+            <div class="language-json">
+                <p>JSON</p>
+            </div>
+          </div>
+          <div class="api-info">
+            <table>
+              <tr>
+                <td class="api-text-name">
+                  POST
+                </td>
+                <td class="api-text-description">
+                  http://api.precog.io/v1/jobs/?token=[your token]
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  description
+                </td>
+                <td>
                   <p>
-                    job id=[the id of the long-running job]
+                    Creates a new long-running job. There are three kinds of jobs you can create:
                   </p>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="api-code">
-                response
-              </td>
-              <td>
-                <p>
-                  The status of the long-running job.
-                </p>
-                <div class="font-code">
+                  <ul>
+                    <li>
+                      <em>A delete job</em>. A delete job is a request to delete all the events matching a specified query.
+                    </li>
+                    <li>
+                      <em>A transform job</em>. A transform job is a request to save the results of some query to a specified path.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  request body
+                </td>
+                <td>
                   <p>
-                    {"status": "running", "start": 1332165118, "elapsed": 96422, "progress": 0.23}
+                    Create a delete job:
                   </p>
-                </div>
-              </td>
-            </tr>
-          </table>
+                  <div class="font-code">
+                    <pre>
+  &lt;![CDATA[
+  {
+  "type":  "delete",
+  "query": "[query]"
+  }
+  ]]&gt;
+                        </pre>
+                  </div>
+                  <div class="clear">
+                  </div>
+                  <p>
+                    Create a transform job:
+                  </p>
+                  <div class="font-code">
+                    <pre>
+  &lt;![CDATA[
+  {
+  "type":  "transform",
+  "query": "[query]",
+  "path":  "/results/"
+  }
+  ]]&gt;
+  </pre>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  query parameters
+                </td>
+                <td>
+                  <ul>
+                      <li>
+                          <p>token=<p>
+                      </li>
+                      <li>
+                          <p>[yourtoken]<p>
+                      </li>
+                      <li>
+                          <p>example<p>
+                      </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                </td>
+                <td>
+                  <ul>
+                      <li>
+                          <p>q=<p>
+                      </li>
+                      <li>
+                          <p>[your query]<p>
+                      </li>
+                      <li>
+                          <p>example<p>
+                      </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  response
+                </td>
+                <td>
+                  <p>
+                    A job id that can be used to poll for the status of the job.
+                  </p>
+                  <ul>
+                      <li>
+                          <p>9869823123<p>
+                      </li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="api-language">
+            <div class="language-json">
+                <p>JSON</p>
+            </div>
+          </div>
+          <div class="api-info">
+            <table>
+              <tr>
+                <td class="api-text-name">
+                  GET
+                </td>
+                <td class="api-text-description">
+                  http://api.precog.io/v1/jobs/[job id]/status
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  description
+                </td>
+                <td>
+                  <p>
+                    Polls for the status of some long-running job.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  query parameters
+                </td>
+                <td>
+                  <ul>
+                      <li>
+                          <p>token=<p>
+                      </li>
+                      <li>
+                          <p>[yourtoken]<p>
+                      </li>
+                      <li>
+                          <p>example<p>
+                      </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  query parameters
+                </td>
+                <td>
+                  <ul>
+                      <li>
+                          <p>job id=<p>
+                      </li>
+                      <li>
+                          <p>[the id of the long-running job]<p>
+                      </li>
+                      <li>
+                          <p>example<p>
+                      </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  response
+                </td>
+                <td>
+                  <p>
+                    The status of the long-running job.
+                  </p>
+                  <ul>
+                      <li>
+                          <p>{"status": "running", "start": 1332165118, "elapsed": 96422, "progress": 0.23}<p>
+                      </li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+          </div>
           <div class="body-section-breaker"></div>
         </div>
         <div id="body-content-right-dev-cntr">
