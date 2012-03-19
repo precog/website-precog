@@ -2094,21 +2094,6 @@ h1 {
     margin-bottom: 40px;
 }
 
-#body-content-left-dev-cntr .font-code-api {
-    width: 100px;
-}
-
-#body-content-left-dev-cntr .font-code-api p{
-    font-family: Courier;
-    font-size: 10pt;
-    color: #C03C26;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: left;
-}
-
 .api-text-name {
     font-family: questrial;
     font-size: 12pt;
@@ -2141,6 +2126,15 @@ h1 {
     vertical-align: text-top;
 }
 
+#body-content-left-dev-cntr .api-info-bullet li {
+    list-style: square;
+    color: #C03C26 !important;
+    clear: both;
+    width: 500px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
 #body-content-left-dev-cntr .api-info ul li {
     font-size: 10pt;
     color: #EA7F1E;
@@ -2150,7 +2144,7 @@ h1 {
 }
 
 #body-content-left-dev-cntr .api-info ul li p {
-    font-family: Courier;
+    font-family: helvetica;
     font-size: 10pt;
     color: #C03C26;
     padding-left: 0px;
@@ -2167,6 +2161,7 @@ h1 {
 }
 
 #body-content-left-dev-cntr .api-info .font-code pre {
+    font-family: monospace;
     color: #fff;
 }
 
@@ -2178,6 +2173,10 @@ h1 {
     padding-top: 6px;
     vertical-align: top;
     width: 140px;
+}
+
+.api-wide p {
+    width: 560px;
 }
 
 .api-language {

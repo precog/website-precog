@@ -93,7 +93,7 @@
                 <td>
                   <ul>
                       <li>
-                          <p>token=<p>
+                          <p>token<p>
                       </li>
                       <li>
                           <p>[yourtoken]<p>
@@ -104,18 +104,18 @@
                   </ul>
                 </td>
               </tr>
-              <tr>
-                <td class="api-code">
-                  response
-                </td>
-                <td>
-                  <ul>
-                      <li>
-                          <p>["/foo", "/bar"]<p>
-                      </li>
-                  </ul>
-                </td>
-              </tr>
+                <tr>
+                    <td class="api-code">
+                      response
+                    </td>
+                    <td class="api-wide">
+                      <ul>
+                          <li>
+                              <p>["/foo", "/bar"] This is a test of the emergency broadcasting system.<p>
+                          </li>
+                      </ul>
+                    </td>
+                </tr>
             </table>
           </div>
           <div class="api-language">
@@ -153,9 +153,7 @@
                   </p>
                   <div class="font-code">
                     <pre>
-  &lt;![CDATA[
   {"user": "jdoe", "age": 23, "income": 89221.00}
-  ]]&gt;
   </pre>
                   </div>
                 </td>
@@ -167,7 +165,7 @@
                 <td>
                   <ul>
                       <li>
-                          <p>token=<p>
+                          <p>token<p>
                       </li>
                       <li>
                           <p>[yourtoken]<p>
@@ -182,7 +180,7 @@
                 <td class="api-code">
                   response
                 </td>
-                <td>
+                <td class="api-wide">
                   <ul>
                       <li>
                           <p>HTTP 200</p>
@@ -227,7 +225,7 @@
                 <td>
                   <ul>
                       <li>
-                          <p>token=<p>
+                          <p>token<p>
                       </li>
                       <li>
                           <p>[yourtoken]<p>
@@ -244,7 +242,7 @@
                 <td>
                   <ul>
                       <li>
-                          <p>q=<p>
+                          <p>q<p>
                       </li>
                       <li>
                           <p>[your query]<p>
@@ -299,7 +297,7 @@
                 <td>
                   <ul>
                       <li>
-                          <p>token=<p>
+                          <p>token<p>
                       </li>
                       <li>
                           <p>[yourtoken]<p>
@@ -314,8 +312,8 @@
                 <td class="api-code">
                   response
                 </td>
-                <td>
-                  <<ul>
+                <td class="api-wide">
+                  <ul>
                       <li>
                           <p>HTTP 200<p>
                       </li>
@@ -347,14 +345,16 @@
                   <p>
                     Creates a new long-running job. There are three kinds of jobs you can create:
                   </p>
-                  <ul>
-                    <li>
-                      <em>A delete job</em>. A delete job is a request to delete all the events matching a specified query.
-                    </li>
-                    <li>
-                      <em>A transform job</em>. A transform job is a request to save the results of some query to a specified path.
-                    </li>
-                  </ul>
+                  <div class="api-info-bullet">
+                    <ul>
+                      <li>
+                        <em>A delete job</em>. A delete job is a request to delete all the events matching a specified query.
+                      </li>
+                      <li>
+                        <em>A transform job</em>. A transform job is a request to save the results of some query to a specified path.
+                      </li>
+                    </ul>
+                  </div>
                 </td>
               </tr>
               <tr>
@@ -367,12 +367,10 @@
                   </p>
                   <div class="font-code">
                     <pre>
-  &lt;![CDATA[
   {
   "type":  "delete",
   "query": "[query]"
   }
-  ]]&gt;
                         </pre>
                   </div>
                   <div class="clear">
@@ -382,13 +380,11 @@
                   </p>
                   <div class="font-code">
                     <pre>
-  &lt;![CDATA[
   {
   "type":  "transform",
   "query": "[query]",
   "path":  "/results/"
   }
-  ]]&gt;
   </pre>
                   </div>
                 </td>
@@ -400,7 +396,7 @@
                 <td>
                   <ul>
                       <li>
-                          <p>token=<p>
+                          <p>token<p>
                       </li>
                       <li>
                           <p>[yourtoken]<p>
@@ -417,7 +413,7 @@
                 <td>
                   <ul>
                       <li>
-                          <p>q=<p>
+                          <p>q<p>
                       </li>
                       <li>
                           <p>[your query]<p>
@@ -435,7 +431,7 @@
                 <td class="api-code">
                   response
                 </td>
-                <td>
+                <td class="api-wide">
                   <p>
                     A job id that can be used to poll for the status of the job.
                   </p>
@@ -480,7 +476,7 @@
                 <td>
                   <ul>
                       <li>
-                          <p>token=<p>
+                          <p>token<p>
                       </li>
                       <li>
                           <p>[yourtoken]<p>
@@ -498,7 +494,7 @@
                 <td>
                   <ul>
                       <li>
-                          <p>job id=<p>
+                          <p>job id<p>
                       </li>
                       <li>
                           <p>[the id of the long-running job]<p>
@@ -513,7 +509,7 @@
                 <td class="api-code">
                   response
                 </td>
-                <td>
+                <td class="api-wide">
                   <p>
                     The status of the long-running job.
                   </p>
