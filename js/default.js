@@ -24,6 +24,10 @@ $('#com-box-home-page').click(function () {
     window.open('newsletter.html','_self');
 });
 
+$('#report-grid-link').click(function () {
+    window.open('http://reportgrid.com/charts.html#pricing-anchor');
+});
+
 var isalt;
 $("#background-apps .box-alt").css('opacity', 0);
 

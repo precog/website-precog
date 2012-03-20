@@ -450,6 +450,10 @@ h1 {
     color: #D6272C;
 }
 
+#report-grid-link {
+    cursor: pointer;
+}
+
 #body-add-ons {
     width: 1050px;
     padding-top: 30px;
@@ -1078,6 +1082,30 @@ h1 {
     margin-left: 20px;
     margin-top: 40px;
     text-align: center;
+}
+
+.partner-rapleaf {
+    background-image: url("../images/logo-partner-rapleaf.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.partner-alchemyapi {
+    background-image: url("../images/logo-partner-alchemyapi.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.partner-fullcontact {
+    background-image: url("../images/logo-partner-fullcontact.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.partner-reportgrid {
+    background-image: url("../images/logo-partner-reportgrid.png");
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .content-right-graphic h2 {
