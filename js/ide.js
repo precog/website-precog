@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var service = "http://demo.precog.io/services/quirrel/v1/query?tokenId=C5EF0038-A2A2-47EB-88A4-AAFCE59EC22B";
+    var service = "http://play2012v1.precog.io/v1/vfs/?tokenId=C18ED787-BF07-4097-B819-0415C759C8D5";
 
     editor = ace.edit("ide");
     editor.commands.addCommand({
@@ -39,7 +39,7 @@ $(document).ready(function(){
       displayOutput("loading...", "warning");
       var content = editor.getSession().getValue();
 
-      API.Http.Jsonp.post(service, content, {
+      API.Http.Jsonp.get(service, {
         success : function(data) {
           editor.setReadOnly(false);
           success(JSON.stringify(data));
@@ -67,6 +67,9 @@ $(document).ready(function(){
           }
           error(msg);
         }
+      },
+      {
+        q : content
       })
     }
     $('#console-execute-button').click(executeQuery);
