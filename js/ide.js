@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var service = "http://play2012v1.precog.io/v1/vfs/?tokenId=C18ED787-BF07-4097-B819-0415C759C8D5";
+    var service = "http://play2012v1.precog.io/v1/vfs/?tokenId=1BF2FA96-8817-4C98-8BCB-BEC6E86CB3C2";
 
     editor = ace.edit("ide");
     editor.commands.addCommand({
