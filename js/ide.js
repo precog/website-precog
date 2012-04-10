@@ -1,6 +1,4 @@
 $(document).ready(function(){
-    console.log(API.Config.analyticsService);
-    console.log(API.Config.tokenId);
     var serviceUrl = API.PageConfig.analyticsService || API.Config.analyticsService || "http://play2012v1.precog.io/v1/vfs/",
         tokenId    = API.PageConfig.tokenId || API.Config.tokenId || "1BF2FA96-8817-4C98-8BCB-BEC6E86CB3C2",
         service    = serviceUrl + "?tokenId=" + tokenId;
