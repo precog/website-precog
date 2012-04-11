@@ -58,14 +58,21 @@
                                 <div class="admin-left-fields">
                                     <div class="field-group">
                                         <p>Current E-mail Address:</p><span id="contactemail" class="value"></span>
+                                    </div>
+                                </div>
+                                <div class="admin-right-fields">
+                                    <div class="field-group">
                                         <form id="changeemail" action="" method="">
                                            <p>Change Email to:</p><input type="email" name="email">
                                            <input type="submit" id="submitemail" class="admin-update-button" value="">
                                        </form>
                                     </div>
                                 </div>
+                                <div class="atrib-clear-left">
+                                </div>
+                                <div class="body-section-breaker"></div>
                                 <h2>Password</h2>
-                                <div class="admin-right-fields">
+                                <div class="admin-left-fields">
                                     <div class="field-group">
                                         <p>To change your current password provide the following information.</p>
                                         <form id="changepassword" action="" method="">
@@ -79,6 +86,7 @@
                                 </div>
                                 <div class="atrib-clear-left">
                                 </div>
+                                <div class="body-section-breaker"></div>
                                 <h2>Contact Information</h2>
                                 <form id="changeaccount" class="rgform" action="" method="">
                                    <div class="admin-left-fields">
@@ -97,12 +105,13 @@
                                             <p>City:</p><input type="text" name="city">
                                             <p>ZipCode:</p><input type="text" name="postalCode">
                                             <p>Website:</p><input type="text" name="website">
+                                            <input type="submit" id="submitaccount" class="admin-update-button" value="">
                                         </div>
-                                   <input type="submit" id="submitaccount" class="admin-update-button" value="">
                                    </div>
                                    <div class="atrib-clear-left">
                                    </div>
                                </form>
+                                <div class="body-section-breaker"></div>
                                <h2>Billing</h2>
                                <div class="admin-left-fields" id="current-billing-info">
                                     <div class="field-group">
@@ -124,8 +133,8 @@
                                         <p>CCV Code:</p><input id="cardsecurecode" class="blacktext" type="text" name="cardCCV" autocomplete="off" />
                                         <p>Name of Card Holder:</p><input id="cardnameon" class="blacktext" type="text" name="cardHolder" autocomplete="off" />
                                         <p>Zip Code:</p><input type="text" name="postalCode" autocomplete="off" />
+                                        <input type="submit" id="submitcreditcard" class="admin-update-button" value=""/>
                                     </div>
-                                    <input type="submit" id="submitcreditcard" class="admin-update-button" value=""/>
                                 </div>
                             </div>
                         </div>
@@ -192,7 +201,7 @@
                                         </div>
                                     </div>
                                 </div>  
-                                <div class="dragbox2" id="item5" >  
+                                <div class="dragbox" id="item5" >  
                                     <div class="dragbox-content" >
                                         <div class="dragbox-icon">
                                             <img src="images/icon-jobs.png">

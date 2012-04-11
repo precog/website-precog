@@ -74,13 +74,23 @@
     padding-left: 6px;
 }
 
+#admin-information .field-group input:hover{
+    border-color: #617280;
+}
+
+#admin-information .field-group input:focus{
+    border-color: #748899;
+}
+
+
 .admin-update-button {
     background-image: url("../images/button-update-m.png");
     background-color: transparent !important;
     width: 139px !important;
     height: 48px !important;
     border-style: none !important;
-    left: -4px;
+    left: 10px;
+    top: -16px;
 }
 
 .admin-update-button:hover {
