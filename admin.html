@@ -53,6 +53,81 @@
                             <h1 class="body-title">ADMIN</h1>
                             <h2>Your Information</h2>
                             <p>Your slice of the Precog platform. Change your plan, update personal information, select addons from our marketplace, track your usage, its all here!</p>
+                            <div id="admin-information">
+                                <h2>E-mail Address</h2>
+                                <div class="admin-left-fields">
+                                    <div class="field-group">
+                                        <p>Current E-mail Address:</p><span id="contactemail" class="value"></span>
+                                        <form id="changeemail" action="" method="">
+                                           <p>Change Email to:</p><input type="email" name="email">
+                                           <input type="submit" id="submitemail" class="admin-update-button" value="">
+                                       </form>
+                                    </div>
+                                </div>
+                                <h2>Password</h2>
+                                <div class="admin-right-fields">
+                                    <div class="field-group">
+                                        <p>To change your current password provide the following information.</p>
+                                        <form id="changepassword" action="" method="">
+                                           <p>Current Password:</p>
+                                           <input type="password" name="oldpassword" autocomplete="off">
+                                           <p>New Password:</p><input type="password" name="password" autocomplete="off">
+                                           <p>Password Confirm:</p><input type="password" name="confirmpassword" autocomplete="off">
+                                           <input type="submit" id="submitpassword" class="admin-update-button" value="">
+                                       </form>
+                                    </div>
+                                </div>
+                                <div class="atrib-clear-left">
+                                </div>
+                                <h2>Contact Information</h2>
+                                <form id="changeaccount" class="rgform" action="" method="">
+                                   <div class="admin-left-fields">
+                                        <div class="field-group">
+                                            <p>First Name:</p><input type="text" name="firstName">
+                                            <p>Company:</p><input type="text" name="company">
+                                            <p>Address:</p><input type="text" name="street">
+                                            <p>State:</p><input type="text" name="state">
+                                            <p>Phone Number:</p><input type="text" name="phone">
+                                        </div>
+                                   </div>
+                                   <div class="admin-right-fields">
+                                        <div class="field-group">
+                                            <p>Last Name:</p><input type="text" name="lastName">
+                                            <p>Title:</p><input type="text" name="title">
+                                            <p>City:</p><input type="text" name="city">
+                                            <p>ZipCode:</p><input type="text" name="postalCode">
+                                            <p>Website:</p><input type="text" name="website">
+                                        </div>
+                                   <input type="submit" id="submitaccount" class="admin-update-button" value="">
+                                   </div>
+                                   <div class="atrib-clear-left">
+                                   </div>
+                               </form>
+                               <h2>Billing</h2>
+                               <div class="admin-left-fields" id="current-billing-info">
+                                    <div class="field-group">
+                                        <p>Payments are done using the following information:</p>
+                                        <p>Current Card Number: (last 4)</p><span id="contactemail" class="value"></span>
+                                    </div>
+                                </div>
+                               <div class="atrib-clear-left">
+                                </div>
+                               <div class="admin-left-fields" id="no-billing-info">
+                                    <div class="field-group">
+                                        <p>Credit Card Number:</p><input class="blacktext" type="text" name="cardNumber" autocomplete="off">
+                                        <p>Expiration Month</p><input type="text" name="cardExpMonth" placeholder="mm" autocomplete="off">
+                                        <p>Expiration Year</p><input type="text" name="cardExpYear" placeholder="yyyy" autocomplete="off">
+                                    </div>
+                                </div>
+                               <div class="admin-right-fields" id="no-billing-info">
+                                    <div class="field-group">
+                                        <p>CCV Code:</p><input id="cardsecurecode" class="blacktext" type="text" name="cardCCV" autocomplete="off" />
+                                        <p>Name of Card Holder:</p><input id="cardnameon" class="blacktext" type="text" name="cardHolder" autocomplete="off" />
+                                        <p>Zip Code:</p><input type="text" name="postalCode" autocomplete="off" />
+                                    </div>
+                                    <input type="submit" id="submitcreditcard" class="admin-update-button" value=""/>
+                                </div>
+                            </div>
                         </div>
                         <div class="body-content-left-admin">
                             <h1 class="body-title">YOUR PLANS & ADD-ONS</h1>
