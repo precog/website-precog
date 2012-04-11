@@ -2088,18 +2088,18 @@ h1 {
     width: 141px;
     height: 66px;
     position: absolute;
-    z-index: 1;
+    z-index: 10;
     left: 670px;
-    margin-top: -20px;
+    margin-top: -2px;
 }
 
 #sticker-whatisquirrel {
     width: 141px;
     height: 66px;
     position: absolute;
-    z-index: 1;
+    z-index: 10;
     left: 520px;
-    margin-top: -20px;
+    margin-top: -2px;
 }
 
 .console-execute {
@@ -2145,6 +2145,12 @@ h1 {
 .button-top-adjust {
     top: -30px !important;
     left: -5px !important;
+}
+
+#ide {
+    background-color: #fff;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 /*TUTORIALS*/
