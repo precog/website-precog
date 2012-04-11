@@ -399,7 +399,7 @@ h1 {
     border-color: #15181A;
 }
 
-#body-content-left a, #body-content-left-dev-cntr a, #how-it-works-content a {
+#body-content-left a, #body-content-left-dev-cntr a, #how-it-works-content a, .body-content-left-admin a{
     text-decoration: underline !important;
 }
 
@@ -1277,6 +1277,58 @@ h1 {
     padding-top: 30px;
 }
 
+/*admin*/
+#body-content-admin-holder {
+    width: 780px;
+    float: left;
+    padding-right: 60px;
+    overflow: hidden;
+}
+
+#body-content-admin-slider {
+    width: 2520px;
+    left: 0px;
+}
+
+.body-content-left-admin {
+    width: 780px;
+    float: left;
+    margin-top: 30px;
+    padding-right: 60px;
+}
+
+#body-content-right-admin {
+    padding-top: 34px;
+    width: 190px;
+    float: left;
+    min-height: 300px;
+    border-left: solid;
+    border-width: 2px;
+    border-color: #15181A;
+}
+
+#admin-your-plan {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.admin-your-plan-icon {
+    width: 260px;
+    height: 260px;
+    background-color: #15181A;
+    background-position: center;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+.admin-your-plan-details {
+    float: left;
+}
+
+.your-plan-starter {
+    background-image: url("../images/your-plan-starter.png");
+}
+
 /*about*/
 .jdg {
     background-image: url("../images/graphic-johndegoes.png");
@@ -1822,7 +1874,7 @@ h1 {
     cursor: pointer;
 }
 
-#body-content-left-dev-cntr .body-sticker-repl p {
+#body-content-left-dev-cntr .body-sticker-repl p, .body-content-left-admin .body-sticker-repl p {
     color: #fff;
     font-size: 10pt;
     left: 80px;
@@ -1842,7 +1894,7 @@ h1 {
     line-height: 1.5;
 }
 
-#body-content-left-dev-cntr h2 {
+#body-content-left-dev-cntr h2, .body-content-left-admin h2 {
     font-size: 20px;
     color: #C13707;
     padding-bottom: 2px;
@@ -1850,7 +1902,7 @@ h1 {
     font-weight: normal;
 }
 
-#body-content-left-dev-cntr h3 {
+#body-content-left-dev-cntr h3, .body-content-left-admin h3 {
     font-size: 15px;
     color: #fff;
     padding-bottom: 4px;
@@ -1858,7 +1910,7 @@ h1 {
     font-weight: normal;
 }
 
-#body-content-left-dev-cntr p {
+#body-content-left-dev-cntr p, .body-content-left-admin p {
     font-family:  Helvetica, Questrial, sans-serif;
     font-weight: lighter;
     padding-top: 4px;
