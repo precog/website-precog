@@ -1,6 +1,5 @@
-var service = "http://demo.precog.io/services/quirrel/v1/query?tokenId=C5EF0038-A2A2-47EB-88A4-AAFCE59EC22B";
-
 (function (){
+var service = "http://demo.precog.io/v1/vfs/?tokenId=1BF2FA96-8817-4C98-8BCB-BEC6E86CB3C2";
 
 function track(line, success)
 {
@@ -10,7 +9,7 @@ function track(line, success)
 function _console(id, query)
 {
   var console = $('#'+id),
-    scroll = function() { console.animate({ scrollTop: console.prop("scrollHeight") }, 250); }
+    scroll = function() { console.animate({ scrollTop: console.prop("scrollHeight") }, 250); };
     controller = console.console({
     promptLabel: 'quirrel> ',
     continuedPromptLabel: '       | ',
@@ -24,8 +23,8 @@ function _console(id, query)
       return;
     },
     execute:function(line, handler){
-      if(line == "") return false;
-      API.Http.Jsonp.post(service, line, {
+      if(line === "") return false;
+      API.Http.Jsonp.get(service, {
         success : function(data) {
           track(line, true);
           handler({ msg : JSON.stringify(data), className : 'success'});
@@ -55,7 +54,10 @@ function _console(id, query)
           handler({ msg : msg, className : 'error'});
           scroll();
         }
-      })
+      },
+      {
+        q : line
+      });
       scroll();
       return true;
     },
@@ -76,11 +78,11 @@ window.buildConsole = function(id, query)
     var controller = _console(id, query);
     $('#'+id+'-execute-button').click(function() {
       controller.trigger();
-    })
-  })
-}
+    });
+  });
+};
 
 
 buildConsole('console');
 
-})()
+})();

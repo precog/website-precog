@@ -606,6 +606,10 @@ var JSON = JSON || { stringify : jQuery.toJSON, parse : jQuery.evalJSON },
       return Util.parseQueryParameters(findThisScript().getAttribute('src'));
     },
 
+    getPageConfiguration: function() {
+      return Util.parseQueryParameters(window.location.href);
+    },
+
     parseQueryParameters: function(url) {
       var index = url.indexOf('?');
 
@@ -966,6 +970,7 @@ var JSON = JSON || { stringify : jQuery.toJSON, parse : jQuery.evalJSON },
     }
   }
 
+  API.PageConfig = Util.getPageConfiguration();
   API.Config = Util.getConfiguration();
 
   var onceMap = {};
