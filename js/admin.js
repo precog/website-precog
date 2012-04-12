@@ -540,13 +540,29 @@ $("#admin-your-tolkens").click(function(){
     }
     );
 
+$(function() {
+		$( "#admin-your-default-stack" ).sortable({
+			connectWith: ".connectedSortable"
+		}).disableSelection();
+	});
+
+$(function() {
+		$( "#admin-your-apps" ).sortable({
+			connectWith: ".connectedSortable",
+                        helper: function(e,li) {
+				copyHelper= li.clone().insertAfter(li);
+				return li.clone();
+                        }
+		}).disableSelection();
+	});
+
 $('.admin-apps').sortable({  
     connectWith: '.admin-apps',  
     handle: 'h2',  
     cursor: 'move',  
     placeholder: 'placeholder',  
     forcePlaceholderSize: true,  
-    opacity: 0.4,  
+    opacity: 0.4,
 })
 .disableSelection(); 
 

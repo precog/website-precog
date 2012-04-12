@@ -1306,58 +1306,6 @@ h1 {
     padding-top: 30px;
 }
 
-/*admin*/
-#body-content-admin-holder {
-    width: 780px;
-    float: left;
-    padding-right: 60px;
-    overflow: hidden;
-}
-
-#body-content-admin-slider {
-    width: 2520px;
-    left: 0px;
-}
-
-.body-content-left-admin {
-    width: 780px;
-    float: left;
-    margin-top: 30px;
-    padding-right: 60px;
-}
-
-#body-content-right-admin {
-    padding-top: 34px;
-    width: 190px;
-    float: left;
-    min-height: 300px;
-    border-left: solid;
-    border-width: 2px;
-    border-color: #15181A;
-}
-
-#admin-your-plan {
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-.admin-your-plan-icon {
-    width: 260px;
-    height: 260px;
-    background-color: #15181A;
-    background-position: center;
-    background-repeat: no-repeat;
-    float: left;
-}
-
-.admin-your-plan-details {
-    float: left;
-}
-
-.your-plan-starter {
-    background-image: url("../images/your-plan-starter.png");
-}
-
 /*about*/
 .jdg {
     background-image: url("../images/graphic-johndegoes.png");

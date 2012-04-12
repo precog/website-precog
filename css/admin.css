@@ -1,12 +1,98 @@
+/*admin*/
+#body-content-admin-holder {
+    width: 780px;
+    float: left;
+    padding-right: 60px;
+    overflow: hidden;
+}
+
+#body-content-admin-slider {
+    width: 2520px;
+    left: 0px;
+}
+
+.body-content-left-admin {
+    width: 780px;
+    float: left;
+    margin-top: 30px;
+    padding-right: 60px;
+}
+
+#body-content-right-admin {
+    padding-top: 34px;
+    width: 190px;
+    float: left;
+    min-height: 300px;
+    border-left: solid;
+    border-width: 2px;
+    border-color: #15181A;
+}
+
+#admin-your-plan {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.admin-your-plan-icon {
+    width: 260px;
+    height: 260px;
+    background-color: #15181A;
+    background-position: center;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+.admin-your-plan-details {
+    float: left;
+    width: 500px;
+    margin-left: 20px;
+}
+
+#admin-plan-usage {
+    width: 100%;
+    height: 30px;
+    background-image: linear-gradient(left , rgb(142,198,63) 0%, rgb(237,28,35) 100%);
+    background-image: -o-linear-gradient(left , rgb(142,198,63) 0%, rgb(237,28,35) 100%);
+    background-image: -moz-linear-gradient(left , rgb(142,198,63) 0%, rgb(237,28,35) 100%);
+    background-image: -webkit-linear-gradient(left , rgb(142,198,63) 0%, rgb(237,28,35) 100%);
+    background-image: -ms-linear-gradient(left , rgb(142,198,63) 0%, rgb(237,28,35) 100%);
+}
+
+#admin-apu-usage {
+    width: 500px;
+}
+
+.admin-apu-gauge { 
+    border-top: 50px solid #000;
+    border-right: 50px solid #000;
+    border-left: 50px solid #000;
+    border-top-left-radius: 140px;
+    border-top-right-radius: 140px;
+    height:100px;
+    width:200px;
+}
+
+#admin-plan-usage .admin-plan-usage-current {
+    background-color: #000;
+    opacity: 0.5;
+    width: 30%;
+    height: 30px;
+    right: 0px;
+    position: absolute;
+}
+
+.your-plan-starter {
+    background-image: url("../images/your-plan-starter.png");
+}
+
 .admin-apps{  
-    width:49%;  
-    margin-right:.5%;  
+    width:370px;  
     min-height:100px;  
 }  
 .admin-apps .dragbox{  
     margin:5px 2px  20px;  
     background-color:#15181A;  
-    position:relative;  
+    position: relative;  
     -moz-border-radius: 5px;  
     -webkit-border-radius: 5px;  
 }  
@@ -28,8 +114,10 @@
 
 .dragbox-icon {
     float: left;
-    width: 100px;
-    height: 100px;
+    padding-left: 20px;
+    padding-top: 20px;
+    width: 60px;
+    height: 80px;
     overflow: hidden;
 }
 
@@ -53,6 +141,64 @@
 .dragbox h2.collapse{  
     background: #f0f0f0;
 }  
+
+#admin-your-default-stack {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 2.5em;
+    float: left;
+    margin-right: 10px;
+}
+
+#admin-your-default-stack li {
+    background-color: #7B8D99;
+    margin: 0 5px 5px 5px;
+    padding: 10px;
+    font-size: 1.2em;
+    width: 200px;
+    height: 24px;
+    cursor: move;
+    border-radius: 6px;
+}
+
+#admin-your-default-stack li p {
+    font-family: helvetica;
+    font-size: 10pt;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+#admin-your-apps {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 2.5em;
+    float: left;
+    margin-right: 10px;
+}
+
+#admin-your-apps li {
+    background-color: #000;
+    margin: 0 5px 5px 5px;
+    padding: 5px;
+    font-size: 1.2em;
+    width: 60px;
+    height: 60px;
+    float: left;
+    cursor: move;
+    border-radius: 6px;
+}
+
+#admin-your-apps li p {
+    font-family: helvetica;
+    font-size: 10pt;
+    color: #fff;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.default-stack {
+    float: left;
+}
 
 #admin-information p {
     font-family: helvetica, sans-serif;
