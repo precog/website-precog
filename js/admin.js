@@ -306,15 +306,6 @@ $("#scrolling-scroll-panel").mouseover(function(){
 }
 );
 
-//JOBS
-$("#scrolling-scroll-panel").mouseover(function(){
-  $(".scrolling-right-panel-newsletter").animate({
-        'left': '-1230'
-        }, 17500
-        );
-}
-);
-
 //DEVELOPER CENTER
 $(".dev-center-api-docs").mouseover(function(){
       $(".dev-center-api-doc").css({
@@ -528,13 +519,13 @@ $("#admin-your-info").click(function(){
     );
 $("#admin-your-pa").click(function(){
     $("#body-content-admin-slider").animate({
-      'left': '-840px'
+      'left': '-1240px'
    }, {queue: false});
 });
 
 $("#admin-your-tolkens").click(function(){
     $("#body-content-admin-slider").animate({
-        'left': '-1680px'
+        'left': '-2480px'
         }, {queue: false}
         );
     }
@@ -565,6 +556,14 @@ $('.admin-apps').sortable({
     opacity: 0.4,
 })
 .disableSelection(); 
+
+$('.admin-ring-delete').live('click', function() {
+    $(this).closest('li').remove();
+});
+
+$('.admin-token-delete').live('click', function() {
+    $(this).closest('li').remove();
+});
 
 //NEWS AND EVENTS
 $("#news-items-only").click(function(){

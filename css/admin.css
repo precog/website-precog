@@ -7,7 +7,7 @@
 }
 
 #body-content-admin-slider {
-    width: 2520px;
+    width: 3720px;
     left: 0px;
 }
 
@@ -15,7 +15,7 @@
     width: 780px;
     float: left;
     margin-top: 30px;
-    padding-right: 60px;
+    padding-right: 460px;
 }
 
 #body-content-right-admin {
@@ -254,4 +254,161 @@
 #admin-information .admin-right-fields {
     width: 390px;
     float: left;
+}
+
+/*rings*/
+#admin-rings ul li {
+    float: left;
+    width: 136px;
+    height: 120px;
+    background-image: url("../images/icon-admin-ring.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#admin-rings ul li:hover {
+    background-image: url("../images/icon-admin-ring-alt.png");
+}
+
+#admin-rings ul li p {
+    color: #802819;
+    padding-top: 100px;
+}
+
+#admin-rings ul li p:hover {
+    font-size: 12pt;
+    color: #C03B27;
+}
+
+#admin-rings input {
+    font-family: helvetica;
+    font-size: 10pt;
+    background-color: #15181A;
+    width: 116px;
+    height: 28px;
+    border-radius: 6px;
+    margin-top: 100px;
+    color: #3C454D;
+    padding-left: 4px;
+}
+
+input.admin-ring-new {
+    background-color: transparent !important;
+    background-image: url("../images/icon-admin-ring-new.png");
+    width: 21px !important;
+    height: 21px !important;
+    position: absolute;
+    right: 12px;
+    top: 4px;
+    cursor: pointer;
+}
+
+.admin-ring-delete {
+    background-color: transparent !important;
+    background-image: url("../images/icon-admin-ring-delete.png");
+    width: 21px !important;
+    height: 21px !important;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.admin-circle-panel {
+    margin-left: 10px;
+}
+
+.admin-circle-panel-top {
+}
+
+.circle-icon {
+    border: 30px solid #15181A;
+    border-radius: 120px;
+    height:120px;
+    width:120px;
+    -moz-box-shadow: 0px 0px 5px 5px #505D66;
+    -webkit-box-shadow: 0px 0px 5px 5px #505D66;
+    box-shadow: 0px 0px 5px 5px #505D66;
+    float: left;
+}
+
+.circle-details {
+    float: left;
+    padding-left: 30px;
+}
+
+.circle-details ul li h1, .admin-circle-panel-bottom h1 {
+    font-size: 10pt;
+    font-weight: normal;
+    font-family: helvetica;
+    color: #fff;
+    padding: 0px !important;
+}
+
+.circle-details ul li p {
+    font-size: 12pt;
+    font-weight: normal;
+    font-family: helvetica;
+    color: #C03B27;
+}
+
+.admin-circle-panel-bottom {
+    margin-top: 20px;
+}
+
+.circle-tokens {
+    margin-top: 20px;
+}
+
+.admin-circle-panel-bottom ul li {
+    background-color: #15181A;
+    width: 372px;
+    height: 40px;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    float: left;
+    border-radius: 6px;
+}
+
+.admin-circle-panel-bottom ul li p {
+    font-size: 13pt;
+    color: #C03B27;
+    padding-left: 9px;
+    padding-top: 9px;
+}
+
+input.admin-token-new {
+    background-color: transparent !important;
+    background-image: url("../images/icon-admin-token-new.png");
+    width: 37px !important;
+    height: 36px !important;
+    position: absolute;
+    right: 2px;
+    top: -3px;
+    cursor: pointer;
+}
+
+.admin-token-delete {
+    background-color: transparent !important;
+    background-image: url("../images/icon-admin-token-delete.png");
+    width: 15px !important;
+    height: 15px !important;
+    position: absolute;
+    right: 12px;
+    top: 14px;
+    cursor: pointer;
+}
+
+.circle-tokens input {
+    font-family: helvetica;
+    font-size: 12pt;
+    background-color: #15181A;
+    margin-top: 6px;
+    width: 200px;
+    height: 28px;
+    border-radius: 6px;
+    color: #3C454D;
+    padding-left: 8px;
 }
