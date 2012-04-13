@@ -324,10 +324,10 @@ input.admin-ring-new {
 }
 
 .circle-icon {
-    border: 30px solid #15181A;
-    border-radius: 120px;
-    height:120px;
-    width:120px;
+    border: 20px solid #15181A;
+    border-radius: 80px;
+    height: 80px;
+    width: 80px;
     -moz-box-shadow: 0px 0px 5px 5px #505D66;
     -webkit-box-shadow: 0px 0px 5px 5px #505D66;
     box-shadow: 0px 0px 5px 5px #505D66;
