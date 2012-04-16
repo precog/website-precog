@@ -532,20 +532,20 @@ $("#admin-your-tolkens").click(function(){
     );
 
 $(function() {
-		$( "#admin-your-default-stack" ).sortable({
-			connectWith: ".connectedSortable"
-		}).disableSelection();
-	});
+    $( "#admin-your-default-stack" ).sortable({
+            connectWith: ".connectedSortable"
+    }).disableSelection();
+});
 
 $(function() {
-		$( "#admin-your-apps" ).sortable({
-			connectWith: ".connectedSortable",
-                        helper: function(e,li) {
-				copyHelper= li.clone().insertAfter(li);
-				return li.clone();
-                        }
-		}).disableSelection();
-	});
+    $( "#admin-your-apps" ).sortable({
+            connectWith: ".connectedSortable",
+            helper: function(e,li) {
+                    copyHelper= li.clone().insertAfter(li);
+                    return li.clone();
+            }
+    }).disableSelection();
+});
 
 $('.admin-apps').sortable({  
     connectWith: '.admin-apps',  
@@ -553,7 +553,7 @@ $('.admin-apps').sortable({
     cursor: 'move',  
     placeholder: 'placeholder',  
     forcePlaceholderSize: true,  
-    opacity: 0.4,
+    opacity: 0.4
 })
 .disableSelection(); 
 
@@ -563,6 +563,10 @@ $('.admin-ring-delete').live('click', function() {
 
 $('.admin-token-delete').live('click', function() {
     $(this).closest('li').remove();
+});
+
+$('.admin-stack-delete').live('click', function() {
+    $(this).closest('.admin-addon-stack').remove();
 });
 
 //NEWS AND EVENTS

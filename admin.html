@@ -57,14 +57,14 @@
                                 <h2>E-mail Address</h2>
                                 <div class="admin-left-fields">
                                     <div class="field-group">
-                                        <p>Current E-mail Address:</p><span id="contactemail" class="value"></span>
+                                        <form id="currentemail" action="" method="">
+                                           <p>Current Email Address</p><input type="email" name="email" tabindex="1">
+                                            <input type="submit" id="submitemail" class="admin-update-button" value="" tabindex="3">
                                     </div>
                                 </div>
                                 <div class="admin-right-fields">
                                     <div class="field-group">
-                                        <form id="changeemail" action="" method="">
-                                           <p>Change Email to:</p><input type="email" name="email">
-                                           <input type="submit" id="submitemail" class="admin-update-button" value="">
+                                           <p>Change Email to:</p><input type="email" name="email" tabindex="2">
                                        </form>
                                     </div>
                                 </div>
@@ -72,16 +72,19 @@
                                 </div>
                                 <div class="body-section-breaker"></div>
                                 <h2>Password</h2>
+                                <p class="admin-normal">To change your current password provide the following information.</p>
                                 <div class="admin-left-fields">
                                     <div class="field-group">
-                                        <p>To change your current password provide the following information.</p>
                                         <form id="changepassword" action="" method="">
-                                           <p>Current Password:</p>
-                                           <input type="password" name="oldpassword" autocomplete="off">
-                                           <p>New Password:</p><input type="password" name="password" autocomplete="off">
-                                           <p>Password Confirm:</p><input type="password" name="confirmpassword" autocomplete="off">
-                                           <input type="submit" id="submitpassword" class="admin-update-button" value="">
-                                       </form>
+                                           <p>Current Password:</p><input type="password" name="oldpassword" autocomplete="off" tabindex="4">
+                                           <p>New Password:</p><input type="password" name="password" autocomplete="off" tabindex="6">
+                                           <input type="submit" id="submitpassword" class="admin-update-button" value="" tabindex="7">
+                                    </div>
+                                </div>
+                                <div class="admin-right-fields">
+                                    <div class="field-group">
+                                            <p>Password Confirm:</p><input type="password" name="confirmpassword" autocomplete="off" tabindex="5">
+                                        </form>
                                     </div>
                                 </div>
                                 <div class="atrib-clear-left">
@@ -91,21 +94,21 @@
                                 <form id="changeaccount" class="rgform" action="" method="">
                                    <div class="admin-left-fields">
                                         <div class="field-group">
-                                            <p>First Name:</p><input type="text" name="firstName">
-                                            <p>Company:</p><input type="text" name="company">
-                                            <p>Address:</p><input type="text" name="street">
-                                            <p>State:</p><input type="text" name="state">
-                                            <p>Phone Number:</p><input type="text" name="phone">
+                                            <p>First Name:</p><input type="text" name="firstName" tabindex="8">
+                                            <p>Company:</p><input type="text" name="company" tabindex="10">
+                                            <p>Address:</p><input type="text" name="street" tabindex="12">
+                                            <p>State:</p><input type="text" name="state" tabindex="14">
+                                            <p>Phone Number:</p><input type="text" name="phone" tabindex="16">
+                                            <input type="submit" id="submitaccount" class="admin-update-button" value="" tabindex="18">
                                         </div>
                                    </div>
                                    <div class="admin-right-fields">
                                         <div class="field-group">
-                                            <p>Last Name:</p><input type="text" name="lastName">
-                                            <p>Title:</p><input type="text" name="title">
-                                            <p>City:</p><input type="text" name="city">
-                                            <p>ZipCode:</p><input type="text" name="postalCode">
-                                            <p>Website:</p><input type="text" name="website">
-                                            <input type="submit" id="submitaccount" class="admin-update-button" value="">
+                                            <p>Last Name:</p><input type="text" name="lastName" tabindex="9">
+                                            <p>Title:</p><input type="text" name="title" tabindex="11">
+                                            <p>City:</p><input type="text" name="city" tabindex="13">
+                                            <p>ZipCode:</p><input type="text" name="postalCode" tabindex="15">
+                                            <p>Website:</p><input type="text" name="website" tabindex="17">
                                         </div>
                                    </div>
                                    <div class="atrib-clear-left">
@@ -115,7 +118,7 @@
                                <h2>Billing</h2>
                                <div class="admin-left-fields" id="current-billing-info">
                                     <div class="field-group">
-                                        <p>Payments are done using the following information:</p>
+                                        <p class="admin-normal">Payments are done using the following information:</p>
                                         <p>Current Card Number: (last 4)</p><span id="contactemail" class="value"></span>
                                     </div>
                                 </div>
@@ -123,17 +126,17 @@
                                 </div>
                                <div class="admin-left-fields" id="no-billing-info">
                                     <div class="field-group">
-                                        <p>Credit Card Number:</p><input class="blacktext" type="text" name="cardNumber" autocomplete="off">
-                                        <p>Expiration Month</p><input type="text" name="cardExpMonth" placeholder="mm" autocomplete="off">
-                                        <p>Expiration Year</p><input type="text" name="cardExpYear" placeholder="yyyy" autocomplete="off">
+                                        <p>Credit Card Number:</p><input class="blacktext" type="text" name="cardNumber" autocomplete="off" tabindex="18">
+                                        <p>Expiration Month</p><input type="text" name="cardExpMonth" placeholder="mm" autocomplete="off" tabindex="20">
+                                        <p>Expiration Year</p><input type="text" name="cardExpYear" placeholder="yyyy" autocomplete="off" tabindex="22">
+                                        <input type="submit" id="submitcreditcard" class="admin-update-button" value="" tabindex="24">
                                     </div>
                                 </div>
                                <div class="admin-right-fields" id="no-billing-info">
                                     <div class="field-group">
-                                        <p>CCV Code:</p><input id="cardsecurecode" class="blacktext" type="text" name="cardCCV" autocomplete="off" />
-                                        <p>Name of Card Holder:</p><input id="cardnameon" class="blacktext" type="text" name="cardHolder" autocomplete="off" />
-                                        <p>Zip Code:</p><input type="text" name="postalCode" autocomplete="off" />
-                                        <input type="submit" id="submitcreditcard" class="admin-update-button" value=""/>
+                                        <p>CCV Code:</p><input id="cardsecurecode" class="blacktext" type="text" name="cardCCV" autocomplete="off" tabindex="19">
+                                        <p>Name of Card Holder:</p><input id="cardnameon" class="blacktext" type="text" name="cardHolder" autocomplete="off" tabindex="21">
+                                        <p>Zip Code:</p><input type="text" name="postalCode" autocomplete="off" tabindex="23">
                                     </div>
                                 </div>
                             </div>
@@ -144,7 +147,6 @@
                             <h2>Your Plan</h2>
                             <div id="admin-your-plan">
                                 <div class="admin-your-plan-icon your-plan-starter">
-                                    
                                 </div>
                                 <div class="admin-your-plan-details">
                                     <p>Size:<span>100MB</span></p>
@@ -152,6 +154,7 @@
                                         <div class="admin-plan-usage-current">
                                         </div>
                                     </div>
+                                    <p>APUs<span>10</span></p>
                                     <div id="admin-apu-usage">
                                         <div class="admin-apu-gauge">
                                         </div>
@@ -160,28 +163,62 @@
                                 <div class="atrib-clear-left">
                                 </div>
                             </div>
+                            <div class="body-section-breaker"></div>
                             <div class="default-stack">
                                 <h2>Your Add-on Stack</h2>
-                                <div class="your-stacks">
-                                    <ul id="admin-your-default-stack" class="connectedSortable">
-                                        <li class="ui-state-default"><p>Hadoop Synchronizer</p></li>
-                                        <li class="ui-state-default"><p>Demographics</p></li>
-                                        <li class="ui-state-default"><p>Geo</p></li>
-                                        <li class="ui-state-default"><p>Sentiment Analysis</p></li>
-                                        <li class="ui-state-default"><p>Visualizations</p></li>
-                                    </ul>
+                                <div id="admin-your-stacks">
+                                    <div class="admin-stacks-holder">
+                                        <div class="admin-addon-stack">
+                                            <div class="ui-header">
+                                                <form>
+                                                    <input class="stack-current" type="text" name="ringname" value="default">
+                                                    <input type="submit" class="admin-stack-delete" value=""/>
+                                                </form>
+                                                <p>your data in</p>
+                                            </div>
+                                            <ul id="admin-your-default-stack" class="connectedSortable">
+                                                <li class="ui-state-default"><p>Demographics</p></li>
+                                                <li class="ui-state-default"><p>Geo</p></li>
+                                                <li class="ui-state-default"><p>Visualization Engine</p></li>
+                                            </ul>
+                                            <div class="ui-footer"><p>your data out</p></div>
+                                        </div>
+                                        <div class="admin-addon-stack">
+                                            <div class="ui-header">
+                                                <form>
+                                                    <input class="stack-current" type="text" name="ringname" value="default">
+                                                    <input type="submit" class="admin-stack-delete" value=""/>
+                                                </form>
+                                                <p>your data in</p>
+                                            </div>
+                                            <ul id="admin-your-default-stack" class="connectedSortable">
+                                                <li class="ui-state-default"><p>Demographics</p></li>
+                                                <li class="ui-state-default"><p>Visualization Engine</p></li>
+                                            </ul>
+                                            <div class="ui-footer"><p>your data out</p></div>
+                                        </div>
+                                        <div class="admin-addon-stack">
+                                            <div class="ui-new">
+                                                <form>
+                                                    <input class="stack-current" type="text" name="ringname" placeholder="new stack">
+                                                    <input type="submit" class="admin-stack-new" value=""/>
+                                                </form>
+                                                <p>add a new stack</p>
+                                            </div>
+                                        </div>
+                                        <div class="atrib-clear-left">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="atrib-clear-left">
-                            </div>
+                            <div class="body-section-breaker"></div>
                             <h2>Your Apps</h2>
                             <div class="your-apps">
                                 <ul id="admin-your-apps">
-                                    <li class="ui-state-highlight"><p>App 1</p></li>
-                                    <li class="ui-state-highlight"><p>App 2</p></li>
-                                    <li class="ui-state-highlight"><p>App 3</p></li>
-                                    <li class="ui-state-highlight"><p>App 4</p></li>
-                                    <li class="ui-state-highlight"><p>App 5</p></li>
+                                    <li class="ui-state-highlight"><p>Demographics</p></li>
+                                    <li class="ui-state-highlight"><p>Visualization Engine</p></li>
+                                    <li class="ui-state-highlight"><p>Geo</p></li>
+                                    <li class="ui-state-highlight"><p>Sentiment</p></li>
                                 </ul>
                             </div>
                         </div>
