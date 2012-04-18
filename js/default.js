@@ -333,12 +333,20 @@ $("#dev-home-link").click(function(){
         'left': '0px'
         }, {queue: false}
         );
+    $(".developer-section-sliding-panel").css({
+        'height': '1300px !important'
+        }, {queue: false}
+        );
     }
     );
 
 $("#dev-console-link").click(function(){
     $("#developer-body-slider").animate({
         'left': '-1240px'
+        }, {queue: false}
+        );
+    $(".developer-section-sliding-panel").css({
+        'height': '800px !important'
         }, {queue: false}
         );
     }
@@ -349,6 +357,10 @@ $("#dev-queries-link").click(function(){
         'left': '-2480px'
         }, {queue: false}
         );
+    $(".developer-section-sliding-panel").css({
+        'height': '5800px !important'
+        }, {queue: false}
+        );
     }
     );
 
@@ -357,12 +369,20 @@ $("#dev-api-link").click(function(){
         'left': '-3720px'
         }, {queue: false}
         );
+    $(".developer-section-sliding-panel").css({
+        'height': '2800px !important'
+        }, {queue: false}
+        );
     }
     );
 
 $("#dev-addons-link").click(function(){
     $("#developer-body-slider").animate({
         'left': '-4960px'
+        }, {queue: false}
+        );
+    $(".developer-section-sliding-panel").css({
+        'height': '600px !important'
         }, {queue: false}
         );
     }
