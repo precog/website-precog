@@ -523,7 +523,7 @@ $("#admin-your-pa").click(function(){
    }, {queue: false});
 });
 
-$("#admin-your-tolkens").click(function(){
+$("#admin-your-tokens").click(function(){
     $("#body-content-admin-slider").animate({
         'left': '-2480px'
         }, {queue: false}
@@ -568,6 +568,31 @@ $('.admin-token-delete').live('click', function() {
 $('.admin-stack-delete').live('click', function() {
     $(this).closest('.admin-addon-stack').remove();
 });
+
+$("#admin-your-info").click(function(){
+      $("li.right-menu-link-sub").css({
+        'display': 'block'
+        }, {queue: false}
+        );
+    }
+    );
+
+$("#admin-your-pa").click(function(){
+      $("li.right-menu-link-sub").css({
+        'display': 'none'
+        }, {queue: false}
+        );
+    }
+    );
+
+$("#admin-your-tokens").click(function(){
+      $("li.right-menu-link-sub").css({
+        'display': 'none'
+        }, {queue: false}
+        );
+    }
+    );
+
 
 //NEWS AND EVENTS
 $("#news-items-only").click(function(){

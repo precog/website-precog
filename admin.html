@@ -2,18 +2,18 @@
 <html>
     <head>
         <title>Admin</title>
-        <link rel="stylesheet" type="text/css" href="css/innerpage.css">
-        <link rel="stylesheet" type="text/css" href="css/admin.css">
+        <link rel="stylesheet" href="css/innerpage.css">
+        <link rel="stylesheet" href="css/admin.css">
         <link rel="shortcut icon" href="http://precog.io/images/icon-favicon.ico" mce_href="http://precog.io/images/icon-favicon.ico"/>
         <!--[if (gte IE 6)&(lte IE 8)]>
-                <script type="text/javascript" src="js/selectivizr.js"></script>
+                <script src="js/selectivizr.js"></script>
                 <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
         <![endif]-->
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="js/admin.js"></script>
-        <script type="text/javascript" src="js/jquery.console.js"></script>
-        <script type="text/javascript" src="js/console.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+        <script src="js/admin.js"></script>
+        <script src="js/jquery.console.js"></script>
+        <script src="js/console.js"></script>
     </head>
     <body>
         <div id="sticker-precog-beta">
@@ -54,7 +54,7 @@
                             <h2>Your Information</h2>
                             <p>Your slice of the Precog platform. Change your plan, update personal information, select addons from our marketplace, track your usage, its all here!</p>
                             <div id="admin-information">
-                                <h2>E-mail Address</h2>
+                                <h2 id="email-link">E-mail Address</h2>
                                 <div class="admin-left-fields">
                                     <div class="field-group">
                                         <form id="currentemail" action="" method="">
@@ -71,26 +71,26 @@
                                 <div class="atrib-clear-left">
                                 </div>
                                 <div class="body-section-breaker"></div>
-                                <h2>Password</h2>
+                                <h2 id="password-link">Password</h2>
                                 <p class="admin-normal">To change your current password provide the following information.</p>
                                 <div class="admin-left-fields">
                                     <div class="field-group">
                                         <form id="changepassword" action="" method="">
                                            <p>Current Password:</p><input type="password" name="oldpassword" autocomplete="off" tabindex="4">
-                                           <p>New Password:</p><input type="password" name="password" autocomplete="off" tabindex="6">
+                                           <p>New Password:</p><input type="password" name="password" autocomplete="off" tabindex="5">
                                            <input type="submit" id="submitpassword" class="admin-update-button" value="" tabindex="7">
                                     </div>
                                 </div>
                                 <div class="admin-right-fields">
                                     <div class="field-group">
-                                            <p>Password Confirm:</p><input type="password" name="confirmpassword" autocomplete="off" tabindex="5">
+                                            <p class="card-height-adjust">Password Confirm:</p><input type="password" name="confirmpassword" autocomplete="off" tabindex="6">
                                         </form>
                                     </div>
                                 </div>
                                 <div class="atrib-clear-left">
                                 </div>
                                 <div class="body-section-breaker"></div>
-                                <h2>Contact Information</h2>
+                                <h2 id="contact-link">Contact Information</h2>
                                 <form id="changeaccount" class="rgform" action="" method="">
                                    <div class="admin-left-fields">
                                         <div class="field-group">
@@ -115,7 +115,7 @@
                                    </div>
                                </form>
                                 <div class="body-section-breaker"></div>
-                               <h2>Billing</h2>
+                               <h2 id="billing-link">Billing</h2>
                                <div class="admin-left-fields" id="current-billing-info">
                                     <div class="field-group">
                                         <p class="admin-normal">Payments are done using the following information:</p>
@@ -162,6 +162,22 @@
                                 </div>
                                 <div class="atrib-clear-left">
                                 </div>
+                            </div>
+                            <div class="body-section-breaker"></div>
+                            <div id="admin-your-apps">
+                                <h2>Your Apps</h2>
+                                <div class="admin-apps">
+                                </div>
+                                <div class="admin-apps">
+                                </div>
+                                <div class="admin-apps">
+                                </div>
+                                <div class="admin-apps">
+                                </div>
+                                <div class="admin-apps">
+                                </div>
+                            </div>
+                            <div class="atrib-clear-left">
                             </div>
                             <div class="body-section-breaker"></div>
                             <div class="default-stack">
@@ -212,7 +228,7 @@
                                 </div>
                             </div>
                             <div class="body-section-breaker"></div>
-                            <h2>Your Apps</h2>
+                            <h2>Your Add-ons</h2>
                             <div class="your-apps">
                                 <ul id="admin-your-apps">
                                     <li class="ui-state-highlight"><p>Demographics</p></li>
@@ -220,6 +236,11 @@
                                     <li class="ui-state-highlight"><p>Geo</p></li>
                                     <li class="ui-state-highlight"><p>Sentiment</p></li>
                                 </ul>
+                            </div>
+                            <div class="atrib-clear-left">
+                            </div>
+                            <div id="admin-addon-button">
+                                <a href="add-ons.html"></a>
                             </div>
                         </div>
                         <div class="body-content-left-admin">
@@ -281,9 +302,15 @@
                 <div id="body-content-right-admin">
                     <div id="content-right-menu">
                         <ul>
-                            <li id="admin-your-info"><a href="#">your information</a></li>
-                            <li id="admin-your-pa"><a href="#">your plan & add-ons</a></li>
-                            <li id="admin-your-tolkens"><a href="#" >your tolkens</a></li>
+                            <li class="right-menu-link" id="admin-your-info"><a href="#">profile information</a></li>
+                            <ul>
+                                <li class="right-menu-link-sub"><a href="#email-link">e-mail</a></li>
+                                <li class="right-menu-link-sub"><a href="#password-link">password</a></li>
+                                <li class="right-menu-link-sub"><a href="#contact-link">contact</a></li>
+                                <li class="right-menu-link-sub"><a href="#billing-link">billing</a></li>
+                            </ul>
+                            <li class="right-menu-link-alt" id="admin-your-pa"><a href="#">your plan & add-ons</a></li>
+                            <li class="right-menu-link-alt" id="admin-your-tokens"><a href="#">your tolkens</a></li>
                         </ul>
                     </div>
                 </div>

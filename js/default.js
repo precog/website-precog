@@ -9,8 +9,12 @@ $('.sticker-repl-main-square').click(function () {
 });
 
 $('.body-sticker-repl').click(function () {
-    window.open('queries.html','_self');
-});
+    $("#developer-body-slider").animate({
+        'left': '-1240px'
+        }, {queue: false}
+        );
+    }
+    );
 
 $('#news-box-home-page').click(function () {
     window.open('news-and-events.html','_self');
@@ -322,6 +326,46 @@ $(".dev-center-api-docs").mouseover(function(){
         }, {queue: false}
         );
       }
+    );
+
+$("#dev-home-link").click(function(){
+    $("#developer-body-slider").animate({
+        'left': '0px'
+        }, {queue: false}
+        );
+    }
+    );
+
+$("#dev-console-link").click(function(){
+    $("#developer-body-slider").animate({
+        'left': '-1240px'
+        }, {queue: false}
+        );
+    }
+    );
+
+$("#dev-queries-link").click(function(){
+    $("#developer-body-slider").animate({
+        'left': '-2480px'
+        }, {queue: false}
+        );
+    }
+    );
+
+$("#dev-api-link").click(function(){
+    $("#developer-body-slider").animate({
+        'left': '-3720px'
+        }, {queue: false}
+        );
+    }
+    );
+
+$("#dev-addons-link").click(function(){
+    $("#developer-body-slider").animate({
+        'left': '-4960px'
+        }, {queue: false}
+        );
+    }
     );
 
 //PRICING
