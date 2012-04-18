@@ -358,7 +358,7 @@ $("#dev-queries-link").click(function(){
         }, {queue: false}
         );
     $(".developer-section-sliding-panel").css({
-        'height': '5800px !important'
+        'height': '7000px !important'
         }, {queue: false}
         );
     }
