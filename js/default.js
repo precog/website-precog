@@ -2,15 +2,23 @@ $(document).ready(function(){
 
 $('.sticker-repl-main').click(function () {
     window.open('developer-center.html','_self');
+    $("#developer-body-slider").animate({
+        'left': '-2480px'
+        }, {queue: false}
+        );
 });
 
 $('.sticker-repl-main-square').click(function () {
     window.open('developer-center.html','_self');
+    $("#developer-body-slider").animate({
+        'left': '-2480px'
+        }, {queue: false}
+        );
 });
 
 $('.body-sticker-repl').click(function () {
     $("#developer-body-slider").animate({
-        'left': '-1240px'
+        'left': '-2480px'
         }, {queue: false}
         );
     }
