@@ -242,7 +242,7 @@
                                 <div class="console-execute-button button-top-adjust" id="console-load-execute-button">
                                 </div>
                             </div>
-                            <script type="text/javascript">buildConsole('console-load', 'load(//payments)')</script>
+                            <script type="text/javascript">buildConsole('console-load', '//payments')</script>
                             <div class="body-section-breaker">
                             </div>
                             <p>The load function returns all the data stored at the specified path, even if the values have differing types or schemas.</p>
@@ -253,14 +253,14 @@
                                 <div class="console-execute-button button-top-adjust" id="console-jsproperty-execute-button">
                                 </div>
                             </div>
-                            <script type="text/javascript">buildConsole('console-jsproperty', 'payments := load(//payments)\npayments.date')</script>
+                            <script type="text/javascript">buildConsole('console-jsproperty', 'payments := //payments\npayments.date')</script>
         
                             <div class="console-tutorials console" id="console-arrayaccess"></div>
                             <div class="console-execute">
                                 <div class="console-execute-button button-top-adjust" id="console-arrayaccess-execute-button">
                                 </div>
                             </div>
-                            <script type="text/javascript">buildConsole('console-arrayaccess', 'payments := load(//payments)\npayments.recipients[0]')</script>
+                            <script type="text/javascript">buildConsole('console-arrayaccess', 'payments := //payments\npayments.recipients[0]')</script>
                             <div class="body-section-breaker">
                             </div>
                             <h2>REDUCTIONS</h2>
@@ -270,21 +270,21 @@
                                 <div class="console-execute-button button-top-adjust" id="console-sumcount-execute-button">
                                 </div>
                             </div>
-                            <script type="text/javascript">buildConsole('console-sumcount', 'count(load(//payments))')</script>
+                            <script type="text/javascript">buildConsole('console-sumcount', 'count(//payments)')</script>
         
                             <div class="console-tutorials console" id="console-summean"></div>
                             <div class="console-execute">
                                 <div class="console-execute-button button-top-adjust" id="console-summean-execute-button">
                                 </div>
                             </div>
-                            <script type="text/javascript">buildConsole('console-summean', 'mean(load(//payments).amount)')</script>
+                            <script type="text/javascript">buildConsole('console-summean', 'mean(//payments.amount)')</script>
         
                             <div class="console-tutorials console" id="console-sumsum"></div>
                             <div class="console-execute">
                                 <div class="console-execute-button button-top-adjust" id="console-sumsum-execute-button">
                                 </div>
                             </div>
-                            <script type="text/javascript">buildConsole('console-sumsum', 'sum(load(//payments).amount)')</script>
+                            <script type="text/javascript">buildConsole('console-sumsum', 'sum(//payments.amount)')</script>
                             <div class="body-section-breaker">
                             </div>
                             <p>See the Quirrel reference guide for documentation on all supported reductions.</p>
@@ -299,7 +299,7 @@
                                 <div class="console-execute-button button-top-adjust" id="console-identity-execute-button">
                                 </div>
                             </div>
-                            <script type="text/javascript">buildConsole('console-identity', 'orders := load(//orders)\norders.subTotal + orders.subTotal * orders.taxRate + orders.shipping + orders.handling')</script>
+                            <script type="text/javascript">buildConsole('console-identity', 'orders := //orders\norders.subTotal + orders.subTotal * orders.taxRate + orders.shipping + orders.handling')</script>
                             <div class="body-section-breaker">
                             </div>
                             <p>The set-oriented nature of Quirrel lets you perform bulk operations without having to iterate over elements. This property is also what makes it possible to efficiently distribute Quirrel queries across clusters of machines.</p>
@@ -310,7 +310,7 @@
                                 <div class="console-execute-button button-top-adjust" id="console-values-execute-button">
                                 </div>
                             </div>
-                            <script type="text/javascript">buildConsole('console-values', 'load(//payments).amount * 0.10')</script>
+                            <script type="text/javascript">buildConsole('console-values', '//payments.amount * 0.10')</script>
                             <div class="body-section-breaker">
                             </div>
                             <p>In this example, all values in the <em>payments.amount</em> set are multiplied by 0.10, because the 0.10 event has bottom identity and therefore matches with all events in the "payments.amount" set.</p>
@@ -321,14 +321,14 @@
                                 <div class="console-execute-button button-top-adjust" id="console-filter-execute-button">
                                 </div>
                             </div>
-                            <script type="text/javascript">buildConsole('console-filter', 'payments := load(//payments)\ncount(payments where payments.amount > 10.00)')</script>
+                            <script type="text/javascript">buildConsole('console-filter', 'payments := //payments\ncount(payments where payments.amount > 10.00)')</script>
         
                             <div class="console-tutorials console" id="console-where"></div>
                             <div class="console-execute">
                                 <div class="console-execute-button button-top-adjust" id="console-where-execute-button">
                                 </div>
                             </div>
-                            <script type="text/javascript">buildConsole('console-where', 'users := load(//users)\nsegment := users.age > 19 & users.age < 53 & users.income > 60000\ncount(users where segment)')</script>
+                            <script type="text/javascript">buildConsole('console-where', 'users := //users\nsegment := users.age > 19 & users.age < 53 & users.income > 60000\ncount(users where segment)')</script>
                             <div class="body-section-breaker">
                             </div>
                             <p>The <em>where</em> operator in Quirrel is not magical -- it's simply a function from two sets (one of which is a boolean set) to one set. You can store the boolean set in a variable if you want to use it multiple times.</p>
@@ -339,7 +339,7 @@
                                 <div class="console-execute-button button-top-adjust" id="console-chaining-execute-button">
                                 </div>
                             </div>
-                            <script type="text/javascript">buildConsole('console-chaining', 'pageViews := load(//pageViews)\nbound := 1.5 * stdDev(pageViews.duration)\navg := mean(pageViews.duration)\nlongPageViews := pageViews where pageViews.duration > (avg + bound)\nlongPageViews.userId')</script>
+                            <script type="text/javascript">buildConsole('console-chaining', 'pageViews := //pageViews\nbound := 1.5 * stdDev(pageViews.duration)\navg := mean(pageViews.duration)\nlongPageViews := pageViews where pageViews.duration > (avg + bound)\nlongPageViews.userId')</script>
                             <div class="body-section-breaker">
                             </div>
                             <p>This query identifies users who spend an unusually long amount of time viewing a page.</p>
@@ -348,7 +348,7 @@
                             <div class="console-tutorials console" id="console-userfunction">
                                 <div class="jquery-console-inner jquery-console-nofocus">
                                     <div class="jquery-console-prompt-box">
-                                        <span class="jquery-console-prompt-label">       | </span><span class="jquery-console-prompt">pageViews := load(//pageViews)</span>
+                                        <span class="jquery-console-prompt-label">       | </span><span class="jquery-console-prompt">pageViews := //pageViews</span>
                                     </div>
                                     <div class="jquery-console-prompt-box">
                                         <span class="jquery-console-prompt-label">       | </span><span class="jquery-console-prompt">pageViewsForUser('userId) := pageViews where pageViews.userId = 'userId</span>
@@ -365,7 +365,7 @@
                                 <div class="console-execute-button button-top-adjust" id="console-fullyapplied-execute-button">
                                 </div>
                             </div>
-                            <script type="text/javascript">buildConsole('console-fullyapplied', 'pageViews := load(//pageViews)\npageViewsForUser(\'userId) := pageViews where pageViews.userId = \'userId\npageViewsForUser(12345)')</script>
+                            <script type="text/javascript">buildConsole('console-fullyapplied', 'pageViews := //pageViews\npageViewsForUser(\'userId) := pageViews where pageViews.userId = \'userId\npageViewsForUser(12345)')</script>
                             <div class="body-section-breaker">
                             </div>
                             <h2>PARTIALLY-APPLIED FUNCTIONS, PART I</h2>
@@ -379,7 +379,7 @@
                                 <div class="console-execute-button button-top-adjust" id="console-partialfunction1-execute-button">
                                 </div>
                             </div>
-                            <script type="text/javascript">buildConsole('console-partialfunction1', 'pageViews := load(//pageViews)\npageViewsForUser(\'userId) :=\n  {userId: \'userId, meanPageView: mean(pageViews.duration where pageViews.userId = \'userId)}\npageViewsForUser')</script>
+                            <script type="text/javascript">buildConsole('console-partialfunction1', 'pageViews := //pageViews\npageViewsForUser(\'userId) :=\n  {userId: \'userId, meanPageView: mean(pageViews.duration where pageViews.userId = \'userId)}\npageViewsForUser')</script>
                             <div class="body-section-breaker">
                             </div>
                             <p>This query results in average page view durations for all users.</p>
@@ -390,7 +390,7 @@
                                 <div class="console-execute-button button-top-adjust" id="console-partialfunction2-execute-button">
                                 </div>
                             </div>
-                            <script type="text/javascript">buildConsole('console-partialfunction2', 'clicks := load(//clicks)\nviews  := load(//views)\nclickthroughRate(\'page) :=\n  {page: \'page, ctr: count(clicks where clicks.pageId = \'page) /\n                     count(views where views.pageId = \'page)}\nclickthroughRate')</script>
+                            <script type="text/javascript">buildConsole('console-partialfunction2', 'clicks := //clicks\nviews  := //views\nclickthroughRate(\'page) :=\n  {page: \'page, ctr: count(clicks where clicks.pageId = \'page) /\n                     count(views where views.pageId = \'page)}\nclickthroughRate')</script>
                             <div class="body-section-breaker">
                             </div>
                             <p>The final set contains objects that have a <em>page</em> field and a <em>ctr</em> field (the clickthrough rate for the specified page).</p>
@@ -401,7 +401,7 @@
                                 <div class="console-execute-button button-top-adjust" id="console-augmentation-execute-button">
                                 </div>
                             </div>
-                            <script type="text/javascript">buildConsole('console-augmentation', 'clicks := load(//clicks)\nclicksWithDays := clicks with {day: (std :: time :: dayOfYear(clicks.timeString)) }\nclicksWithDays')</script>
+                            <script type="text/javascript">buildConsole('console-augmentation', 'clicks := //clicks\nclicksWithDays := clicks with {day: (std :: time :: dayOfYear(clicks.timeString)) }\nclicksWithDays')</script>
                             <div class="body-section-breaker">
                             </div>
                             <p>In this query, a "day" field is added to the click objects.</p>
@@ -412,7 +412,7 @@
                                 <div class="console-execute-button button-top-adjust" id="console-join-execute-button">
                                 </div>
                             </div>
-                            <script type="text/javascript">buildConsole('console-join', 'customers := load(//customers)\norders := load(//orders)\nfractionForUser(\'userId) :=\n  customers\' := customers where customers.userId = \'userId\n  orders\' := orders where orders.userId = \'userId\n  customers\' ~ orders\'\n  orders.total / customers.income\nfractionForUser')</script>
+                            <script type="text/javascript">buildConsole('console-join', 'customers := //customers\norders := //orders\nfractionForUser(\'userId) :=\n  customers\' := customers where customers.userId = \'userId\n  orders\' := orders where orders.userId = \'userId\n  customers\' ~ orders\'\n  orders.total / customers.income\nfractionForUser')</script>
                             <div class="body-section-breaker">
                             </div>
                             <p>The above query relates the customers and orders sets by their userId field, then computes the total order cost over income. The relate operator is similar to SQL's JOIN operator, but more powerful.</p>
@@ -423,7 +423,7 @@
                                 <div class="console-execute-button button-top-adjust" id="console-selfjoin-execute-button">
                                 </div>
                             </div>
-                            <script type="text/javascript">buildConsole('console-selfjoin', 'users  := load(//users)\nusers\' := new users\nusers ~ users\'\n{ location: users.location.state,  income: users.income }')</script>
+                            <script type="text/javascript">buildConsole('console-selfjoin', 'users  := //users\nusers\' := new users\nusers ~ users\'\n{ location: users.location.state,  income: users.income }')</script>
                             <div class="body-section-breaker">
                             </div>
                             <p>The above query produces a cross-product of all states and income levels.</p>
