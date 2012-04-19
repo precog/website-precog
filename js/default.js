@@ -1,11 +1,11 @@
 $(document).ready(function(){
 
 $('.sticker-repl-main').click(function () {
-    window.open('queries.html','_self');
+    window.open('developer-center.html','_self');
 });
 
 $('.sticker-repl-main-square').click(function () {
-    window.open('queries.html','_self');
+    window.open('developer-center.html','_self');
 });
 
 $('.body-sticker-repl').click(function () {
