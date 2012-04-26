@@ -455,6 +455,15 @@ h1 {
     width: 500px;
 }
 
+.body-title-alt {
+    font-size: 40px;
+    color: #C03C26;
+    margin-bottom: 2px;
+    padding-top: 50px;
+    z-index: 10;
+    width: 500px;
+}
+
 #body-content-left p {
     font-family:  Helvetica, Questrial, sans-serif;
     font-weight: lighter;
@@ -1838,7 +1847,7 @@ h1 {
 
 /*DEVELOPER CENTER*/
 #body-content-left-dev-cntr {
-    width: 780px;
+    width: 770px;
     float: left;
     padding-right: 58px;
     border-right: solid;
@@ -1850,16 +1859,12 @@ h1 {
 #developer-body-slider {
     width: 8000px;
     left: 0px;
-    margin: 0px;
-    padding: 0px;
-    top: 0px;
 }
 
 .developer-section-sliding-panel {
     width: 780px;
     height: 1300px;
     float: left;
-    margin-top: 30px;
     padding-right: 460px;
 }
 

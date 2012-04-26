@@ -1,32 +1,12 @@
 $(document).ready(function(){
 
 $('.sticker-repl-main').click(function () {
-    window.open('developer-center.html#','_self');
-    if(window.location.hash) {
-      $("#developer-body-slider").animate({
-        'left': '-2480px'
-        }, {queue: false}
-        );
-    } else {
-      // Fragment doesn't exist
-    }
+    window.open('developer-center.html#queries-link','_self');
 });
 
 $('.sticker-repl-main-square').click(function () {
-    window.open('developer-center.html','_self');
-    $("#developer-body-slider").animate({
-        'left': '-2480px'
-        }, {queue: false}
-        );
+    window.open('developer-center.html#queries-link','_self');
 });
-
-$('.body-sticker-repl').click(function () {
-    $("#developer-body-slider").animate({
-        'left': '-2480px'
-        }, {queue: false}
-        );
-    }
-    );
 
 $("#home-machine-learning-actor").mouseleave(function () {
       $("#background-header-image-holder").toggleClass("header-image-alt-1");
@@ -318,7 +298,7 @@ $("#dev-home-link").click(function(){
         }, {queue: false}
         );
     $(".developer-section-sliding-panel").css({
-        'height': '1300px'
+        'height': '1400px'
         }, {queue: false}
         );
     }

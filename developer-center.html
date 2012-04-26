@@ -12,6 +12,28 @@
         <script type="text/javascript" src="js/default.js"></script>
         <script type="text/javascript" src="js/jquery.console.js"></script>
         <script type="text/javascript" src="js/console.js"></script>
+        <script type="text/javascript">
+ 
+        //check if hash tag exists in the URL
+        if(window.location.hash) {
+         
+         //set the value as a variable, and remove the #
+        var hash_value = window.location.hash.replace('#', '');
+         
+        function hash() {
+        
+        if (hash_value == "queries-link")
+        $("#developer-body-slider").animate({
+            'left': '-2480px'
+            });
+        $(".developer-section-sliding-panel").css({
+        'height': '7000px'
+        }, {queue: false}
+        );
+        }
+         setTimeout(hash, 250)
+        }
+        </script>
     </head>
     <body>
         <div id="sticker-precog-beta">
@@ -47,8 +69,8 @@
                 </div>
                 <div id="body-content-left-dev-cntr">
                     <div id="developer-body-slider">
-                        <div class="developer-section-sliding-panel">
-                            <h1 class="body-title">DEVELOPER CENTER</h1>
+                        <div class="developer-section-sliding-panel" id="console-devcntr">
+                            <h1 class="body-title-alt">DEVELOPER CENTER</h1>
                             <h2>Overview</h2>
                             <p>Precog is designed to be used by developers who are building applications, and who need to capture, enrich, and analyze data to power intelligent, insightful features inside their applications. Precog is ideal for doing advanced analytics, statistics, and predictive modeling across large, multi-structured data sets.</p>
                             <p>The primary interface to Precog is through the <a href="api-documentation.html">REST API</a>. However, Precog develops and maintains a growing roster of client libraries for common programming languages. These libraries make it easier to use the REST API, and some of them add higher-level functions to perform common operations in analytics and statistics.</p>
@@ -98,8 +120,8 @@
                             <p>Signing up will give you access to a token that you can use to interact with the API. The token keeps your data safe and secure, accessible only to you.</p>
                             <p>Once you have your token, head over to the <a href="api-documentation.html">API documentation</a> page to learn what to do with it!</p>
                         </div>
-                        <div class="developer-section-sliding-panel" id="developer-console-link">
-                            <h1 class="body-title">REPL</h1>
+                        <div class="developer-section-sliding-panel" id="console-link">
+                            <h1 class="body-title-alt">REPL</h1>
                             <p>Come in and have fun with our console! If you're new to our platform, <a href="developer-center.html">explore our tutorial</a>. For more detailed information about Quirrel, the query language implemented by the Precog platform, visit the <a href="http://whatisquirrel.com">Quirrel language site</a>. Enjoy!</p>
                             <div id="sticker-console">
                             </div>
@@ -127,8 +149,8 @@
                               <li>//views</li>
                             </ul>
                         </div>
-                        <div class="developer-section-sliding-panel" id="developer-queries-link">
-                            <h1 class="body-title">QUERIES</h1>
+                        <div class="developer-section-sliding-panel" id="queries-link">
+                            <h1 class="body-title-alt">QUERIES</h1>
                             <p>Precog lets you do very sophisticated analytical and statistical queries.</p>
                             
                             <p>Most common kinds of analytics and statistics are built into the client libraries for your favorite
@@ -428,8 +450,8 @@
                             <p>Quirrel has many built-in functions that help you do analytics. However, you now know all there is to know about Quirrel syntax and semantics.</p>
                             <p>Go ahead and play with our <a href="developer-center.html">live console</a> to explore further!</p>
                         </div>
-                        <div class="developer-section-sliding-panel">
-                            <h1 class="body-title">API DOCUMENTATION</h1>
+                        <div class="developer-section-sliding-panel" id="console-apidocs">
+                            <h1 class="body-title-alt">API DOCUMENTATION</h1>
                               <div class="api-language">
                                 <div class="language-json">
                                     <p>JSON</p>
@@ -892,8 +914,8 @@
                                 </table>
                               </div>
                         </div>
-                        <div class="developer-section-sliding-panel">
-                            <h1 class="body-title">ADD-ONS DOCUMENTATION</h1>
+                        <div class="developer-section-sliding-panel" id="console-addondocs">
+                            <h1 class="body-title-alt">ADD-ONS DOCUMENTATION</h1>
                             <h2>Coming Soon!</h2>
                             <p>UNDER CONSTRUCTION</p>
                             <div class="body-section-breaker">
