@@ -212,13 +212,17 @@ h1 {
 }
 
 .sticker-repl-main {
+    background-image: url("../images/graphic-repl-alien.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 180px;
+    height: 120px;
     position: absolute;
-    right: 0px;
+    right: -180px;
+    top: -16px;
     z-index: 20;
-    background-image: url("../images/sticker-repl-play-2.png");
-    width: 209px;
-    height: 52px;
     cursor: pointer;
+    text-align: center;
 }
 
 /*body*/
@@ -1860,34 +1864,41 @@ h1 {
 }
 
 .body-sticker-repl {
-    background-image: url("../images/sticker-repl-play.png");
-    width: 209px;
-    height: 52px;
+    background-image: url("../images/graphic-repl-alien.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 180px;
+    height: 120px;
     position: absolute;
-    right: 470px;
-    top: 20px;
+    right: -180px;
+    top: -80px;
     z-index: 20;
     cursor: pointer;
+    text-align: center;
 }
 
 #body-content-left-dev-cntr .body-sticker-repl p, .body-content-left-admin .body-sticker-repl p {
-    color: #fff;
-    font-size: 9pt;
-    left: 80px;
-    width: 110px;
-    top: 4px;
-    font-family: Questrial;
-    line-height: 1.5;
+    color: #808080;
+    font-size: 8pt;
+    font-family: questrial;
+    width: 180px;
+    top: 82px;
+    letter-spacing: 1px;
+    line-height: 1.4;
 }
 
 .sticker-repl-main p {
-    color: #fff;
-    font-size: 10pt;
-    left: 80px;
-    width: 120px;
-    top: 8px;
+    color: #808080;
+    font-size: 8pt;
     font-family: questrial;
-    line-height: 1.5;
+    width: 180px;
+    top: 82px;
+    letter-spacing: 1px;
+    line-height: 1.4;
+}
+
+.p-red {
+    color: #FF0000;
 }
 
 #body-content-left-dev-cntr h2, .body-content-left-admin h2 {
