@@ -8,8 +8,14 @@
                 <script type="text/javascript" src="js/selectivizr.js"></script>
                 <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
         <![endif]-->
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <script type="text/javascript" src="js/default.js"></script>
+        <script src="js/jquery.roundabout.js"></script>
+        <script>
+            $(document).ready(function() {
+               $('ul.home-usecases').roundabout();
+            });
+         </script>
         <script type="text/javascript">
         if (document.images) {
             img1 = new Image();
@@ -20,15 +26,15 @@
             img3.src = "images/button-newsletter-signup-sm-alt.png";
         }
         </script>
-<script type="text/javascript">
-$(document).ready(function(){
-    $('a[href^="mailto:"]').click(function(){
-        var el = $(this);
-        _gaq.push(['_trackEvent', 'Contact', el.attr('href').split(':').pop()]);
-        return true;
-    })
-})
-</script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $('a[href^="mailto:"]').click(function(){
+                var el = $(this);
+                _gaq.push(['_trackEvent', 'Contact', el.attr('href').split(':').pop()]);
+                return true;
+            })
+        })
+        </script>
     </head>
     <body>
         <div id="sticker-precog-beta">
@@ -55,113 +61,173 @@ $(document).ready(function(){
                 </div>
                 <div id="header-apps">
                     <div class="sticker-repl-main-square">
-                        <p>play with our super analytics api</p>
+                        <p>play with our <span class="p-red">repl</span></p>
+                        <p>analytics api</p>
                     </div>
-                    <div class="yourapp-box-text" id="app-text-yourapp">
-                        <p>Hello Franco</p>
-                    </div>
-                    <div class="yourapp-box-text" id="app-text-yourapp-alt">
-                        <p>How are you today?</p>
-                    </div>
-                    <div class="yourapp-box-text" id="app-text-yourcrm">
-                        <p>Did you ride your pink bike home?</p>
-                    </div>
-                    <div class="yourapp-box-text" id="app-text-yourcrm-alt">
-                        <p>If so, I bet you looked splendid.</p>
-                    </div>
-                    <div class="yourapp-box-text" id="app-text-yourhelpdesk">
-                        <p>Are you sure that isn't your daughters bike?.</p>
-                    </div>
-                    <div class="yourapp-box-text" id="app-text-yourhelpdesk-alt">
-                        <p>It would be just horrible if you stole your daughter's bike</p>
-                    </div>
-                    <div class="yourapp-box-text" id="app-text-yourecom">
-                        <p>Well that about it for today.</p>
-                    </div>
-                    <div class="yourapp-box-text" id="app-text-yourecom-alt">
-                        <p>Have a nice day.</p>
-                    </div>
-                    <div id="background-apps">
-                        <div class="app-container">
-                            <div class="app" id="yourapp">    
-                                <div class="box">
-                                </div>
-                                <div class="box-alt">
-                                </div>
-                            </div>
-                            <div class="app" id="yourcrm">
-                                <div class="box">
-                                </div>
-                                <div class="box-alt">
-                                </div>
-                            </div>
-                            <div class="app" id="yourhelpdesk">
-                                <div class="box">
-                                </div>
-                                <div class="box-alt">
-                                </div>
-                            </div>
-                            <div class="app" id="yourecom">
-                                <div class="box">
-                                </div>
-                                <div class="box-alt">
-                                </div>
-                            </div>
+                    <div id="background-header-image-holder">
+                        <div id="home-machine-learning">
+                            <p><span id="home-machine-learning-actor" class="tooltip" data-tooltip="temp">machine learning</span></p>
                         </div>
-                        <div id="button-yourapp" class="active">
-                            <a href="#"></a>
+                        <div id="home-statistics">
+                            <p><span id="home-statistics-actor" class="tooltip" data-tooltip="temp">statistics</span></p>
                         </div>
-                        <div id="button-yourapponquerio">
-                            <a href="#"></a>
+                        <div id="home-analytics">
+                            <p><span id="home-analytics-actor" class="tooltip" data-tooltip="temp">analytics</span></p>
                         </div>
                     </div>
                     <div id="app-textbox">
                         <h1>BUILD SMART APPS</h1>
-                        <p>Precog is a big data analytics platform that helps you build apps that are intelligent and insightful.</p>
-                        <p>With our simple APIs, you can store, enrich, and analyze massive amounts of multi-structured data to power mind-blowing features in your apps.</p>
+                        <p>Precog is a new kind of database designed for solving arbitrary problems in <span class="important-p">analytics</span>, <span class="important-p">statistics</span>, and <span class="important-p">machine learning</span>.</p>
+                        <p>Hosted in the cloud and infinitely scalable, Precog provides <span class="important-p">infrastructure APIs</span> that help you build mind-blowing <span class="important-p">intelligence and insights</span> in your application.</p>
                         <div id="button-getstarted-m">
                             <a href="how-it-works.html"></a>
                         </div>
-                    </div>
-                    <div id="apps-bulletselector">
-                        <ul>
-                            <li><a class="app-link active" href="#"></a></li>
-                            <li><a class="app-link" href="#"></a></li>
-                            <li><a class="app-link" href="#"></a></li>
-                            <li><a class="app-link" href="#"></a></li>
-                        </ul>
                     </div>
                 </div>
             </div>
         </div>
         <div id="background-main1">
             <div id="how">
-                <h1>HOW IT WORKS</h1>
-                <div id="how-holder">
-                    <div class="how-textarea">
-                        <h1>RAW DATA IN</h1>
-                        <h2>1</h2>
-                        <p>Use our data storage API to capture huge amounts of structured or unstructured data from your app or any other data source.</p>
+                <div class="how-section">
+                    <div class="how-section-left">
+                        <img src="images/image-precog-fit.png">
+                        <p class="how-p-1">YOUR DATABASE</p>
+                        <p class="how-p-2">PRECOG</p>
+                        <p class="how-p-1-1">TWEETS</p>
+                        <p class="how-p-1-2">MEASUREMENTS</p>
+                        <p class="how-p-1-3">CLICKS</p>
+                        <p class="how-p-1-4">PURCHASE</p>
                     </div>
-                    <div class="how-textarea">
-                        <h1>MARKETPLACE</h1>
-                        <h2>2</h2>
-                        <p>Choose add-ons from the marketplace to enrich your data: geo, demographics, sentiment analysis, social profiles, and others.</p>
-                    </div>
-                    <div class="how-textarea">
-                        <h1>INTELLIGENCE OUT</h1>
-                        <h2>3</h2>
-                        <p>Use our data analysis API inside your app to power real-time intelligence, recommendations, insights, predictions, and more.</p>
+                    <div class="how-section-right">
+                        <h1>HOW DOES PRECOG FIT INTO MY APP?</h1>
+                        <p>Your existing database stores entity data, which change over time (people, places, things). Precog is designed for storing never-ending streams of event-oriented data, such as clicks, measurements, tweets, and transactions.</p>
                     </div>
                 </div>
-                <div id="how-diagram">
+                <div class="how-section-alt">
+                    <img class="how-image" src="images/image-arrow-righttoleft.png">
                 </div>
-                <div id="button-learnmore-m">
-                    <a href="how-it-works.html"></a>
+                <div class="how-section">
+                    <div class="how-section-left">
+                        <h1>HOW DO I GET DATA INTO PRECOG?</h1>
+                        <p>Precog's simple REST API lets you capture events from any source, and on any platform (web, mobile, desktop, server). Precog scales automatically to capture and store all your data and ensures that no event slips through the cracks. You can focus on solving problems instead of maintaining infrastructure.</p>
+                    </div>
+                    <div class="how-section-right">
+                        <img src="images/image-datainto-precog.png">
+                        <p class="how-p-3">WEB</p>
+                        <p class="how-p-4">MOBILE</p>
+                        <p class="how-p-5">SERVER</p>
+                    </div>
+                </div>
+                <div class="how-section-alt">
+                    <img class="how-image" src="images/image-arrow-lefttoright.png">
+                </div>
+                <div class="how-section">
+                    <div class="how-section-left">
+                        <img src="images/image-enhancedata.png">
+                        <p class="how-p-6">OLD DATA</p>
+                        <p class="how-p-7">NEW DATA</p>
+                    </div>
+                    <div class="how-section-right">
+                        <h1>HOW DO I ENHANCE MY DATA?</h1>
+                        <p>Precog's marketplace lets you use third-party add-ons to add structure to unstructured data, clean up dirty data, normalize your data, and mashup your data with third-party sources. Apps in the marketplace let you import and export data from any source, visualize data, and much more.</p>
+                    </div>
+                </div>
+                <div class="how-section-alt">
+                    <img class="how-image" src="images/image-arrow-righttoleft.png">
+                </div>
+                <div class="how-section">
+                    <div class="how-section-left">
+                        <h1>HOW DO I ANALYZE MY DATA?</h1>
+                        <p>Precog's powerful REST API lets you perform deep analysis on your data, ranging from analytics, to statistics, to machine learning. You can focus on what you want to do with your data, instead of how to do it. With Precog, you never need to write any code to do any kind of data analysis.</p>
+                    </div>
+                    <div class="how-section-right">
+                        <img src="images/image-analyzedata.png">
+                        <p class="how-p-8">YOUR APP</p>
+                        <p class="how-p-9">YOUR APP WITH PRECOG</p>
+                    </div>
+                </div>
+                <div class="how-section-alt">
+                    <img class="how-image" src="images/image-arrow-lefttoright.png">
+                </div>
+                <div class="how-section">
+                    <div class="how-section-left">
+                        <img src="images/image-featuresrocket.png">
+                        <p class="how-p-10">DECISION-MAKING</p>
+                        <p class="how-p-11">INSIGHTS</p>
+                        <p class="how-p-12">PERSONALIZATION</p>
+                        <p class="how-p-13">RECOMMENDATIONS</p>
+                        <p class="how-p-14">DATA</p>
+                        <p class="how-p-15">YOUR APP</p>
+                    </div>
+                    <div class="how-section-right">
+                        <h1>WHAT FEATURES CAN I BUILD WITH PRECOG?</h1>
+                        <p>Precog's sophisticated capabilities in analytics, statistics, and machine learning let you build mind-blowing features inside your applications, ranging from insightful reporting, to recommendations, to personalizations, to intelligent decision-making.</p>
+                        <div id="button-getstarted-m-2">
+                            <a href="how-it-works.html"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="how-section-alt-v2">
+                    <img class="how-image" src="images/image-arrow-righttoleft.png">
+                </div>
+            </div>
+        </div>
+        <div id="background-main4">
+            <div id="use-case-holder">
+                <h1>WHAT CAN I DO WITH PRECOG?</h1>
+                <div id="use-case-slider-holder">
+                    <ul class="home-usecases">
+                        <li>
+                            <h2>DECISION-MAKING</h2>
+                            <img src="images/graphic-usecase-decisionmaking.png" alt="Award">
+                        </li>
+			<li>
+                            <h2>INSIGHTS</h2>
+                            <img src="images/graphic-usecase-insight.png" alt="Award">
+                        </li>
+			<li>
+                            <h2>PERSONALIZATION</h2>
+                            <img src="images/graphic-usecase-personalization.png" alt="Award">
+                        </li>
+                        <li>
+                            <h2>RECOMMENDATIONS</h2>
+                            <img src="images/graphic-usecase-recommendations.png" alt="Award">
+                        </li>
+                     </ul>
                 </div>
             </div>
         </div>
         <div id="background-main2">
+            <div id="home-comparison">
+                <div class="comparison-column">
+                    <img class="height-mod" src="images/graphic-build-it-yourself.png">
+                    <ul>
+                        <li><p>Become expert in big data technologies, such as HDFS, Zookeeper, MapReduce, HBase, and Mahout</p></li>
+                        <li><p>Setup and maintain large clusters of machines</p>/li>
+                        <li><p>Keep infrastructure running 24x7 with no data loss and no down time (even during software upgrades)</p></li>
+                        <li><p>Write tens or hundreds of thousands of lines of Java and Python code to do custom analyses</p></li>
+                        <li><p>Maintain ever-growing code bases filled with boilerplate and increasingly complicated workflows</p></li>
+                        <li><p>Deploy new data-driven features on the timescale of months or years</p></li>
+                    </ul>
+                </div>
+                <div id="comparison-vs">
+                </div>
+                <div class="comparison-column">
+                    <img src="images/logo-precog.png">
+                    <ul>
+                        <li><p>No need to become expert in arcane technologies; use our simple REST API to solve any problem in analytics, statistics, or machine learning</p></li>
+                        <li><p>Nothing to install, setup, or maintain, just a simple API that lets you focus on getting stuff done</p></li>
+                        <li><p>Precog runs 24x7, with continuous, real-time backups of your data</p></li>
+                        <li><p>No need to write custom code; our API lets you solve arbitrary problems in analytics and statistics</p></li>
+                        <li><p>Focus on what you want to do with your data, not how to do it; work at the level of intention instead of the level of mechanics</p></li>
+                        <li><p>Deploy new data-driven features on the timescale of hours</p></li>
+                    </ul>
+                </div>
+                <div class="clear-left">
+                </div>
+            </div>
+        </div>
+        <div id="background-main3">
             <div id="com">
                 <div id="com-holder">
                     <div class="com-box" id="news-box-home-page">
@@ -184,8 +250,7 @@ $(document).ready(function(){
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="background-main3">
+            <div class="clear-left"></div>
             <div id="cred">
                 <div id="cred-holder">
                     <div class="cred-box">
@@ -208,6 +273,7 @@ $(document).ready(function(){
                     </div>
                 </div>
             </div>
+            <div class="clear-left"></div>
         </div>                
         <div id="background-footer">
             <div id="footer">
