@@ -60,14 +60,14 @@
 
 	defaults = {
 		bearing: 0.0,
-		tilt: -20.0,
+		tilt: -5.0,
 		minZ: 100,
 		maxZ: 280,
-		minOpacity: 0.2,
+		minOpacity: 0.3,
 		maxOpacity: 1.0,
-		minScale: 0.2,
+		minScale: 0.1,
 		maxScale: 1.0,
-		duration: 500,
+		duration: 1000,
 		btnNext: null,
 		btnNextCallback: function() {},
 		btnPrev: null,

@@ -1,11 +1,15 @@
 $(document).ready(function(){
 
 $('.sticker-repl-main').click(function () {
-    window.open('developer-center.html','_self');
-    $("#developer-body-slider").animate({
+    window.open('developer-center.html#','_self');
+    if(window.location.hash) {
+      $("#developer-body-slider").animate({
         'left': '-2480px'
         }, {queue: false}
         );
+    } else {
+      // Fragment doesn't exist
+    }
 });
 
 $('.sticker-repl-main-square').click(function () {
@@ -24,6 +28,30 @@ $('.body-sticker-repl').click(function () {
     }
     );
 
+$("#home-machine-learning-actor").mouseleave(function () {
+      $("#background-header-image-holder").toggleClass("header-image-alt-1");
+    });
+
+$("#home-machine-learning-actor").mouseenter(function () {
+      $("#background-header-image-holder").toggleClass("header-image-alt-1");
+    });
+
+$("#home-statistics-actor").mouseleave(function () {
+      $("#background-header-image-holder").toggleClass("header-image-alt-2");
+    });
+
+$("#home-statistics-actor").mouseenter(function () {
+      $("#background-header-image-holder").toggleClass("header-image-alt-2");
+    });
+
+$("#home-analytics-actor").mouseleave(function () {
+      $("#background-header-image-holder").toggleClass("header-image-alt-3");
+    });
+
+$("#home-analytics-actor").mouseenter(function () {
+      $("#background-header-image-holder").toggleClass("header-image-alt-3");
+    });
+
 $('#news-box-home-page').click(function () {
     window.open('news-and-events.html','_self');
 });
@@ -39,58 +67,6 @@ $('#com-box-home-page').click(function () {
 $('#report-grid-link').click(function () {
     window.open('http://reportgrid.com/charts.html#pricing-anchor');
 });
-
-var isalt;
-$("#background-apps .box-alt").css('opacity', 0);
-
-$("#button-yourapp").bind("mouseenter", function() {
-  $("#button-yourapp").addClass("active");
-  $("#button-yourapponquerio").removeClass("active");
-
-  isalt = false;
-  $("#background-apps .box-alt").stop().animate({
-    opacity : 0
-  });
-  $("#background-apps .box").stop().animate({
-    opacity : 1
-  });
-})
-
-$("#button-yourapponquerio").bind("mouseenter", function() {
-  $("#button-yourapponquerio").addClass("active");
-  $("#button-yourapp").removeClass("active");
-
-  isalt = true;
-  $("#background-apps .box").stop().animate({
-    opacity : 0
-  });
-  $("#background-apps .box-alt").stop().animate({
-    opacity : 1
-  });
-})
-
-$(".app-link").bind("mouseenter", function() {
-  var links = $(".app-link"),
-      len = links.length,
-      index = links.index(this),
-      container = $('#background-apps .app-container'),
-      width = parseFloat(container.css("width"));
-  links.removeClass("active");
-  $(this).addClass("active");
-  container.animate({
-    left : -index * width / len
-  })
-})
-
-$(".box-alt").mouseenter(function() {
-  var id = "app-text-" + $(this.parentNode).attr("id") + (isalt ? "-alt" : "");
-  $("#"+id).stop().animate({ opacity : 1 })
-})
-
-$(".box-alt").mouseleave(function() {
-  var id = "app-text-" + $(this.parentNode).attr("id") + (isalt ? "-alt" : "");
-  $("#"+id).stop().animate({ opacity : 0 })
-})
 
   // HOW IT WORKS
   $(".capture-lg").mouseover(function(){
