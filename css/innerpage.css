@@ -1863,7 +1863,7 @@ h1 {
 
 .developer-section-sliding-panel {
     width: 780px;
-    height: 1300px;
+    height: 1340px;
     float: left;
     padding-right: 460px;
 }
@@ -1974,7 +1974,7 @@ h1 {
     cursor: pointer;
 }
 
-#content-right-menu ul li.right-menu-link a, #content-right-menu ul li.right-menu-link-alt a {
+#content-right-menu ul li.right-menu-link p, #content-right-menu ul li.right-menu-link-alt p {
     font-family: questrial;
     font-size: 13pt;
     color: #C03B27;

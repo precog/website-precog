@@ -310,7 +310,7 @@ $("#dev-console-link").click(function(){
         }, {queue: false}
         );
     $(".developer-section-sliding-panel").css({
-        'height': '1200px'
+        'height': '860px'
         }, {queue: false}
         );
     }
@@ -322,7 +322,7 @@ $("#dev-queries-link").click(function(){
         }, {queue: false}
         );
     $(".developer-section-sliding-panel").css({
-        'height': '7000px'
+        'height': 'auto'
         }, {queue: false}
         );
     }
@@ -334,7 +334,7 @@ $("#dev-api-link").click(function(){
         }, {queue: false}
         );
     $(".developer-section-sliding-panel").css({
-        'height': '2800px'
+        'height': '2840px'
         }, {queue: false}
         );
     }
@@ -346,7 +346,15 @@ $("#dev-addons-link").click(function(){
         }, {queue: false}
         );
     $(".developer-section-sliding-panel").css({
-        'height': '600px'
+        'height': '300px'
+        }, {queue: false}
+        );
+    }
+    );
+
+$(".console-execute-button").click(function(){
+    $(".developer-section-sliding-panel").css({
+        'height': 'auto'
         }, {queue: false}
         );
     }
