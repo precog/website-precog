@@ -8,27 +8,27 @@ $('.sticker-repl-main-square').click(function () {
     window.open('developer-center.html#queries-link','_self');
 });
 
-$("#home-machine-learning-actor").mouseleave(function () {
+$("#home-machine-learning").mouseleave(function () {
       $("#background-header-image-holder").toggleClass("header-image-alt-1");
     });
 
-$("#home-machine-learning-actor").mouseenter(function () {
+$("#home-machine-learning").mouseenter(function () {
       $("#background-header-image-holder").toggleClass("header-image-alt-1");
     });
 
-$("#home-statistics-actor").mouseleave(function () {
+$("#home-statistics").mouseleave(function () {
       $("#background-header-image-holder").toggleClass("header-image-alt-2");
     });
 
-$("#home-statistics-actor").mouseenter(function () {
+$("#home-statistics").mouseenter(function () {
       $("#background-header-image-holder").toggleClass("header-image-alt-2");
     });
 
-$("#home-analytics-actor").mouseleave(function () {
+$("#home-analytics").mouseleave(function () {
       $("#background-header-image-holder").toggleClass("header-image-alt-3");
     });
 
-$("#home-analytics-actor").mouseenter(function () {
+$("#home-analytics").mouseenter(function () {
       $("#background-header-image-holder").toggleClass("header-image-alt-3");
     });
 

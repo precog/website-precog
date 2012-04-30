@@ -208,20 +208,37 @@ h1 {
 
 #home-machine-learning {
     position: absolute;
-    left: 376px;
-    top: -4px;
+    left: 326px;
+    top: -62px;
+    width: 160px;
+    height: 160px;
+    text-align: center;
+    display: table;
 }
 
 #home-statistics {
     position: absolute;
-    left: 2px;
-    top: 86px;
+    left: -48px;
+    top: 18px;
+    width: 160px;
+    height: 160px;
+    text-align: center;
+    display: table;
 }
 
 #home-analytics {
     position: absolute;
-    left: 390px;
-    top: 332px;
+    left: 340px;
+    top: 262px;
+    width: 160px;
+    height: 160px;
+    text-align: center;
+    display: table;
+}
+
+#home-machine-learning p, #home-statistics p, #home-analytics p {
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .tooltip {
@@ -229,7 +246,7 @@ h1 {
     font-family: questrial;
     color: #808080;
 }
- 
+
 /*.tooltip::after {
     text-align: left;
     background-color: #000;
@@ -675,7 +692,7 @@ p.how-p-15 {
 }
 
 #use-case-slider-holder {
-    padding-left: 150px;
+    padding-left: 50px;
 }
 
 .roundabout-holder {
@@ -683,7 +700,7 @@ p.how-p-15 {
     padding: 0;
     margin: 0;
     height: 200px;
-    width: 750px;
+    width: 950px;
 }
 .roundabout-moveable-item {
     height: 200px;
