@@ -360,6 +360,23 @@ $(".console-execute-button").click(function(){
     }
     );
 
+$("li.right-menu-link").click(function(){
+      $("li.right-menu-link-sub").css({
+        'display': 'none'
+        }, {queue: false}
+        );
+    }
+    );
+
+$("#dev-api-link").click(function(){
+      $("li.right-menu-link-sub").css({
+        'display': 'block'
+        }, {queue: false}
+        );
+    }
+    );
+
+
 //PRICING
 $(".body-pricing-difference").mouseover(function(){
       $(".body-pricing-difference-li").animate({

@@ -1974,6 +1974,10 @@ h1 {
     cursor: pointer;
 }
 
+.right-menu-link-sub {
+    display: none;
+}
+
 #content-right-menu ul li.right-menu-link p, #content-right-menu ul li.right-menu-link-alt p {
     font-family: questrial;
     font-size: 13pt;
@@ -2132,7 +2136,7 @@ h1 {
     position: fixed;
     z-index: 10;
     right: 198px;
-    top: 440px;
+    bottom: 40px;
 }
 
 .console-execute {
@@ -2154,7 +2158,7 @@ h1 {
     z-index: 2;
     float: right;
     top: -58px;
-    left: -24px;
+    left: -28px;
     cursor: pointer;
 }
 
