@@ -1,1008 +1,1008 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Developer Center</title>
-        <link rel="stylesheet" type="text/css" href="css/innerpage.css">
-        <link rel="shortcut icon" href="http://precog.io/images/icon-favicon.ico" mce_href="http://precog.io/images/icon-favicon.ico"/>
-        <!--[if (gte IE 6)&(lte IE 8)]>
-                <script type="text/javascript" src="js/selectivizr.js"></script>
-                <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
-        <![endif]-->
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-        <script type="text/javascript" src="js/default.js"></script>
-        <script type="text/javascript" src="js/jquery.console.js"></script>
-        <script type="text/javascript" src="js/console.js"></script>
-        <script type="text/javascript">
- 
-        //check if hash tag exists in the URL
-        if(window.location.hash) {
-         
-         //set the value as a variable, and remove the #
-        var hash_value = window.location.hash.replace('#', '');
-         
-        function hash() {
-        
-        if (hash_value == "queries-link")
-        $("#developer-body-slider").animate({
-            'left': '-2480px'
-            });
-        $(".developer-section-sliding-panel").css({
-        'height': '7000px'
-        }, {queue: false}
-        );
-        }
-         setTimeout(hash, 250)
-        }
-        </script>
-    </head>
-    <body>
-        <div id="sticker-precog-beta">
-            <a href="mailto:contact@precog.io"></a>
-        </div>
-        <div id="contact-us">
-            <a href="contact-us.html"></a>
-        </div>
-        <div id="support">
-            <a href="http://support.precog.io/"></a>
-        </div>
-        <div id="background-top">
-            <div id="header">
-                <div id="header-logo">
-                    <a href="./index.html"><img alt="precog" src="images/logo-precog.png"></a>
-                </div>
-                <div id="header-menu">
-                    <ul>
-                        <li><a href="how-it-works.html">how it works</a></li>
-                        <li><a href="pricing.html">pricing</a></li>
-                        <li><a href="add-ons.html">add-ons</a></li>
-                        <li><a href="developer-center.html">dev center</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div id="background-main1">
-            <div id="body">
-                <div id="body-navbar">
-                    <a class="bodynav-devcenter" href="developer-center.html">dev center</a>
-                    <a class="bodynav-support" href="http://support.precog.io/">support</a>
-                    <a class="bodynav-status" href="http://status.precog.io/">status</a>
-                </div>
-                <div id="body-content-left-dev-cntr">
-                    <div id="developer-body-slider">
-                        <div class="developer-section-sliding-panel" id="console-devcntr">
-                            <h1 class="body-title-alt">DEVELOPER CENTER</h1>
-                            <h2>Overview</h2>
-                            <p>Precog is designed to be used by developers who are building applications, and who need to capture, enrich, and analyze data to power intelligent, insightful features inside their applications. Precog is ideal for doing advanced analytics, statistics, and predictive modeling across large, multi-structured data sets.</p>
-                            <p>The primary interface to Precog is through the <a href="api-documentation.html">REST API</a>. However, Precog develops and maintains a growing roster of client libraries for common programming languages. These libraries make it easier to use the REST API, and some of them add higher-level functions to perform common operations in analytics and statistics.</p>
-                            <div class="body-section-breaker"></div>
-                            <h2 id="features">Features</h2>
-                            <ul>
-                              <li class="feature-circle"><em>JSON</em>. Precog uses JSON as the native underlying representation (although you can store XML or tabular data, too).</li>
-                              <li class="feature-vfs"><em>VFS</em>. Precog lets you organize data into a <em>virtual file system</em>, which has a strong capability-based security model.</li>
-                              <li class="feature-multistructured"><em>Multi-structured</em>. Precog lets you store raw strings, raw numbers, arrays, key-value pairs, documents, and objects.</li>
-                              <li class="feature-schemaless"><em>Schema-less</em>. Precog lets you store real-world, messy data, or change your models freely over time.</li>
-                              <li class="feature-highlyscalable"><em>Highly-scalable</em>. Precog is designed to store and efficiently analyze very large amounts of data.</li>
-                              <li class="feature-advancedanalysis"><em>Advanced analysis</em>. Precog is capable of very sophisticated analytics and statistics through its support of <a href="http://whatisquirrel.com">Quirrel</a>.</li>
-                              <li class="feature-fastqueries"><em>Fast queries</em>. Precog adapts its storage to improve the speed of repeated queries over time.</li>
-                              <li class="features-addons"><em>Add-ons</em>.Precog has a <a href="add-ons.html">growing library</a> of add-ons to help you enrich and clean your data.</li>
-                              <li class="feature-opensource"><em>Open source</em>. The technology behind Precog, PrecogDB, is being released in an open source distribution in fall of 2012.</li>
-                            </ul>
-                            <!-- 
-                            <div class="font-code">
-                                <p>some important script</p>
-                            </div> 
-                            -->
-                            <div class="body-section-breaker"></div>
-                            <h2>Key Concepts</h2>
-                            
-                            <p>There are a few key concepts you should become familiar with: data format, security model, and virtual file system.
-                              
-                            <h3>Data Format</h3>
-                            
-                            <p>Precog natively stores data in an enhanced form of JSON (JSON with a few more types and support for metadata). The JSON format allows you to 
-                              store strings, numbers, arrays, and objects (currently, Precog does not support binary data).</p> 
-                            
-                            <h3>Security Model</h3>
-                            
-                            <p>UNDER CONSTRUCTION</p>
-                            
-                            <h3>Virtual File System</h3>
-                            
-                            <p>When you signup for a Precog account, you are given access to a particular directory in the Precog virtual file system. You can store data at this
-                              directory or any deeper path.</p>
-                              
-                            <p>The virtual file system can be used to organize your data or your customers data.</p>
-                            
-                            <div class="body-section-breaker">
-                            </div>
-                            <h2>Getting Started</h2>
-                            <p>It's super easy to get started with Precog. Just <a href="pricing.html">signup</a> for an account.</p>
-                            <p>Signing up will give you access to a token that you can use to interact with the API. The token keeps your data safe and secure, accessible only to you.</p>
-                            <p>Once you have your token, head over to the <a href="api-documentation.html">API documentation</a> page to learn what to do with it!</p>
-                        </div>
-                        <div class="developer-section-sliding-panel" id="console-link">
-                            <h1 class="body-title-alt">REPL</h1>
-                            <p>Come in and have fun with our console! If you're new to our platform, <a href="developer-center.html">explore our tutorial</a>. For more detailed information about Quirrel, the query language implemented by the Precog platform, visit the <a href="http://whatisquirrel.com">Quirrel language site</a>. Enjoy!</p>
-                            <div id="sticker-console">
-                            </div>
-                            <div id="developer-console">
-                                <div id="console" class="console">
-                                </div>
-                            </div>
-                            <div class="console-execute">
-                                <div id="console-execute-button" class="console-execute-button-2">
-                                </div>
-                            </div>
-                            <p>The following pre-populated datasets are available for your exploring pleasure:</p>
-                            <ul>
-                              <li>//campaigns</li>
-                              <li>//clicks</li>
-                              <li>//customers</li>
-                              <li>//orders</li>
-                              <li>//organizations</li>
-                              <li>//pageViews</li>
-                              <li>//payments</li>
-                              <li>//users</li>
-                              <li>//views</li>
-                            </ul>
-                        </div>
-                        <div class="developer-section-sliding-panel" id="queries-link">
-                            <h1 class="body-title-alt">QUERIES</h1>
-                            <p>Precog lets you do very sophisticated analytical and statistical queries.</p>
-                            
-                            <p>Most common kinds of analytics and statistics are built into the client libraries for your favorite
-                              programming languages (Ruby, Python, Java, Scala, PHP, JavaScript). In these client libraries, you will find 
-                              histograms, time series rollups, correlations, and many other common calculations.
-                            </p>
-                            
-                            <p>If you want to do something more advanced, then you can always write a custom query in <a href="http://whatisquirrel.com">Quirrel</a>, 
-                              a statistically-oriented, open source query language that is natively supported by the Precog platform.</p>
-                              
-                            <p><a href="http://whatisquirrel.com">Quirrel</a> is designed specifically for analytics and statistics on large, multi-structured data sets.
-                              It's small, simple, and composable, and lets you easily solve problems that would otherwise require thousands of lines of custom code.</p>
-                              
-                            <p>All the Precog client libraries implement <em>all of their functionality</em> in terms of simple Quirrel queries.</p>
-                              
-                            <p>Below you will find an interactive tutorial that lets you learn and experiment with Quirrel at the same time. After you've gone through the
-                              tutorial, please check out the <a href="developer-center.html">standalone console</a>.</p>
-                              
-                            <p>If you want more information on Quirrel, be sure to visit the <a href="http://whatisquirrel.com">official website</a> for the standard.</p>
-                              
-                            <h2>JSON</h2>
-                            <p>Quirrel has native support for JSON. You can create strings, numbers, booleans, arrays, and objects just like you do in JavaScript.</p>
-                            <div class="console-tutorials console" id="console-json"></div>
-                            <div class="console-execute">
-                                <div class="console-execute-button button-top-adjust" id="console-json-execute-button">
-                                </div>
-                            </div>
-                            <script type="text/javascript">buildConsole('console-json', '{name: "John", age: 29, gender: "male"}')</script>
-        
-                            <div class="console-tutorials console" id="console-bool"></div>
-                            <div class="console-execute">
-                                <div class="console-execute-button button-top-adjust" id="console-bool-execute-button">
-                                </div>
-                            </div>
-                            <script type="text/javascript">buildConsole('console-bool', 'true')</script>
-        
-                            <div class="console-tutorials console" id="console-string"></div>
-                            <div class="console-execute">
-                                <div class="console-execute-button button-top-adjust" id="console-string-execute-button">
-                                </div>
-                            </div>
-                            <script type="text/javascript">buildConsole('console-string', '"hello world"')</script>
-                            <div class="body-section-breaker">
-                            </div>
-                            <h2>NUMBERS</h2>
-                            <p>Since quirrel is designed for analytics, it has good support for math expressions. To start exploring, you can use Quirrel REPL as a calculator.</p>
-        
-                            <div class="console-tutorials console" id="console-sum"></div>
-                            <div class="console-execute">
-                                <div class="console-execute-button button-top-adjust" id="console-sum-execute-button">
-                                </div>
-                            </div>
-                            <script type="text/javascript">buildConsole('console-sum', '5 + 2')</script>
-        
-                            <div class="console-tutorials console" id="console-mul"></div>
-                            <div class="console-execute">
-                                <div class="console-execute-button button-top-adjust" id="console-mul-execute-button">
-                                </div>
-                            </div>
-                            <script type="text/javascript">buildConsole('console-mul', '8 * 2')</script>
-        
-        
-                            <p>Quirrel has an extensive built-in library of mathematical functions. Check the reference guide to see them all.</p>
-                            <div class="body-section-breaker">
-                            </div>
-                            <h2>BOOLEANS</h2>
-                            <p>Quirrel supports equality and inequality operators, which result in boolean values. These operators are often used to filter sets of data (a topic covered later).</p>
-                            <div class="console-tutorials console" id="console-bigger"></div>
-                            <div class="console-execute">
-                                <div class="console-execute-button button-top-adjust" id="console-bigger-execute-button">
-                                </div>
-                            </div>
-                            <script type="text/javascript">buildConsole('console-bigger', '5 > 2')</script>
-        
-                            <div class="console-tutorials console" id="console-different"></div>
-                            <div class="console-execute">
-                                <div class="console-execute-button button-top-adjust" id="console-different-execute-button">
-                                </div>
-                            </div>
-                            <script type="text/javascript">buildConsole('console-different', '"foo" != "foo"')</script>
-        
-        
-                            <div class="body-section-breaker">
-                            </div>
-                            <p>The full list of equality/inequality operators includes = (equal), != (not equal), &lt; (less than), &gt; (greater than), and variants like &lt;= and &gt;=.</p>
-        
-                            <h2>VARIABLES</h2>
-                            <p>You can store intermediate results in variables to make your queries more readable. The final expression determines what is returned by the query.</p>
-                            <div class="console-tutorials console" id="console-total"></div>
-                            <div class="console-execute">
-                                <div class="console-execute-button button-top-adjust" id="console-total-execute-button">
-                                </div>
-                            </div>
-                            <script type="text/javascript">buildConsole('console-total', 'total := 2 + 1\ntotal * 3')</script>
-        
-                            <div class="console-tutorials console" id="console-square"></div>
-                            <div class="console-execute">
-                                <div class="console-execute-button button-top-adjust" id="console-square-execute-button">
-                                </div>
-                            </div>
-                            <script type="text/javascript">buildConsole('console-square', 'num := 4\nsquare := num * num\nsquare - 1')</script>
-                            <div class="body-section-breaker">
-                            </div>
-                            <h2>LOADING DATA</h2>
-                            <p>The most basic query you can do is to retrieve raw data. To do this, use the <em>load</em> function, and specify the path to load data from.</p>
-                            <div class="console-tutorials console" id="console-load"></div>
-                            <div class="console-execute">
-                                <div class="console-execute-button button-top-adjust" id="console-load-execute-button">
-                                </div>
-                            </div>
-                            <script type="text/javascript">buildConsole('console-load', '//payments')</script>
-                            <div class="body-section-breaker">
-                            </div>
-                            <p>The load function returns all the data stored at the specified path, even if the values have differing types or schemas.</p>
-                            <h2>FILTERED DESCENT</h2>
-                            <p>Quirrel has direct support for JavaScript's <em>object dereference</em> and <em>array dereference</em> operations. These implicitly filter the data set to those items that contain the specified field or array index.</p>
-                            <div class="console-tutorials console" id="console-jsproperty"></div>
-                            <div class="console-execute">
-                                <div class="console-execute-button button-top-adjust" id="console-jsproperty-execute-button">
-                                </div>
-                            </div>
-                            <script type="text/javascript">buildConsole('console-jsproperty', 'payments := //payments\npayments.date')</script>
-        
-                            <div class="console-tutorials console" id="console-arrayaccess"></div>
-                            <div class="console-execute">
-                                <div class="console-execute-button button-top-adjust" id="console-arrayaccess-execute-button">
-                                </div>
-                            </div>
-                            <script type="text/javascript">buildConsole('console-arrayaccess', 'payments := //payments\npayments.recipients[0]')</script>
-                            <div class="body-section-breaker">
-                            </div>
-                            <h2>REDUCTIONS</h2>
-                            <p>Quirrel can reduce sets of data into a single value. There are many built-in reductions.</p>
-                            <div class="console-tutorials console" id="console-sumcount"></div>
-                            <div class="console-execute">
-                                <div class="console-execute-button button-top-adjust" id="console-sumcount-execute-button">
-                                </div>
-                            </div>
-                            <script type="text/javascript">buildConsole('console-sumcount', 'count(//payments)')</script>
-        
-                            <div class="console-tutorials console" id="console-summean"></div>
-                            <div class="console-execute">
-                                <div class="console-execute-button button-top-adjust" id="console-summean-execute-button">
-                                </div>
-                            </div>
-                            <script type="text/javascript">buildConsole('console-summean', 'mean(//payments.amount)')</script>
-        
-                            <div class="console-tutorials console" id="console-sumsum"></div>
-                            <div class="console-execute">
-                                <div class="console-execute-button button-top-adjust" id="console-sumsum-execute-button">
-                                </div>
-                            </div>
-                            <script type="text/javascript">buildConsole('console-sumsum', 'sum(//payments.amount)')</script>
-                            <div class="body-section-breaker">
-                            </div>
-                            <p>See the Quirrel reference guide for documentation on all supported reductions.</p>
-                            <h2>SETS OF EVENTS</h2>
-                            <p>In Quirrel, every expression is a set of events. An event is just something that has an identity and a JSON value. Every value you store gets its own unique identity. Identities are hidden (you'll never see them), but they are used internally by Quirrel.</p>
-                            <div class="body-section-breaker">
-                            </div>
-                            <h2>IDENTITY MATCHING</h2>
-                            <p>All functions and operators in Quirrel operate on sets of events, not values. When you add two sets (for example), Quirrel finds the events whose identities match, and adds their values, to produce a new set.</p>
-                            <div class="console-tutorials console" id="console-identity"></div>
-                            <div class="console-execute">
-                                <div class="console-execute-button button-top-adjust" id="console-identity-execute-button">
-                                </div>
-                            </div>
-                            <script type="text/javascript">buildConsole('console-identity', 'orders := //orders\norders.subTotal + orders.subTotal * orders.taxRate + orders.shipping + orders.handling')</script>
-                            <div class="body-section-breaker">
-                            </div>
-                            <p>The set-oriented nature of Quirrel lets you perform bulk operations without having to iterate over elements. This property is also what makes it possible to efficiently distribute Quirrel queries across clusters of machines.</p>
-                            <h2>VALUES</h2>
-                            <p>Quirrel implicitly converts values like "0.10" or "male" into sets containing a single event. These events have so-called <em>bottom identity</em>, which matches against all identities.</p>
-                            <div class="console-tutorials console" id="console-values"></div>
-                            <div class="console-execute">
-                                <div class="console-execute-button button-top-adjust" id="console-values-execute-button">
-                                </div>
-                            </div>
-                            <script type="text/javascript">buildConsole('console-values', '//payments.amount * 0.10')</script>
-                            <div class="body-section-breaker">
-                            </div>
-                            <p>In this example, all values in the <em>payments.amount</em> set are multiplied by 0.10, because the 0.10 event has bottom identity and therefore matches with all events in the "payments.amount" set.</p>
-                            <h2>FILTERING</h2>
-                            <p>Quirrel has a "where" operator which allows you to filter one set by another set of boolean values.</p>
-                            <div class="console-tutorials console" id="console-filter"></div>
-                            <div class="console-execute">
-                                <div class="console-execute-button button-top-adjust" id="console-filter-execute-button">
-                                </div>
-                            </div>
-                            <script type="text/javascript">buildConsole('console-filter', 'payments := //payments\ncount(payments where payments.amount > 10.00)')</script>
-        
-                            <div class="console-tutorials console" id="console-where"></div>
-                            <div class="console-execute">
-                                <div class="console-execute-button button-top-adjust" id="console-where-execute-button">
-                                </div>
-                            </div>
-                            <script type="text/javascript">buildConsole('console-where', 'users := //users\nsegment := users.age > 19 & users.age < 53 & users.income > 60000\ncount(users where segment)')</script>
-                            <div class="body-section-breaker">
-                            </div>
-                            <p>The <em>where</em> operator in Quirrel is not magical -- it's simply a function from two sets (one of which is a boolean set) to one set. You can store the boolean set in a variable if you want to use it multiple times.</p>
-                            <h2>CHAINING</h2>
-                            <p>Quirrel lets you chain expressions together without any limitations. This lets you easily perform multi-step analytical queries.</p>
-                            <div class="console-tutorials console" id="console-chaining"></div>
-                            <div class="console-execute">
-                                <div class="console-execute-button button-top-adjust" id="console-chaining-execute-button">
-                                </div>
-                            </div>
-                            <script type="text/javascript">buildConsole('console-chaining', 'pageViews := //pageViews\nbound := 1.5 * stdDev(pageViews.duration)\navg := mean(pageViews.duration)\nlongPageViews := pageViews where pageViews.duration > (avg + bound)\nlongPageViews.userId')</script>
-                            <div class="body-section-breaker">
-                            </div>
-                            <p>This query identifies users who spend an unusually long amount of time viewing a page.</p>
-                            <h2>USER-DEFINED FUNCTIONS</h2>
-                            <p>Quirrel lets you create user-defined functions, which map from one or more values to sets. These functions are often used to perform analytical queries on a group of related values. They can also be used to factor out logic that's common across different queries.</p>
-                            <div class="console-tutorials console" id="console-userfunction">
-                                <div class="jquery-console-inner jquery-console-nofocus">
-                                    <div class="jquery-console-prompt-box">
-                                        <span class="jquery-console-prompt-label">       | </span><span class="jquery-console-prompt">pageViews := //pageViews</span>
-                                    </div>
-                                    <div class="jquery-console-prompt-box">
-                                        <span class="jquery-console-prompt-label">       | </span><span class="jquery-console-prompt">pageViewsForUser('userId) := pageViews where pageViews.userId = 'userId</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="body-section-breaker">
-                            </div>
-                            <p>This function returns all page views for a given userId.</p>
-                            <h2>FULLY-APPLIED FUNCTIONS</h2>
-                            <p>You can call functions with parameters. This has the same effect as substituting the parameters into the body of the function.</p>
-                            <div class="console-tutorials console" id="console-fullyapplied"></div>
-                            <div class="console-execute">
-                                <div class="console-execute-button button-top-adjust" id="console-fullyapplied-execute-button">
-                                </div>
-                            </div>
-                            <script type="text/javascript">buildConsole('console-fullyapplied', 'pageViews := //pageViews\npageViewsForUser(\'userId) := pageViews where pageViews.userId = \'userId\npageViewsForUser(12345)')</script>
-                            <div class="body-section-breaker">
-                            </div>
-                            <h2>PARTIALLY-APPLIED FUNCTIONS, PART I</h2>
-                            <p>In many cases, Quirrel knows how to compute the range of values for a parameter. If you call the function without supplying a value, Quirrel will evaluate the function at all possible values and merge the results into a single set.</p>
-                            
-        
-        
-        
-                            <div class="console-tutorials console" id="console-partialfunction1"></div>
-                            <div class="console-execute">
-                                <div class="console-execute-button button-top-adjust" id="console-partialfunction1-execute-button">
-                                </div>
-                            </div>
-                            <script type="text/javascript">buildConsole('console-partialfunction1', 'pageViews := //pageViews\npageViewsForUser(\'userId) :=\n  {userId: \'userId, meanPageView: mean(pageViews.duration where pageViews.userId = \'userId)}\npageViewsForUser')</script>
-                            <div class="body-section-breaker">
-                            </div>
-                            <p>This query results in average page view durations for all users.</p>
-                            <h2>PARTIALLY-APPLIED FUNCTIONS, PART II</h2>
-                            <p>A common idiom in Quirrel is to save the parameters of a function into an object that contains both the parameters, and the desired calculation.</p>
-                            <div class="console-tutorials console" id="console-partialfunction2"></div>
-                            <div class="console-execute">
-                                <div class="console-execute-button button-top-adjust" id="console-partialfunction2-execute-button">
-                                </div>
-                            </div>
-                            <script type="text/javascript">buildConsole('console-partialfunction2', 'clicks := //clicks\nviews  := //views\nclickthroughRate(\'page) :=\n  {page: \'page, ctr: count(clicks where clicks.pageId = \'page) /\n                     count(views where views.pageId = \'page)}\nclickthroughRate')</script>
-                            <div class="body-section-breaker">
-                            </div>
-                            <p>The final set contains objects that have a <em>page</em> field and a <em>ctr</em> field (the clickthrough rate for the specified page).</p>
-                            <h2>AUGMENTATION</h2>
-                            <p>You can easily add more fields to objects, or more elements to arrays, with the <em>with</em> operator.</p>
-                            <div class="console-tutorials console" id="console-augmentation"></div>
-                            <div class="console-execute">
-                                <div class="console-execute-button button-top-adjust" id="console-augmentation-execute-button">
-                                </div>
-                            </div>
-                            <script type="text/javascript">buildConsole('console-augmentation', 'clicks := //clicks\nclicksWithDays := clicks with {day: (std :: time :: dayOfYear(clicks.timeString)) }\nclicksWithDays')</script>
-                            <div class="body-section-breaker">
-                            </div>
-                            <p>In this query, a "day" field is added to the click objects.</p>
-                            <h2>JOINS</h2>
-                            <p>The most complicated operator in Quirrel is the relate operator '~', which joins together sets that don't share identities, and allows you to perform operations on the joined sets.</p>
-                            <div class="console-tutorials console" id="console-join"></div>
-                            <div class="console-execute">
-                                <div class="console-execute-button button-top-adjust" id="console-join-execute-button">
-                                </div>
-                            </div>
-                            <script type="text/javascript">buildConsole('console-join', 'customers := //customers\norders := //orders\nfractionForUser(\'userId) :=\n  customers\' := customers where customers.userId = \'userId\n  orders\' := orders where orders.userId = \'userId\n  customers\' ~ orders\'\n  orders.total / customers.income\nfractionForUser')</script>
-                            <div class="body-section-breaker">
-                            </div>
-                            <p>The above query relates the customers and orders sets by their userId field, then computes the total order cost over income. The relate operator is similar to SQL's JOIN operator, but more powerful.</p>
-                            <h2>SELF-JOINS</h2>
-                            <p>Quirrel makes it easy to do self-joins by providing the 'new' operator, which conceptually creates a copy of a set, but with new identities. The new set is not related to the original set (but you can relate it with the relate operator).</p>
-                            <div class="console-tutorials console" id="console-selfjoin"></div>
-                            <div class="console-execute">
-                                <div class="console-execute-button button-top-adjust" id="console-selfjoin-execute-button">
-                                </div>
-                            </div>
-                            <script type="text/javascript">buildConsole('console-selfjoin', 'users  := //users\nusers\' := new users\nusers ~ users\'\n{ location: users.location.state,  income: users.income }')</script>
-                            <div class="body-section-breaker">
-                            </div>
-                            <p>The above query produces a cross-product of all states and income levels.</p>
-                            <h2>THAT'S IT!</h2>
-                            <p>Quirrel has many built-in functions that help you do analytics. However, you now know all there is to know about Quirrel syntax and semantics.</p>
-                            <p>Go ahead and play with our <a href="developer-center.html">live console</a> to explore further!</p>
-                        </div>
-                        <div class="developer-section-sliding-panel" id="console-apidocs">
-                            <h1 class="body-title-alt">API DOCUMENTATION</h1>
-                              <div class="api-language">
-                                <div class="language-json">
-                                    <p>JSON</p>
-                                </div>
-                              </div>
-                              <div class="api-info">
-                                <table>
-                                  <tr>
-                                    <td class="api-text-name">
-                                      GET
-                                    </td>
-                                    <td class="api-text-description">
-                                      http://api.precog.io/v1/vfs/[path]?token=[your token]
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td class="api-code">
-                                      description
-                                    </td>
-                                    <td>
-                                      <p>
-                                        Retrieves a list of the children of the specified path. You must have permission to read from the path.
-                                      </p>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td class="api-code">
-                                      query parameters
-                                    </td>
-                                    <td>
-                                      <ul>
-                                          <li>
-                                              <p>token<p>
-                                          </li>
-                                          <li>
-                                              <p>[yourtoken]<p>
-                                          </li>
-                                          <li>
-                                              <p>example<p>
-                                          </li>
-                                      </ul>
-                                    </td>
-                                  </tr>
-                                    <tr>
-                                        <td class="api-code">
-                                          response
-                                        </td>
-                                        <td class="api-wide">
-                                          <ul>
-                                              <li>
-                                                  <p>["/foo", "/bar"] This is a test of the emergency broadcasting system.<p>
-                                              </li>
-                                          </ul>
-                                        </td>
-                                    </tr>
-                                </table>
-                              </div>
-                              <div class="api-language">
-                                <div class="language-json">
-                                    <p>JSON</p>
-                                </div>
-                              </div>
-                              <div class="api-info">
-                                <table>
-                                  <tr>
-                                    <td class="api-text-name">
-                                      POST
-                                    </td>
-                                    <td class="api-text-description">
-                                      http://api.precog.io/v1/vfs/[path]?token=[your token]
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td class="api-code">
-                                      description
-                                    </td>
-                                    <td>
-                                      <p>
-                                        Uploads a JSON value to the specified path. You must have permission to write to the path.
-                                      </p>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td class="api-code">
-                                      request body
-                                    </td>
-                                    <td>
-                                      <p>
-                                        The content you want to upload to the specified path.
-                                      </p>
-                                      <div class="font-code">
-                                        <pre>
+	<head>
+		<title>Developer Center</title>
+		<link rel="stylesheet" type="text/css" href="css/innerpage.css">
+		<link rel="shortcut icon" href="http://precog.io/images/icon-favicon.ico" mce_href="http://precog.io/images/icon-favicon.ico"/>
+		<!--[if (gte IE 6)&(lte IE 8)]>
+						<script type="text/javascript" src="js/selectivizr.js"></script>
+						<noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
+		<![endif]-->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+		<script type="text/javascript" src="js/default.js"></script>
+		<script type="text/javascript" src="js/jquery.console.js"></script>
+		<script type="text/javascript" src="js/console.js"></script>
+		<script type="text/javascript">
+
+			//check if hash tag exists in the URL
+			if(window.location.hash) {
+
+				//set the value as a variable, and remove the #
+				var hash_value = window.location.hash.replace('#', '');
+
+				function hash() {
+
+					if (hash_value == "queries-link")
+						$("#developer-body-slider").animate({
+							'left': '-2480px'
+						});
+					$(".developer-section-sliding-panel").css({
+						'height': '7000px'
+					}, {queue: false}
+				);
+				}
+				setTimeout(hash, 250)
+			}
+		</script>
+	</head>
+	<body>
+		<div id="sticker-precog-beta">
+			<a href="mailto:contact@precog.io"></a>
+		</div>
+		<div id="contact-us">
+			<a href="contact-us.html"></a>
+		</div>
+		<div id="support">
+			<a href="http://support.precog.io/"></a>
+		</div>
+		<div id="background-top">
+			<div id="header">
+				<div id="header-logo">
+					<a href="./index.html"><img alt="precog" src="images/logo-precog.png"></a>
+				</div>
+				<div id="header-menu">
+					<ul>
+						<li><a href="how-it-works.html">how it works</a></li>
+						<li><a href="pricing.html">pricing</a></li>
+						<li><a href="add-ons.html">add-ons</a></li>
+						<li><a href="developer-center.html">dev center</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="background-main1">
+			<div id="body">
+				<div id="body-navbar">
+					<a class="bodynav-devcenter" href="developer-center.html">dev center</a>
+					<a class="bodynav-support" href="http://support.precog.io/">support</a>
+					<a class="bodynav-status" href="http://status.precog.io/">status</a>
+				</div>
+				<div id="body-content-left-dev-cntr">
+					<div id="developer-body-slider">
+						<div class="developer-section-sliding-panel" id="console-devcntr">
+							<h1 class="body-title-alt">DEVELOPER CENTER</h1>
+							<h2>Overview</h2>
+							<p>Precog is designed to be used by developers who are building applications, and who need to capture, enrich, and analyze data to power intelligent, insightful features inside their applications. Precog is ideal for doing advanced analytics, statistics, and predictive modeling across large, multi-structured data sets.</p>
+							<p>The primary interface to Precog is through the <a href="api-documentation.html">REST API</a>. However, Precog develops and maintains a growing roster of client libraries for common programming languages. These libraries make it easier to use the REST API, and some of them add higher-level functions to perform common operations in analytics and statistics.</p>
+							<div class="body-section-breaker"></div>
+							<h2 id="features">Features</h2>
+							<ul>
+								<li class="feature-circle"><em>JSON</em>. Precog uses JSON as the native underlying representation (although you can store XML or tabular data, too).</li>
+								<li class="feature-vfs"><em>VFS</em>. Precog lets you organize data into a <em>virtual file system</em>, which has a strong capability-based security model.</li>
+								<li class="feature-multistructured"><em>Multi-structured</em>. Precog lets you store raw strings, raw numbers, arrays, key-value pairs, documents, and objects.</li>
+								<li class="feature-schemaless"><em>Schema-less</em>. Precog lets you store real-world, messy data, or change your models freely over time.</li>
+								<li class="feature-highlyscalable"><em>Highly-scalable</em>. Precog is designed to store and efficiently analyze very large amounts of data.</li>
+								<li class="feature-advancedanalysis"><em>Advanced analysis</em>. Precog is capable of very sophisticated analytics and statistics through its support of <a href="http://whatisquirrel.com">Quirrel</a>.</li>
+								<li class="feature-fastqueries"><em>Fast queries</em>. Precog adapts its storage to improve the speed of repeated queries over time.</li>
+								<li class="features-addons"><em>Add-ons</em>.Precog has a <a href="add-ons.html">growing library</a> of add-ons to help you enrich and clean your data.</li>
+								<li class="feature-opensource"><em>Open source</em>. The technology behind Precog, PrecogDB, is being released in an open source distribution in fall of 2012.</li>
+							</ul>
+							<!--
+							<div class="font-code">
+									<p>some important script</p>
+							</div>
+							-->
+							<div class="body-section-breaker"></div>
+							<h2>Key Concepts</h2>
+
+							<p>There are a few key concepts you should become familiar with: data format, security model, and virtual file system.
+
+							<h3>Data Format</h3>
+
+							<p>Precog natively stores data in an enhanced form of JSON (JSON with a few more types and support for metadata). The JSON format allows you to
+								store strings, numbers, arrays, and objects (currently, Precog does not support binary data).</p>
+
+							<h3>Security Model</h3>
+
+							<p>UNDER CONSTRUCTION</p>
+
+							<h3>Virtual File System</h3>
+
+							<p>When you signup for a Precog account, you are given access to a particular directory in the Precog virtual file system. You can store data at this
+								directory or any deeper path.</p>
+
+							<p>The virtual file system can be used to organize your data or your customers data.</p>
+
+							<div class="body-section-breaker">
+							</div>
+							<h2>Getting Started</h2>
+							<p>It's super easy to get started with Precog. Just <a href="pricing.html">signup</a> for an account.</p>
+							<p>Signing up will give you access to a token that you can use to interact with the API. The token keeps your data safe and secure, accessible only to you.</p>
+							<p>Once you have your token, head over to the <a href="api-documentation.html">API documentation</a> page to learn what to do with it!</p>
+						</div>
+						<div class="developer-section-sliding-panel" id="console-link">
+							<h1 class="body-title-alt">REPL</h1>
+							<p>Come in and have fun with our console! If you're new to our platform, <a href="developer-center.html">explore our tutorial</a>. For more detailed information about Quirrel, the query language implemented by the Precog platform, visit the <a href="http://whatisquirrel.com">Quirrel language site</a>. Enjoy!</p>
+							<div id="sticker-console">
+							</div>
+							<div id="developer-console">
+								<div id="console" class="console">
+								</div>
+							</div>
+							<div class="console-execute">
+								<div id="console-execute-button" class="console-execute-button-2">
+								</div>
+							</div>
+							<p>The following pre-populated datasets are available for your exploring pleasure:</p>
+							<ul>
+								<li>//campaigns</li>
+								<li>//clicks</li>
+								<li>//customers</li>
+								<li>//orders</li>
+								<li>//organizations</li>
+								<li>//pageViews</li>
+								<li>//payments</li>
+								<li>//users</li>
+								<li>//views</li>
+							</ul>
+						</div>
+						<div class="developer-section-sliding-panel" id="queries-link">
+							<h1 class="body-title-alt">QUERIES</h1>
+							<p>Precog lets you do very sophisticated analytical and statistical queries.</p>
+
+							<p>Most common kinds of analytics and statistics are built into the client libraries for your favorite
+								programming languages (Ruby, Python, Java, Scala, PHP, JavaScript). In these client libraries, you will find
+								histograms, time series rollups, correlations, and many other common calculations.
+							</p>
+
+							<p>If you want to do something more advanced, then you can always write a custom query in <a href="http://whatisquirrel.com">Quirrel</a>,
+								a statistically-oriented, open source query language that is natively supported by the Precog platform.</p>
+
+							<p><a href="http://whatisquirrel.com">Quirrel</a> is designed specifically for analytics and statistics on large, multi-structured data sets.
+								It's small, simple, and composable, and lets you easily solve problems that would otherwise require thousands of lines of custom code.</p>
+
+							<p>All the Precog client libraries implement <em>all of their functionality</em> in terms of simple Quirrel queries.</p>
+
+							<p>Below you will find an interactive tutorial that lets you learn and experiment with Quirrel at the same time. After you've gone through the
+								tutorial, please check out the <a href="developer-center.html">standalone console</a>.</p>
+
+							<p>If you want more information on Quirrel, be sure to visit the <a href="http://whatisquirrel.com">official website</a> for the standard.</p>
+
+							<h2>JSON</h2>
+							<p>Quirrel has native support for JSON. You can create strings, numbers, booleans, arrays, and objects just like you do in JavaScript.</p>
+							<div class="console-tutorials console" id="console-json"></div>
+							<div class="console-execute">
+								<div class="console-execute-button button-top-adjust" id="console-json-execute-button">
+								</div>
+							</div>
+							<script type="text/javascript">buildConsole('console-json', '{name: "John", age: 29, gender: "male"}')</script>
+
+							<div class="console-tutorials console" id="console-bool"></div>
+							<div class="console-execute">
+								<div class="console-execute-button button-top-adjust" id="console-bool-execute-button">
+								</div>
+							</div>
+							<script type="text/javascript">buildConsole('console-bool', 'true')</script>
+
+							<div class="console-tutorials console" id="console-string"></div>
+							<div class="console-execute">
+								<div class="console-execute-button button-top-adjust" id="console-string-execute-button">
+								</div>
+							</div>
+							<script type="text/javascript">buildConsole('console-string', '"hello world"')</script>
+							<div class="body-section-breaker">
+							</div>
+							<h2>NUMBERS</h2>
+							<p>Since quirrel is designed for analytics, it has good support for math expressions. To start exploring, you can use Quirrel REPL as a calculator.</p>
+
+							<div class="console-tutorials console" id="console-sum"></div>
+							<div class="console-execute">
+								<div class="console-execute-button button-top-adjust" id="console-sum-execute-button">
+								</div>
+							</div>
+							<script type="text/javascript">buildConsole('console-sum', '5 + 2')</script>
+
+							<div class="console-tutorials console" id="console-mul"></div>
+							<div class="console-execute">
+								<div class="console-execute-button button-top-adjust" id="console-mul-execute-button">
+								</div>
+							</div>
+							<script type="text/javascript">buildConsole('console-mul', '8 * 2')</script>
+
+
+							<p>Quirrel has an extensive built-in library of mathematical functions. Check the reference guide to see them all.</p>
+							<div class="body-section-breaker">
+							</div>
+							<h2>BOOLEANS</h2>
+							<p>Quirrel supports equality and inequality operators, which result in boolean values. These operators are often used to filter sets of data (a topic covered later).</p>
+							<div class="console-tutorials console" id="console-bigger"></div>
+							<div class="console-execute">
+								<div class="console-execute-button button-top-adjust" id="console-bigger-execute-button">
+								</div>
+							</div>
+							<script type="text/javascript">buildConsole('console-bigger', '5 > 2')</script>
+
+							<div class="console-tutorials console" id="console-different"></div>
+							<div class="console-execute">
+								<div class="console-execute-button button-top-adjust" id="console-different-execute-button">
+								</div>
+							</div>
+							<script type="text/javascript">buildConsole('console-different', '"foo" != "foo"')</script>
+
+
+							<div class="body-section-breaker">
+							</div>
+							<p>The full list of equality/inequality operators includes = (equal), != (not equal), &lt; (less than), &gt; (greater than), and variants like &lt;= and &gt;=.</p>
+
+							<h2>VARIABLES</h2>
+							<p>You can store intermediate results in variables to make your queries more readable. The final expression determines what is returned by the query.</p>
+							<div class="console-tutorials console" id="console-total"></div>
+							<div class="console-execute">
+								<div class="console-execute-button button-top-adjust" id="console-total-execute-button">
+								</div>
+							</div>
+							<script type="text/javascript">buildConsole('console-total', 'total := 2 + 1\ntotal * 3')</script>
+
+							<div class="console-tutorials console" id="console-square"></div>
+							<div class="console-execute">
+								<div class="console-execute-button button-top-adjust" id="console-square-execute-button">
+								</div>
+							</div>
+							<script type="text/javascript">buildConsole('console-square', 'num := 4\nsquare := num * num\nsquare - 1')</script>
+							<div class="body-section-breaker">
+							</div>
+							<h2>LOADING DATA</h2>
+							<p>The most basic query you can do is to retrieve raw data. To do this, use the <em>load</em> function, and specify the path to load data from.</p>
+							<div class="console-tutorials console" id="console-load"></div>
+							<div class="console-execute">
+								<div class="console-execute-button button-top-adjust" id="console-load-execute-button">
+								</div>
+							</div>
+							<script type="text/javascript">buildConsole('console-load', '//payments')</script>
+							<div class="body-section-breaker">
+							</div>
+							<p>The load function returns all the data stored at the specified path, even if the values have differing types or schemas.</p>
+							<h2>FILTERED DESCENT</h2>
+							<p>Quirrel has direct support for JavaScript's <em>object dereference</em> and <em>array dereference</em> operations. These implicitly filter the data set to those items that contain the specified field or array index.</p>
+							<div class="console-tutorials console" id="console-jsproperty"></div>
+							<div class="console-execute">
+								<div class="console-execute-button button-top-adjust" id="console-jsproperty-execute-button">
+								</div>
+							</div>
+							<script type="text/javascript">buildConsole('console-jsproperty', 'payments := //payments\npayments.date')</script>
+
+							<div class="console-tutorials console" id="console-arrayaccess"></div>
+							<div class="console-execute">
+								<div class="console-execute-button button-top-adjust" id="console-arrayaccess-execute-button">
+								</div>
+							</div>
+							<script type="text/javascript">buildConsole('console-arrayaccess', 'payments := //payments\npayments.recipients[0]')</script>
+							<div class="body-section-breaker">
+							</div>
+							<h2>REDUCTIONS</h2>
+							<p>Quirrel can reduce sets of data into a single value. There are many built-in reductions.</p>
+							<div class="console-tutorials console" id="console-sumcount"></div>
+							<div class="console-execute">
+								<div class="console-execute-button button-top-adjust" id="console-sumcount-execute-button">
+								</div>
+							</div>
+							<script type="text/javascript">buildConsole('console-sumcount', 'count(//payments)')</script>
+
+							<div class="console-tutorials console" id="console-summean"></div>
+							<div class="console-execute">
+								<div class="console-execute-button button-top-adjust" id="console-summean-execute-button">
+								</div>
+							</div>
+							<script type="text/javascript">buildConsole('console-summean', 'mean(//payments.amount)')</script>
+
+							<div class="console-tutorials console" id="console-sumsum"></div>
+							<div class="console-execute">
+								<div class="console-execute-button button-top-adjust" id="console-sumsum-execute-button">
+								</div>
+							</div>
+							<script type="text/javascript">buildConsole('console-sumsum', 'sum(//payments.amount)')</script>
+							<div class="body-section-breaker">
+							</div>
+							<p>See the Quirrel reference guide for documentation on all supported reductions.</p>
+							<h2>SETS OF EVENTS</h2>
+							<p>In Quirrel, every expression is a set of events. An event is just something that has an identity and a JSON value. Every value you store gets its own unique identity. Identities are hidden (you'll never see them), but they are used internally by Quirrel.</p>
+							<div class="body-section-breaker">
+							</div>
+							<h2>IDENTITY MATCHING</h2>
+							<p>All functions and operators in Quirrel operate on sets of events, not values. When you add two sets (for example), Quirrel finds the events whose identities match, and adds their values, to produce a new set.</p>
+							<div class="console-tutorials console" id="console-identity"></div>
+							<div class="console-execute">
+								<div class="console-execute-button button-top-adjust" id="console-identity-execute-button">
+								</div>
+							</div>
+							<script type="text/javascript">buildConsole('console-identity', 'orders := //orders\norders.subTotal + orders.subTotal * orders.taxRate + orders.shipping + orders.handling')</script>
+							<div class="body-section-breaker">
+							</div>
+							<p>The set-oriented nature of Quirrel lets you perform bulk operations without having to iterate over elements. This property is also what makes it possible to efficiently distribute Quirrel queries across clusters of machines.</p>
+							<h2>VALUES</h2>
+							<p>Quirrel implicitly converts values like "0.10" or "male" into sets containing a single event. These events have so-called <em>bottom identity</em>, which matches against all identities.</p>
+							<div class="console-tutorials console" id="console-values"></div>
+							<div class="console-execute">
+								<div class="console-execute-button button-top-adjust" id="console-values-execute-button">
+								</div>
+							</div>
+							<script type="text/javascript">buildConsole('console-values', '//payments.amount * 0.10')</script>
+							<div class="body-section-breaker">
+							</div>
+							<p>In this example, all values in the <em>payments.amount</em> set are multiplied by 0.10, because the 0.10 event has bottom identity and therefore matches with all events in the "payments.amount" set.</p>
+							<h2>FILTERING</h2>
+							<p>Quirrel has a "where" operator which allows you to filter one set by another set of boolean values.</p>
+							<div class="console-tutorials console" id="console-filter"></div>
+							<div class="console-execute">
+								<div class="console-execute-button button-top-adjust" id="console-filter-execute-button">
+								</div>
+							</div>
+							<script type="text/javascript">buildConsole('console-filter', 'payments := //payments\ncount(payments where payments.amount > 10.00)')</script>
+
+							<div class="console-tutorials console" id="console-where"></div>
+							<div class="console-execute">
+								<div class="console-execute-button button-top-adjust" id="console-where-execute-button">
+								</div>
+							</div>
+							<script type="text/javascript">buildConsole('console-where', 'users := //users\nsegment := users.age > 19 & users.age < 53 & users.income > 60000\ncount(users where segment)')</script>
+							<div class="body-section-breaker">
+							</div>
+							<p>The <em>where</em> operator in Quirrel is not magical -- it's simply a function from two sets (one of which is a boolean set) to one set. You can store the boolean set in a variable if you want to use it multiple times.</p>
+							<h2>CHAINING</h2>
+							<p>Quirrel lets you chain expressions together without any limitations. This lets you easily perform multi-step analytical queries.</p>
+							<div class="console-tutorials console" id="console-chaining"></div>
+							<div class="console-execute">
+								<div class="console-execute-button button-top-adjust" id="console-chaining-execute-button">
+								</div>
+							</div>
+							<script type="text/javascript">buildConsole('console-chaining', 'pageViews := //pageViews\nbound := 1.5 * stdDev(pageViews.duration)\navg := mean(pageViews.duration)\nlongPageViews := pageViews where pageViews.duration > (avg + bound)\nlongPageViews.userId')</script>
+							<div class="body-section-breaker">
+							</div>
+							<p>This query identifies users who spend an unusually long amount of time viewing a page.</p>
+							<h2>USER-DEFINED FUNCTIONS</h2>
+							<p>Quirrel lets you create user-defined functions, which map from one or more values to sets. These functions are often used to perform analytical queries on a group of related values. They can also be used to factor out logic that's common across different queries.</p>
+							<div class="console-tutorials console" id="console-userfunction">
+								<div class="jquery-console-inner jquery-console-nofocus">
+									<div class="jquery-console-prompt-box">
+										<span class="jquery-console-prompt-label">       | </span><span class="jquery-console-prompt">pageViews := //pageViews</span>
+									</div>
+									<div class="jquery-console-prompt-box">
+										<span class="jquery-console-prompt-label">       | </span><span class="jquery-console-prompt">pageViewsForUser('userId) := pageViews where pageViews.userId = 'userId</span>
+									</div>
+								</div>
+							</div>
+							<div class="body-section-breaker">
+							</div>
+							<p>This function returns all page views for a given userId.</p>
+							<h2>FULLY-APPLIED FUNCTIONS</h2>
+							<p>You can call functions with parameters. This has the same effect as substituting the parameters into the body of the function.</p>
+							<div class="console-tutorials console" id="console-fullyapplied"></div>
+							<div class="console-execute">
+								<div class="console-execute-button button-top-adjust" id="console-fullyapplied-execute-button">
+								</div>
+							</div>
+							<script type="text/javascript">buildConsole('console-fullyapplied', 'pageViews := //pageViews\npageViewsForUser(\'userId) := pageViews where pageViews.userId = \'userId\npageViewsForUser(12345)')</script>
+							<div class="body-section-breaker">
+							</div>
+							<h2>PARTIALLY-APPLIED FUNCTIONS, PART I</h2>
+							<p>In many cases, Quirrel knows how to compute the range of values for a parameter. If you call the function without supplying a value, Quirrel will evaluate the function at all possible values and merge the results into a single set.</p>
+
+
+
+
+							<div class="console-tutorials console" id="console-partialfunction1"></div>
+							<div class="console-execute">
+								<div class="console-execute-button button-top-adjust" id="console-partialfunction1-execute-button">
+								</div>
+							</div>
+							<script type="text/javascript">buildConsole('console-partialfunction1', 'pageViews := //pageViews\npageViewsForUser(\'userId) :=\n  {userId: \'userId, meanPageView: mean(pageViews.duration where pageViews.userId = \'userId)}\npageViewsForUser')</script>
+							<div class="body-section-breaker">
+							</div>
+							<p>This query results in average page view durations for all users.</p>
+							<h2>PARTIALLY-APPLIED FUNCTIONS, PART II</h2>
+							<p>A common idiom in Quirrel is to save the parameters of a function into an object that contains both the parameters, and the desired calculation.</p>
+							<div class="console-tutorials console" id="console-partialfunction2"></div>
+							<div class="console-execute">
+								<div class="console-execute-button button-top-adjust" id="console-partialfunction2-execute-button">
+								</div>
+							</div>
+							<script type="text/javascript">buildConsole('console-partialfunction2', 'clicks := //clicks\nviews  := //views\nclickthroughRate(\'page) :=\n  {page: \'page, ctr: count(clicks where clicks.pageId = \'page) /\n                     count(views where views.pageId = \'page)}\nclickthroughRate')</script>
+							<div class="body-section-breaker">
+							</div>
+							<p>The final set contains objects that have a <em>page</em> field and a <em>ctr</em> field (the clickthrough rate for the specified page).</p>
+							<h2>AUGMENTATION</h2>
+							<p>You can easily add more fields to objects, or more elements to arrays, with the <em>with</em> operator.</p>
+							<div class="console-tutorials console" id="console-augmentation"></div>
+							<div class="console-execute">
+								<div class="console-execute-button button-top-adjust" id="console-augmentation-execute-button">
+								</div>
+							</div>
+							<script type="text/javascript">buildConsole('console-augmentation', 'clicks := //clicks\nclicksWithDays := clicks with {day: (std :: time :: dayOfYear(clicks.timeString)) }\nclicksWithDays')</script>
+							<div class="body-section-breaker">
+							</div>
+							<p>In this query, a "day" field is added to the click objects.</p>
+							<h2>JOINS</h2>
+							<p>The most complicated operator in Quirrel is the relate operator '~', which joins together sets that don't share identities, and allows you to perform operations on the joined sets.</p>
+							<div class="console-tutorials console" id="console-join"></div>
+							<div class="console-execute">
+								<div class="console-execute-button button-top-adjust" id="console-join-execute-button">
+								</div>
+							</div>
+							<script type="text/javascript">buildConsole('console-join', 'customers := //customers\norders := //orders\nfractionForUser(\'userId) :=\n  customers\' := customers where customers.userId = \'userId\n  orders\' := orders where orders.userId = \'userId\n  customers\' ~ orders\'\n  orders.total / customers.income\nfractionForUser')</script>
+							<div class="body-section-breaker">
+							</div>
+							<p>The above query relates the customers and orders sets by their userId field, then computes the total order cost over income. The relate operator is similar to SQL's JOIN operator, but more powerful.</p>
+							<h2>SELF-JOINS</h2>
+							<p>Quirrel makes it easy to do self-joins by providing the 'new' operator, which conceptually creates a copy of a set, but with new identities. The new set is not related to the original set (but you can relate it with the relate operator).</p>
+							<div class="console-tutorials console" id="console-selfjoin"></div>
+							<div class="console-execute">
+								<div class="console-execute-button button-top-adjust" id="console-selfjoin-execute-button">
+								</div>
+							</div>
+							<script type="text/javascript">buildConsole('console-selfjoin', 'users  := //users\nusers\' := new users\nusers ~ users\'\n{ location: users.location.state,  income: users.income }')</script>
+							<div class="body-section-breaker">
+							</div>
+							<p>The above query produces a cross-product of all states and income levels.</p>
+							<h2>THAT'S IT!</h2>
+							<p>Quirrel has many built-in functions that help you do analytics. However, you now know all there is to know about Quirrel syntax and semantics.</p>
+							<p>Go ahead and play with our <a href="developer-center.html">live console</a> to explore further!</p>
+						</div>
+						<div class="developer-section-sliding-panel" id="console-apidocs">
+							<h1 class="body-title-alt">API DOCUMENTATION</h1>
+							<div class="api-language">
+								<div class="language-json">
+									<p>JSON</p>
+								</div>
+							</div>
+							<div class="api-info">
+								<table>
+									<tr>
+										<td class="api-text-name">
+											GET
+										</td>
+										<td class="api-text-description">
+											http://api.precog.io/v1/vfs/[path]?token=[your token]
+										</td>
+									</tr>
+									<tr>
+										<td class="api-code">
+											description
+										</td>
+										<td>
+											<p>
+												Retrieves a list of the children of the specified path. You must have permission to read from the path.
+											</p>
+										</td>
+									</tr>
+									<tr>
+										<td class="api-code">
+											query parameters
+										</td>
+										<td>
+											<ul>
+												<li>
+													<p>token<p>
+												</li>
+												<li>
+													<p>[yourtoken]<p>
+												</li>
+												<li>
+													<p>example<p>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td class="api-code">
+											response
+										</td>
+										<td class="api-wide">
+											<ul>
+												<li>
+													<p>["/foo", "/bar"] This is a test of the emergency broadcasting system.<p>
+												</li>
+											</ul>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="api-language">
+								<div class="language-json">
+									<p>JSON</p>
+								</div>
+							</div>
+							<div class="api-info">
+								<table>
+									<tr>
+										<td class="api-text-name">
+											POST
+										</td>
+										<td class="api-text-description">
+											http://api.precog.io/v1/vfs/[path]?token=[your token]
+										</td>
+									</tr>
+									<tr>
+										<td class="api-code">
+											description
+										</td>
+										<td>
+											<p>
+												Uploads a JSON value to the specified path. You must have permission to write to the path.
+											</p>
+										</td>
+									</tr>
+									<tr>
+										<td class="api-code">
+											request body
+										</td>
+										<td>
+											<p>
+												The content you want to upload to the specified path.
+											</p>
+											<div class="font-code">
+												<pre>
                       {"user": "jdoe", "age": 23, "income": 89221.00}
-                      </pre>
-                                      </div>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td class="api-code">
-                                      query parameters
-                                    </td>
-                                    <td>
-                                      <ul>
-                                          <li>
-                                              <p>token<p>
-                                          </li>
-                                          <li>
-                                              <p>[yourtoken]<p>
-                                          </li>
-                                          <li>
-                                              <p>example<p>
-                                          </li>
-                                      </ul>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td class="api-code">
-                                      response
-                                    </td>
-                                    <td class="api-wide">
-                                      <ul>
-                                          <li>
-                                              <p>HTTP 200</p>
-                                          </li>
-                                      </ul>
-                                    </td>
-                                  </tr>
-                                </table>
-                              </div>
-                              <div class="api-language">
-                                <div class="language-json">
-                                    <p>JSON</p>
-                                </div>
-                              </div>
-                              <div class="api-info">
-                                <table>
-                                  <tr>
-                                    <td class="api-text-name">
-                                      GET
-                                    </td>
-                                    <td class="api-text-description">
-                                      http://api.precog.io/v1/vfs/[path]?token=[your token]&amp;q=[query]
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td class="api-code">
-                                      description
-                                    </td>
-                                    <td>
-                                      <p>
-                                        Performs a fast-running query with respect to the specified base path. You must have permission to read from the path.
-                                      </p>
-                                      <p>
-                                        The query must be expressed in <a href="developer-center.html">Quirrel</a>.
-                                      </p>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td class="api-code">
-                                      query parameters
-                                    </td>
-                                    <td>
-                                      <ul>
-                                          <li>
-                                              <p>token<p>
-                                          </li>
-                                          <li>
-                                              <p>[yourtoken]<p>
-                                          </li>
-                                          <li>
-                                              <p>example<p>
-                                          </li>
-                                      </ul>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td class="api-code">
-                                    </td>
-                                    <td>
-                                      <ul>
-                                          <li>
-                                              <p>q<p>
-                                          </li>
-                                          <li>
-                                              <p>[your query]<p>
-                                          </li>
-                                          <li>
-                                              <p>example<p>
-                                          </li>
-                                      </ul>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td class="api-code">
-                                      response
-                                    </td>
-                                    <td>
-                                      <p>
-                                        The JSON results of executing the query.
-                                      </p>
-                                    </td>
-                                  </tr>
-                                </table>
-                              </div>
-                              <div class="api-language">
-                                <div class="language-json">
-                                    <p>JSON</p>
-                                </div>
-                              </div>
-                              <div class="api-info">
-                                <table>
-                                  <tr>
-                                    <td class="api-text-name">
-                                      DELETE
-                                    </td>
-                                    <td class="api-text-description">
-                                      http://api.precog.io/v1/vfs/[path]?token=[your token]
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td class="api-code">
-                                      description
-                                    </td>
-                                    <td>
-                                      <p>
-                                        Deletes an entire path. USE WITH CAUTION!
-                                      </p>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td class="api-code">
-                                      query parameters
-                                    </td>
-                                    <td>
-                                      <ul>
-                                          <li>
-                                              <p>token<p>
-                                          </li>
-                                          <li>
-                                              <p>[yourtoken]<p>
-                                          </li>
-                                          <li>
-                                              <p>example<p>
-                                          </li>
-                                      </ul>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td class="api-code">
-                                      response
-                                    </td>
-                                    <td class="api-wide">
-                                      <ul>
-                                          <li>
-                                              <p>HTTP 200<p>
-                                          </li>
-                                      </ul>
-                                    </td>
-                                  </tr>
-                                </table>
-                              </div>
-                              <div class="api-language">
-                                <div class="language-json">
-                                    <p>JSON</p>
-                                </div>
-                              </div>
-                              <div class="api-info">
-                                <table>
-                                  <tr>
-                                    <td class="api-text-name">
-                                      POST
-                                    </td>
-                                    <td class="api-text-description">
-                                      http://api.precog.io/v1/jobs/?token=[your token]
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td class="api-code">
-                                      description
-                                    </td>
-                                    <td>
-                                      <p>
-                                        Creates a new long-running job. There are three kinds of jobs you can create:
-                                      </p>
-                                      <div class="api-info-bullet">
-                                        <ul>
-                                          <li>
-                                            <em>A delete job</em>. A delete job is a request to delete all the events matching a specified query.
-                                          </li>
-                                          <li>
-                                            <em>A transform job</em>. A transform job is a request to save the results of some query to a specified path.
-                                          </li>
-                                        </ul>
-                                      </div>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td class="api-code">
-                                      request body
-                                    </td>
-                                    <td>
-                                      <p>
-                                        Create a delete job:
-                                      </p>
-                                      <div class="font-code">
-                                        <pre>
+												</pre>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="api-code">
+											query parameters
+										</td>
+										<td>
+											<ul>
+												<li>
+													<p>token<p>
+												</li>
+												<li>
+													<p>[yourtoken]<p>
+												</li>
+												<li>
+													<p>example<p>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td class="api-code">
+											response
+										</td>
+										<td class="api-wide">
+											<ul>
+												<li>
+													<p>HTTP 200</p>
+												</li>
+											</ul>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="api-language">
+								<div class="language-json">
+									<p>JSON</p>
+								</div>
+							</div>
+							<div class="api-info">
+								<table>
+									<tr>
+										<td class="api-text-name">
+											GET
+										</td>
+										<td class="api-text-description">
+											http://api.precog.io/v1/vfs/[path]?token=[your token]&amp;q=[query]
+										</td>
+									</tr>
+									<tr>
+										<td class="api-code">
+											description
+										</td>
+										<td>
+											<p>
+												Performs a fast-running query with respect to the specified base path. You must have permission to read from the path.
+											</p>
+											<p>
+												The query must be expressed in <a href="developer-center.html">Quirrel</a>.
+											</p>
+										</td>
+									</tr>
+									<tr>
+										<td class="api-code">
+											query parameters
+										</td>
+										<td>
+											<ul>
+												<li>
+													<p>token<p>
+												</li>
+												<li>
+													<p>[yourtoken]<p>
+												</li>
+												<li>
+													<p>example<p>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td class="api-code">
+										</td>
+										<td>
+											<ul>
+												<li>
+													<p>q<p>
+												</li>
+												<li>
+													<p>[your query]<p>
+												</li>
+												<li>
+													<p>example<p>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td class="api-code">
+											response
+										</td>
+										<td>
+											<p>
+												The JSON results of executing the query.
+											</p>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="api-language">
+								<div class="language-json">
+									<p>JSON</p>
+								</div>
+							</div>
+							<div class="api-info">
+								<table>
+									<tr>
+										<td class="api-text-name">
+											DELETE
+										</td>
+										<td class="api-text-description">
+											http://api.precog.io/v1/vfs/[path]?token=[your token]
+										</td>
+									</tr>
+									<tr>
+										<td class="api-code">
+											description
+										</td>
+										<td>
+											<p>
+												Deletes an entire path. USE WITH CAUTION!
+											</p>
+										</td>
+									</tr>
+									<tr>
+										<td class="api-code">
+											query parameters
+										</td>
+										<td>
+											<ul>
+												<li>
+													<p>token<p>
+												</li>
+												<li>
+													<p>[yourtoken]<p>
+												</li>
+												<li>
+													<p>example<p>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td class="api-code">
+											response
+										</td>
+										<td class="api-wide">
+											<ul>
+												<li>
+													<p>HTTP 200<p>
+												</li>
+											</ul>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="api-language">
+								<div class="language-json">
+									<p>JSON</p>
+								</div>
+							</div>
+							<div class="api-info">
+								<table>
+									<tr>
+										<td class="api-text-name">
+											POST
+										</td>
+										<td class="api-text-description">
+											http://api.precog.io/v1/jobs/?token=[your token]
+										</td>
+									</tr>
+									<tr>
+										<td class="api-code">
+											description
+										</td>
+										<td>
+											<p>
+												Creates a new long-running job. There are three kinds of jobs you can create:
+											</p>
+											<div class="api-info-bullet">
+												<ul>
+													<li>
+														<em>A delete job</em>. A delete job is a request to delete all the events matching a specified query.
+													</li>
+													<li>
+														<em>A transform job</em>. A transform job is a request to save the results of some query to a specified path.
+													</li>
+												</ul>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="api-code">
+											request body
+										</td>
+										<td>
+											<p>
+												Create a delete job:
+											</p>
+											<div class="font-code">
+												<pre>
                       {
                       "type":  "delete",
                       "query": "[query]"
                       }
-                                            </pre>
-                                      </div>
-                                      <div class="clear">
-                                      </div>
-                                      <p>
-                                        Create a transform job:
-                                      </p>
-                                      <div class="font-code">
-                                        <pre>
+												</pre>
+											</div>
+											<div class="clear">
+											</div>
+											<p>
+												Create a transform job:
+											</p>
+											<div class="font-code">
+												<pre>
                       {
                       "type":  "transform",
                       "query": "[query]",
                       "path":  "/results/"
                       }
-                      </pre>
-                                      </div>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td class="api-code">
-                                      query parameters
-                                    </td>
-                                    <td>
-                                      <ul>
-                                          <li>
-                                              <p>token<p>
-                                          </li>
-                                          <li>
-                                              <p>[yourtoken]<p>
-                                          </li>
-                                          <li>
-                                              <p>example<p>
-                                          </li>
-                                      </ul>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td class="api-code">
-                                    </td>
-                                    <td>
-                                      <ul>
-                                          <li>
-                                              <p>q<p>
-                                          </li>
-                                          <li>
-                                              <p>[your query]<p>
-                                          </li>
-                                          <li>
-                                              <p>example<p>
-                                          </li>
-                                      </ul>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td></td>
-                                  </tr>
-                                  <tr>
-                                    <td class="api-code">
-                                      response
-                                    </td>
-                                    <td class="api-wide">
-                                      <p>
-                                        A job id that can be used to poll for the status of the job.
-                                      </p>
-                                      <ul>
-                                          <li>
-                                              <p>9869823123<p>
-                                          </li>
-                                      </ul>
-                                    </td>
-                                  </tr>
-                                </table>
-                              </div>
-                              <div class="api-language">
-                                <div class="language-json">
-                                    <p>JSON</p>
-                                </div>
-                              </div>
-                              <div class="api-info">
-                                <table>
-                                  <tr>
-                                    <td class="api-text-name">
-                                      GET
-                                    </td>
-                                    <td class="api-text-description">
-                                      http://api.precog.io/v1/jobs/[job id]/status
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td class="api-code">
-                                      description
-                                    </td>
-                                    <td>
-                                      <p>
-                                        Polls for the status of some long-running job.
-                                      </p>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td class="api-code">
-                                      query parameters
-                                    </td>
-                                    <td>
-                                      <ul>
-                                          <li>
-                                              <p>token<p>
-                                          </li>
-                                          <li>
-                                              <p>[yourtoken]<p>
-                                          </li>
-                                          <li>
-                                              <p>example<p>
-                                          </li>
-                                      </ul>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td class="api-code">
-                                      query parameters
-                                    </td>
-                                    <td>
-                                      <ul>
-                                          <li>
-                                              <p>job id<p>
-                                          </li>
-                                          <li>
-                                              <p>[the id of the long-running job]<p>
-                                          </li>
-                                          <li>
-                                              <p>example<p>
-                                          </li>
-                                      </ul>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td class="api-code">
-                                      response
-                                    </td>
-                                    <td class="api-wide">
-                                      <p>
-                                        The status of the long-running job.
-                                      </p>
-                                      <ul>
-                                          <li>
-                                              <p>{"status": "running", "start": 1332165118, "elapsed": 96422, "progress": 0.23}<p>
-                                          </li>
-                                      </ul>
-                                    </td>
-                                  </tr>
-                                </table>
-                              </div>
-                        </div>
-                        <div class="developer-section-sliding-panel" id="console-addondocs">
-                            <h1 class="body-title-alt">ADD-ONS DOCUMENTATION</h1>
-                            <h2>Coming Soon!</h2>
-                            <p>UNDER CONSTRUCTION</p>
-                            <div class="body-section-breaker">
-                            </div>
-                        </div>
-                        <div class="atrib-clear-left">
-                        </div>
-                    </div>
-                </div>
-                <div id="body-content-right-dev-cntr">
-                    <div id="content-right-menu">
-                        <ul>
-                            <li class="right-menu-link" id="dev-home-link"><p>overview</p></li>
-                            <li class="right-menu-link" id="dev-console-link"><p>console</p></li>
-                            <li class="right-menu-link" id="dev-queries-link"><p>queries</p></li>
-                            <li class="right-menu-link" id="dev-api-link"><p>api documentation</p></li>
-                            <ul>
-                                <li class="right-menu-link-sub"><a href="#">link 1</a></li>
-                            </ul>
-                            <li class="right-menu-link" id="dev-addons-link"><p>add-ons</p></li>
-                        </ul>
-                    </div>
-                    <div id="sticker-whatisquirrel">
-                        <a href="http://whatisquirrel.com" target="_blank"><img src="images/sticker-whatisquirrel.png"></a>
-                    </div>
-                </div>
-                <div class="atrib-clear-left">
-                </div>
-            </div>
-        </div>
-        <div id="background-footer">
-            <div id="footer">
-                <div id="footer-menu">
-                    <ul>
-                        <li>Precog</li>
-                        <li><a href="about.html">about</a></li>
-                        <li><a href="contact-us.html">contact</a></li>
-                        <li><a href="jobs.html">jobs</a></li>
-                    </ul>
-                     <ul>
-                        <li>Business</li>
-                        <li><a href="why-precog.html">why precog?</a></li>
-                        <li><a href="success-stories.html">success stories</a></li>
-                        <li><a href="dev-partner.html">dev partners</a></li>
-                        <li><a href="add-on-partner.html">add-on partners</a></li>
-                        <li><a href="news-and-events.html">news & events</a></li>
-                        <li><a href="blog.html">blog</a></li>
-                    </ul>
-                     <ul>
-                        <li>Platform</li>
-                        <li><a href="how-it-works.html">how it works?</a></li>
-                        <li><a href="pricing.html">pricing</a></li>
-                        <li><a href="add-ons.html">add-ons</a></li>
-                    </ul>
-                     <ul>
-                        <li>Resources</li>
-                        <li><a href="developer-center.html">dev center</a></li>
-                        <li><a href="http://support.precog.io/">support</a></li>
-                        <li><a href="http://status.precog.io/">status</a></li>
-                    </ul>
-                </div>
-                <div id="phone-number">
-                    <p>(888) 673-9958</p>
-                </div>
-                <div id="icon-facebook">
-                    <a href="http://www.facebook.com/pages/Precog/136686693120257?sk=wall" target="_blank"></a>
-                </div>
-                <div id="icon-twitter">
-                    <a href="https://twitter.com/#!/@PrecogIO" target="_blank"></a>
-                </div>
-                <div id="copyrights">
-                    <p>Copyright &copy; 2012 ReportGrid, Inc. All Rights Reserved</p>
-                    <a href="privacy-terms.html">privacy : terms of use</a>
-                </div>
-            </div>
-        </div>
-<script type="text/javascript">
+												</pre>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="api-code">
+											query parameters
+										</td>
+										<td>
+											<ul>
+												<li>
+													<p>token<p>
+												</li>
+												<li>
+													<p>[yourtoken]<p>
+												</li>
+												<li>
+													<p>example<p>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td class="api-code">
+										</td>
+										<td>
+											<ul>
+												<li>
+													<p>q<p>
+												</li>
+												<li>
+													<p>[your query]<p>
+												</li>
+												<li>
+													<p>example<p>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td></td>
+									</tr>
+									<tr>
+										<td class="api-code">
+											response
+										</td>
+										<td class="api-wide">
+											<p>
+												A job id that can be used to poll for the status of the job.
+											</p>
+											<ul>
+												<li>
+													<p>9869823123<p>
+												</li>
+											</ul>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="api-language">
+								<div class="language-json">
+									<p>JSON</p>
+								</div>
+							</div>
+							<div class="api-info">
+								<table>
+									<tr>
+										<td class="api-text-name">
+											GET
+										</td>
+										<td class="api-text-description">
+											http://api.precog.io/v1/jobs/[job id]/status
+										</td>
+									</tr>
+									<tr>
+										<td class="api-code">
+											description
+										</td>
+										<td>
+											<p>
+												Polls for the status of some long-running job.
+											</p>
+										</td>
+									</tr>
+									<tr>
+										<td class="api-code">
+											query parameters
+										</td>
+										<td>
+											<ul>
+												<li>
+													<p>token<p>
+												</li>
+												<li>
+													<p>[yourtoken]<p>
+												</li>
+												<li>
+													<p>example<p>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td class="api-code">
+											query parameters
+										</td>
+										<td>
+											<ul>
+												<li>
+													<p>job id<p>
+												</li>
+												<li>
+													<p>[the id of the long-running job]<p>
+												</li>
+												<li>
+													<p>example<p>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td class="api-code">
+											response
+										</td>
+										<td class="api-wide">
+											<p>
+												The status of the long-running job.
+											</p>
+											<ul>
+												<li>
+													<p>{"status": "running", "start": 1332165118, "elapsed": 96422, "progress": 0.23}<p>
+												</li>
+											</ul>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="developer-section-sliding-panel" id="console-addondocs">
+							<h1 class="body-title-alt">ADD-ONS DOCUMENTATION</h1>
+							<h2>Coming Soon!</h2>
+							<p>UNDER CONSTRUCTION</p>
+							<div class="body-section-breaker">
+							</div>
+						</div>
+						<div class="atrib-clear-left">
+						</div>
+					</div>
+				</div>
+				<div id="body-content-right-dev-cntr">
+					<div id="content-right-menu">
+						<ul>
+							<li class="right-menu-link" id="dev-home-link"><p>overview</p></li>
+							<li class="right-menu-link" id="dev-console-link"><p>console</p></li>
+							<li class="right-menu-link" id="dev-queries-link"><p>queries</p></li>
+							<li class="right-menu-link" id="dev-api-link"><p>api documentation</p></li>
+							<ul>
+								<li class="right-menu-link-sub"><a href="#">link 1</a></li>
+							</ul>
+							<li class="right-menu-link" id="dev-addons-link"><p>add-ons</p></li>
+						</ul>
+					</div>
+					<div id="sticker-whatisquirrel">
+						<a href="http://whatisquirrel.com" target="_blank"><img src="images/sticker-whatisquirrel.png"></a>
+					</div>
+				</div>
+				<div class="atrib-clear-left">
+				</div>
+			</div>
+		</div>
+		<div id="background-footer">
+			<div id="footer">
+				<div id="footer-menu">
+					<ul>
+						<li>Precog</li>
+						<li><a href="about.html">about</a></li>
+						<li><a href="contact-us.html">contact</a></li>
+						<li><a href="jobs.html">jobs</a></li>
+					</ul>
+					<ul>
+						<li>Business</li>
+						<li><a href="why-precog.html">why precog?</a></li>
+						<li><a href="success-stories.html">success stories</a></li>
+						<li><a href="dev-partner.html">dev partners</a></li>
+						<li><a href="add-on-partner.html">add-on partners</a></li>
+						<li><a href="news-and-events.html">news & events</a></li>
+						<li><a href="blog.html">blog</a></li>
+					</ul>
+					<ul>
+						<li>Platform</li>
+						<li><a href="how-it-works.html">how it works?</a></li>
+						<li><a href="pricing.html">pricing</a></li>
+						<li><a href="add-ons.html">add-ons</a></li>
+					</ul>
+					<ul>
+						<li>Resources</li>
+						<li><a href="developer-center.html">dev center</a></li>
+						<li><a href="http://support.precog.io/">support</a></li>
+						<li><a href="http://status.precog.io/">status</a></li>
+					</ul>
+				</div>
+				<div id="phone-number">
+					<p>(888) 673-9958</p>
+				</div>
+				<div id="icon-facebook">
+					<a href="http://www.facebook.com/pages/Precog/136686693120257?sk=wall" target="_blank"></a>
+				</div>
+				<div id="icon-twitter">
+					<a href="https://twitter.com/#!/@PrecogIO" target="_blank"></a>
+				</div>
+				<div id="copyrights">
+					<p>Copyright &copy; 2012 ReportGrid, Inc. All Rights Reserved</p>
+					<a href="privacy-terms.html">privacy : terms of use</a>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-589893-15']);
-  _gaq.push(['_setDomainName', 'precog.io']);
-  _gaq.push(['_setAllowLinker', true]);
-  _gaq.push(['_trackPageview']);
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-589893-15']);
+			_gaq.push(['_setDomainName', 'precog.io']);
+			_gaq.push(['_setAllowLinker', true]);
+			_gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
 
-</script>
-    </body>
+		</script>
+	</body>
 </html>
