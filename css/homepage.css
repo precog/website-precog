@@ -278,7 +278,7 @@ h1 {
     float: left;
 }
 
-#app-textbox h1, #use-case-holder h1{
+#app-textbox h1, #use-case-holder h1, #home-why-precog h1{
     font-size: 28pt;
     color: #C13707;
     padding-top: 0px;
@@ -746,6 +746,28 @@ ul.home-usecases li img {
 #background-main2 {
     background-color: #0A0B0D;
     width: 100%;
+}
+
+#background-main5 {
+    background-color: #0A0B0D;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 60px;
+}
+
+#home-why-precog p {
+    font-family: helvetica;
+    font-size: 13pt;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    color: #748899;
+}
+
+#home-why-precog {
+    text-align: left;
+    width: 1050px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 #home-comparison {
