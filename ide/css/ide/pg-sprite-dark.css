@@ -1,0 +1,44 @@
+#pg {
+    background-image: url("../../images/custom-precog-sprite-dark.png");
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    display: block;
+    background-repeat: no-repeat;
+}
+
+#pg.download {
+    background-position:0px 0px;
+}
+
+#pg.help {
+    background-position:0px -16px;
+}
+
+#pg.new {
+    background-position:0px -32px;
+}
+
+#pg.minimize {
+    background-position:0px -48px;
+}
+
+#pg.close {
+    background-position:0px -64px;
+}
+
+#pg.duplicate {
+    background-position:0px -80px;
+}
+
+#pg.maximize {
+    background-position:0px -96px;
+}
+
+#pg.folder {
+    background-position:0px -112px;
+}
+
+#pg.query {
+    background-position:0px -128px;
+}
