@@ -455,7 +455,7 @@ span.k-numeric-wrap.k-state-active,
   border-radius: 7px;
 }
 .ace_gutter {
-  background-color: #000;
+  background: #000 !important;
 }
 
 .ace_gutter-cell {
