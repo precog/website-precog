@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Precog IDE</title>
+    <script src="js/jquery/jquery.min.js"></script>
+    <script src="js/ide/precog-ide.js?tokenId=1BF2FA96-8817-4C98-8BCB-BEC6E86CB3C2&analyticsService=http://demo.precog.io/v1/"></script>
+    <script>
+var ide;
+$(function(){
+    ide = PrecogIDE.create("#precog-ide");
+})
+    </script>
+    <style>
+#precog-ide
+{
+    width: 960px;
+    height: 800px;
+    margin: 0 auto;
+}
+    </style>
+</head>
+<body>
+
+<div id="precog-ide"></div>
+</body>
+</html>
