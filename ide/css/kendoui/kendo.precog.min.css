@@ -191,7 +191,6 @@ span.k-numeric-wrap.k-state-active,
 .k-button.k-state-disabled:hover,
 .k-state-disabled .k-button:hover,
 .k-draghandle {
-  border-style: none;
   border-color: #000000;
   background-color: #122e4d;
 }
@@ -455,6 +454,10 @@ span.k-numeric-wrap.k-state-active,
   -webkit-border-radius: 7px;
   border-radius: 7px;
 }
+.ace_gutter {
+  background-color: #000;
+}
+
 .ace_gutter-cell {
-  
+  color: #fff;
 }
