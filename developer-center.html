@@ -93,7 +93,7 @@
 							</div>
 							-->
 							<div class="body-section-breaker"></div>
-							<h2>Key Concepts</h2>
+							<h2 id="key-concepts-link">Key Concepts</h2>
 
 							<p>There are a few key concepts you should become familiar with: data format, security model, and virtual file system.
 
@@ -115,10 +115,36 @@
 
 							<div class="body-section-breaker">
 							</div>
-							<h2>Getting Started</h2>
+							<h2  id="get-started-link">Getting Started</h2>
 							<p>It's super easy to get started with Precog. Just <a href="pricing.html">signup</a> for an account.</p>
 							<p>Signing up will give you access to a token that you can use to interact with the API. The token keeps your data safe and secure, accessible only to you.</p>
 							<p>Once you have your token, head over to the <a href="api-documentation.html">API documentation</a> page to learn what to do with it!</p>
+                                                        <div class="body-section-breaker">
+							</div>
+                                                        <h2  id="security-model-link">Security Model</h2>
+                                                        <p>In order to interact with the Precog API, you need a token. A token gives you permissions for a particular location in the virtual file system, including all descendent directories. This location is referred to as the <i>token directory</i>.</p>
+                                                        <p>Every token is uniquely identified by a string of 256 characters, which is called the <i>token id</i>. Token ids are very similar to the API keys used by most APIs. The token id itself is what confers permissions, so you should treat token ids securely, like you would treat passwords.</p>
+                                                        <p>All tokens can be used to create other tokens. When a first token is used to create a second token, the second token is referred to as a child of the first token. Child tokens can confer the same or more restrictive permissions as held by parent tokens (but never broader permissions).</p>
+                                                        <p>Every Precog customer has a root token. A root token establishes you as the unique owner of a particular directory (called your <i>root directory</i>). A root token is not created by any other token, and therefore does not have a parent token. Root tokens have ultimate authority over the directory they own.</p>
+                                                        <p>All tokens except root tokens have an owner. The owner is defined to be the root token that ultimately granted the token its permissions. The owner of a token always has the ability to modify the permissions of the token.</p>
+                                                        <p class="dev-example"><span class="red-hilight">Example-</span> Let's say Bob owns the directory /bob/. If Bob creates a write token for Alice for /bob/, and then Alice uses the permissions of that token to create a write token for Tom for /bob/, then Tom's write token for /bob/ will still be owned by Bob, even though Alice created it.</p>
+                                                        <p>Root tokens own data. If you own the /foo/ directory, and write data to /foo/, then you also own that data. However, if Alice owns the /foo/ directory, and you write data to /foo/, then both you and Alice own the data. Thus, data is owned both by the root of the write token, and by the owner of the target directory. In the common case, these are one and the same, so data has a single owner (the root of the write token).</p>
+                                                        <p class="dev-example"><span class="red-hilight">Example-</span> In the above example, if Tom writes to /bob/ using his write token, then both Tom and Bob will own the data, because Bob owns the /bob/ directory, and Tom created the data. Thus, for Tom to access the data, he needs read permission from Bob, and for Bob to access the data, he needs read permission from Tom. This flexible permission model lies at the core of the Precog enrichment system.</p>
+                                                        <h2>Any given token may have several permissions:</h2>
+                                                        <ul class="normal">
+                                                            <li class="normal">Read permission. This permission lets you read the subset of  data in the directory that is owned by the root of the token. For example, Bob can create read tokens for Alice to /foo/, even if there is no data owned by Bob in /foo/. In this sense, a pure read token just means, "I don't care if you read data owned by me if it happens to be located in the directory."</li>
+                                                            <li class="normal">Write permission. This permission lets you insert new data inside the directory. This permission is valid for as long as the parent of the token has permission to write to the directory.</li>
+                                                            <li class="normal">Modify permission. This permission lets you modify (update and delete) data inside the directory. This permission is valid for as long as the parent of the token has permission to modify the directory.</li>
+                                                            <li class="normal">Owner permission. This permission gives you ownership of the specified path. Only root tokens have ownership permissions. Ownership permission implies read (for self-owned data), write, and modify permissions.</li>
+                                                        </ul>
+							<p>In addition, tokens have an optional expiration date. If a token has an expiration date, then it confers no permissions once the current time is greater than the expiration date.</p>
+                                                        <p>Inside any directory in the virtual file system, there may exist data which is owned by many different root tokens. In order to read all the data in a directory, you need tokens which give you read permissions from all the data owners.</p>
+                                                        <p class="dev-example"><span class="red-hilight">Example-</span> If Bob creates a write token for Alice for /foo/, then Alice will be able to read any data in /foo/ that is owned by Bob. However, if Tom also owns data in /foo/, then Alice won't be able to read that data unless she has a read token from Tom for /foo/.</p>
+                                                        <p>In many cases, you'll want to combine tokens together. For example, if you want to read all data in a directory, and all the data in the directory was created by Tom and Bob, then you might want to combine a read token from Tom with a read token from Bob, and use the composite token to read from the directory.</p>
+                                                        <p>To allow tokens to be combined, every token has a <i>ring</i>. The token itself is a member of the ring, and you can add any number of other tokens to the ring. This confers the permissions of those tokens on the primary token.</p>
+                                                        <p>To manage tokens, you can use the token management API. To use the token management API, you need to specify a token in the query string (tokenId=XYZ). This token is referrred to as the <i>authentication token</i>, because it's used to authorize your operations.</p>
+                                                        <div class="body-section-breaker">
+							</div>
 						</div>
 						<div class="developer-section-sliding-panel" id="console-link">
 							<h1 class="body-title-alt">REPL</h1>
@@ -228,11 +254,10 @@
 								</div>
 							</div>
 							<script type="text/javascript">buildConsole('console-different', '"foo" != "foo"')</script>
-
+                                                        <p>The full list of equality/inequality operators includes = (equal), != (not equal), &lt; (less than), &gt; (greater than), and variants like &lt;= and &gt;=.</p>
 
 							<div class="body-section-breaker">
 							</div>
-							<p>The full list of equality/inequality operators includes = (equal), != (not equal), &lt; (less than), &gt; (greater than), and variants like &lt;= and &gt;=.</p>
 
 							<h2>VARIABLES</h2>
 							<p>You can store intermediate results in variables to make your queries more readable. The final expression determines what is returned by the query.</p>
@@ -259,9 +284,9 @@
 								</div>
 							</div>
 							<script type="text/javascript">buildConsole('console-load', '//payments')</script>
-							<div class="body-section-breaker">
-							</div>
 							<p>The load function returns all the data stored at the specified path, even if the values have differing types or schemas.</p>
+                                                        <div class="body-section-breaker">
+							</div>
 							<h2>FILTERED DESCENT</h2>
 							<p>Quirrel has direct support for JavaScript's <em>object dereference</em> and <em>array dereference</em> operations. These implicitly filter the data set to those items that contain the specified field or array index.</p>
 							<div class="console-tutorials console" id="console-jsproperty"></div>
@@ -301,9 +326,9 @@
 								</div>
 							</div>
 							<script type="text/javascript">buildConsole('console-sumsum', 'sum(//payments.amount)')</script>
-							<div class="body-section-breaker">
-							</div>
 							<p>See the Quirrel reference guide for documentation on all supported reductions.</p>
+                                                        <div class="body-section-breaker">
+							</div>
 							<h2>SETS OF EVENTS</h2>
 							<p>In Quirrel, every expression is a set of events. An event is just something that has an identity and a JSON value. Every value you store gets its own unique identity. Identities are hidden (you'll never see them), but they are used internally by Quirrel.</p>
 							<div class="body-section-breaker">
@@ -316,9 +341,9 @@
 								</div>
 							</div>
 							<script type="text/javascript">buildConsole('console-identity', 'orders := //orders\norders.subTotal + orders.subTotal * orders.taxRate + orders.shipping + orders.handling')</script>
-							<div class="body-section-breaker">
-							</div>
 							<p>The set-oriented nature of Quirrel lets you perform bulk operations without having to iterate over elements. This property is also what makes it possible to efficiently distribute Quirrel queries across clusters of machines.</p>
+                                                        <div class="body-section-breaker">
+							</div>
 							<h2>VALUES</h2>
 							<p>Quirrel implicitly converts values like "0.10" or "male" into sets containing a single event. These events have so-called <em>bottom identity</em>, which matches against all identities.</p>
 							<div class="console-tutorials console" id="console-values"></div>
@@ -327,9 +352,9 @@
 								</div>
 							</div>
 							<script type="text/javascript">buildConsole('console-values', '//payments.amount * 0.10')</script>
-							<div class="body-section-breaker">
-							</div>
 							<p>In this example, all values in the <em>payments.amount</em> set are multiplied by 0.10, because the 0.10 event has bottom identity and therefore matches with all events in the "payments.amount" set.</p>
+                                                        <div class="body-section-breaker">
+							</div>
 							<h2>FILTERING</h2>
 							<p>Quirrel has a "where" operator which allows you to filter one set by another set of boolean values.</p>
 							<div class="console-tutorials console" id="console-filter"></div>
@@ -345,9 +370,9 @@
 								</div>
 							</div>
 							<script type="text/javascript">buildConsole('console-where', 'users := //users\nsegment := users.age > 19 & users.age < 53 & users.income > 60000\ncount(users where segment)')</script>
-							<div class="body-section-breaker">
-							</div>
 							<p>The <em>where</em> operator in Quirrel is not magical -- it's simply a function from two sets (one of which is a boolean set) to one set. You can store the boolean set in a variable if you want to use it multiple times.</p>
+                                                        <div class="body-section-breaker">
+							</div>
 							<h2>CHAINING</h2>
 							<p>Quirrel lets you chain expressions together without any limitations. This lets you easily perform multi-step analytical queries.</p>
 							<div class="console-tutorials console" id="console-chaining"></div>
@@ -356,9 +381,9 @@
 								</div>
 							</div>
 							<script type="text/javascript">buildConsole('console-chaining', 'pageViews := //pageViews\nbound := 1.5 * stdDev(pageViews.duration)\navg := mean(pageViews.duration)\nlongPageViews := pageViews where pageViews.duration > (avg + bound)\nlongPageViews.userId')</script>
-							<div class="body-section-breaker">
-							</div>
 							<p>This query identifies users who spend an unusually long amount of time viewing a page.</p>
+                                                        <div class="body-section-breaker">
+							</div>
 							<h2>USER-DEFINED FUNCTIONS</h2>
 							<p>Quirrel lets you create user-defined functions, which map from one or more values to sets. These functions are often used to perform analytical queries on a group of related values. They can also be used to factor out logic that's common across different queries.</p>
 							<div class="console-tutorials console" id="console-userfunction">
@@ -371,9 +396,9 @@
 									</div>
 								</div>
 							</div>
+                                                        <p>This function returns all page views for a given userId.</p>
 							<div class="body-section-breaker">
 							</div>
-							<p>This function returns all page views for a given userId.</p>
 							<h2>FULLY-APPLIED FUNCTIONS</h2>
 							<p>You can call functions with parameters. This has the same effect as substituting the parameters into the body of the function.</p>
 							<div class="console-tutorials console" id="console-fullyapplied"></div>
@@ -396,9 +421,9 @@
 								</div>
 							</div>
 							<script type="text/javascript">buildConsole('console-partialfunction1', 'pageViews := //pageViews\npageViewsForUser(\'userId) :=\n  {userId: \'userId, meanPageView: mean(pageViews.duration where pageViews.userId = \'userId)}\npageViewsForUser')</script>
-							<div class="body-section-breaker">
-							</div>
 							<p>This query results in average page view durations for all users.</p>
+                                                        <div class="body-section-breaker">
+							</div>
 							<h2>PARTIALLY-APPLIED FUNCTIONS, PART II</h2>
 							<p>A common idiom in Quirrel is to save the parameters of a function into an object that contains both the parameters, and the desired calculation.</p>
 							<div class="console-tutorials console" id="console-partialfunction2"></div>
@@ -407,9 +432,9 @@
 								</div>
 							</div>
 							<script type="text/javascript">buildConsole('console-partialfunction2', 'clicks := //clicks\nviews  := //views\nclickthroughRate(\'page) :=\n  {page: \'page, ctr: count(clicks where clicks.pageId = \'page) /\n                     count(views where views.pageId = \'page)}\nclickthroughRate')</script>
-							<div class="body-section-breaker">
-							</div>
 							<p>The final set contains objects that have a <em>page</em> field and a <em>ctr</em> field (the clickthrough rate for the specified page).</p>
+                                                        <div class="body-section-breaker">
+							</div>
 							<h2>AUGMENTATION</h2>
 							<p>You can easily add more fields to objects, or more elements to arrays, with the <em>with</em> operator.</p>
 							<div class="console-tutorials console" id="console-augmentation"></div>
@@ -418,9 +443,9 @@
 								</div>
 							</div>
 							<script type="text/javascript">buildConsole('console-augmentation', 'clicks := //clicks\nclicksWithDays := clicks with {day: (std :: time :: dayOfYear(clicks.timeString)) }\nclicksWithDays')</script>
-							<div class="body-section-breaker">
-							</div>
 							<p>In this query, a "day" field is added to the click objects.</p>
+                                                        <div class="body-section-breaker">
+							</div>
 							<h2>JOINS</h2>
 							<p>The most complicated operator in Quirrel is the relate operator '~', which joins together sets that don't share identities, and allows you to perform operations on the joined sets.</p>
 							<div class="console-tutorials console" id="console-join"></div>
@@ -429,9 +454,9 @@
 								</div>
 							</div>
 							<script type="text/javascript">buildConsole('console-join', 'customers := //customers\norders := //orders\nfractionForUser(\'userId) :=\n  customers\' := customers where customers.userId = \'userId\n  orders\' := orders where orders.userId = \'userId\n  customers\' ~ orders\'\n  orders.total / customers.income\nfractionForUser')</script>
-							<div class="body-section-breaker">
-							</div>
 							<p>The above query relates the customers and orders sets by their userId field, then computes the total order cost over income. The relate operator is similar to SQL's JOIN operator, but more powerful.</p>
+                                                        <div class="body-section-breaker">
+							</div>
 							<h2>SELF-JOINS</h2>
 							<p>Quirrel makes it easy to do self-joins by providing the 'new' operator, which conceptually creates a copy of a set, but with new identities. The new set is not related to the original set (but you can relate it with the relate operator).</p>
 							<div class="console-tutorials console" id="console-selfjoin"></div>
@@ -440,9 +465,9 @@
 								</div>
 							</div>
 							<script type="text/javascript">buildConsole('console-selfjoin', 'users  := //users\nusers\' := new users\nusers ~ users\'\n{ location: users.location.state,  income: users.income }')</script>
-							<div class="body-section-breaker">
-							</div>
 							<p>The above query produces a cross-product of all states and income levels.</p>
+                                                        <div class="body-section-breaker">
+							</div>
 							<h2>THAT'S IT!</h2>
 							<p>Quirrel has many built-in functions that help you do analytics. However, you now know all there is to know about Quirrel syntax and semantics.</p>
 							<p>Go ahead and play with our <a href="developer-center.html">live console</a> to explore further!</p>
@@ -926,6 +951,12 @@
 					<div id="content-right-menu">
 						<ul>
 							<li class="right-menu-link" id="dev-home-link"><p>overview</p></li>
+                                                            <ul>
+                                                                <li class="right-menu-link-sub" id="dev-home-features-link"><a href="#">features</a></li>
+                                                                <li class="right-menu-link-sub" id="dev-home-key-concepts-link"><a href="#">key concepts</a></li>
+                                                                <li class="right-menu-link-sub" id="dev-home-get-started-link"><a href="#">get started</a></li>
+                                                                <li class="right-menu-link-sub" id="dev-home-security-model-link"><a href="#">security model</a></li>
+                                                            </ul>
 							<li class="right-menu-link" id="dev-console-link"><p>console</p></li>
 							<li class="right-menu-link" id="dev-queries-link"><p>queries</p></li>
 							<li class="right-menu-link" id="dev-api-link"><p>api documentation</p></li>
@@ -933,10 +964,8 @@
 								<li class="right-menu-link-sub"><a href="#">link 1</a></li>
 							</ul>-->
 							<li class="right-menu-link" id="dev-addons-link"><p>add-ons</p></li>
+                                                        <li class="right-menu-link"><a href="http://whatisquirrel.com" target="_blank"><img src="images/sticker-whatisquirrel.png"></a></li>
 						</ul>
-					</div>
-					<div id="sticker-whatisquirrel">
-						<a href="http://whatisquirrel.com" target="_blank"><img src="images/sticker-whatisquirrel.png"></a>
 					</div>
 				</div>
 				<div class="atrib-clear-left">

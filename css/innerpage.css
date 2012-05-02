@@ -1863,7 +1863,7 @@ h1 {
 
 .developer-section-sliding-panel {
     width: 780px;
-    height: 1340px;
+    height: 2880px;
     float: left;
     padding-right: 460px;
 }
@@ -1880,6 +1880,23 @@ h1 {
     z-index: 20;
     cursor: pointer;
     text-align: center;
+}
+
+.developer-section-sliding-panel ul.normal {
+    padding-top: 10px;
+    list-style-image: url(../images/button-ul-li.png);
+    padding-bottom: 10px;
+}
+
+.developer-section-sliding-panel ul li.normal {
+    font-family: Helvetica, Questrial, sans-serif;
+    font-size: 10pt;
+    color: #9AB4CC;
+    letter-spacing: 1px;
+    padding-bottom: 4px;
+    padding-left: 0px !important;
+    line-height: 1.4;
+    font-weight: lighter;
 }
 
 #body-content-left-dev-cntr .body-sticker-repl p, .body-content-left-admin .body-sticker-repl p {
@@ -1947,6 +1964,23 @@ h1 {
     font-weight: lighter;
 }
 
+.developer-section-sliding-panel p.dev-example {
+    background-color: #14171A;
+    color: #B3B3B3;
+    font-size: 10pt;
+    font-family: questrial;
+    letter-spacing: 1px;
+    padding: 20px 20px 20px 20px;
+    border-radius: 6px;
+    padding-top: 20px !important;
+    margin-bottom: 20px;
+    line-height: 1.6 !important;
+}
+
+.red-hilight {
+    color: #CC3E22;
+}
+
 #body-content-left-dev-cntr ul li a {
     color: #C0E1FF;
 }
@@ -1975,7 +2009,7 @@ h1 {
 }
 
 .right-menu-link-sub {
-    display: none;
+    display: block;
 }
 
 #content-right-menu ul li.right-menu-link p, #content-right-menu ul li.right-menu-link-alt p {

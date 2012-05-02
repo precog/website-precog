@@ -278,10 +278,11 @@ h1 {
     float: left;
 }
 
-#app-textbox h1, #use-case-holder h1, #home-why-precog h1{
+#app-textbox h1, #use-case-holder h1, #home-comparison h1{
     font-size: 28pt;
     color: #C13707;
     padding-top: 0px;
+    text-align: left;
 }
 
 #app-textbox p {
@@ -748,14 +749,15 @@ ul.home-usecases li img {
     width: 100%;
 }
 
-#background-main5 {
-    background-color: #0A0B0D;
-    width: 100%;
+#home-comparison {
+    width: 1050px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 60px;
     text-align: left;
-    margin-bottom: 60px;
 }
 
-#home-why-precog p {
+#home-comparison p {
     font-family: helvetica;
     font-size: 13pt;
     font-weight: lighter;
@@ -763,47 +765,43 @@ ul.home-usecases li img {
     color: #748899;
 }
 
-#home-why-precog {
-    text-align: left;
-    width: 1050px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-#home-comparison {
-    width: 1050px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-bottom: 60px;
-}
-
 .height-mod {
     padding-bottom: 10px;
 }
 
 .comparison-column {
-    width: 425px;
+    width: 475px;
     float: left;
     text-align: left;
 }
 
-.comparison-column ul {
+#home-comparison .comparison-column h2 {
+    font-family: questrial, sans-serif;
+    font-size: 16pt;
+    color: #ED2224;
+    letter-spacing: 1px;
+    padding-left: 5pt;
+    font-weight: 100;
+    padding-bottom: 6px;
+}
+
+#home-comparison .comparison-column ul {
     padding-top: 20px;
     list-style-image: url(../images/button-ul-li.png);
     padding-left: 20px;
     padding-bottom: 10px;
 }
 
-.comparison-column ul li {
+#home-comparison .comparison-column ul li {
     padding-bottom: 10px;
     padding-top: 10px;
-    height: 46px;
+    height: 130px;
 }
 
-.comparison-column ul li p {
+#home-comparison .comparison-column ul li p {
     font-family: Helvetica, Questrial, sans-serif;
     font-size: 10pt;
-    color: #B3B3B3;
+    color: #808080;
     letter-spacing: 1px;
     padding-right: 20px;
     padding-left: 6px;
@@ -813,10 +811,9 @@ ul.home-usecases li img {
 
 #comparison-vs {
     float: left;
-    background-image: url("../images/graphic-build-it-vs.png");
     background-position: center;
     background-repeat: no-repeat;
-    width: 200px;
+    width: 100px;
     display: block;
     height: 470px;
 }

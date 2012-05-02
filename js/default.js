@@ -297,10 +297,41 @@ $("#dev-home-link").click(function(){
         'left': '0px'
         }, {queue: false}
         );
+    $('html,body').animate({
+    scrollTop: $("#console-devcntr").offset().top
+    }, 500);
     $(".developer-section-sliding-panel").css({
-        'height': '1400px'
+        'height': '2880px'
         }, {queue: false}
         );
+    }
+    );
+
+$("#dev-home-features-link").click(function(){
+    $('html,body').animate({
+    scrollTop: $("#features").offset().top
+    }, 500);
+    }
+    );
+
+$("#dev-home-key-concepts-link").click(function(){
+    $('html,body').animate({
+    scrollTop: $("#key-concepts-link").offset().top
+    }, 500);
+    }
+    );
+
+$("#dev-home-get-started-link").click(function(){
+    $('html,body').animate({
+    scrollTop: $("#get-started-link").offset().top
+    }, 500);
+    }
+    );
+
+$("#dev-home-security-model-link").click(function(){
+    $('html,body').animate({
+    scrollTop: $("#security-model-link").offset().top
+    }, 500);
     }
     );
 
@@ -368,14 +399,13 @@ $("li.right-menu-link").click(function(){
     }
     );
 
-$("#dev-api-link").click(function(){
+$("#dev-home-link").click(function(){
       $("li.right-menu-link-sub").css({
         'display': 'block'
         }, {queue: false}
         );
     }
     );
-
 
 //PRICING
 $(".body-pricing-difference").mouseover(function(){
