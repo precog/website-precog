@@ -104,6 +104,7 @@
                 +'<li data-layout-theme="blueopal" class="layout-theme">blue opal</li>'
                 +'<li data-layout-theme="metro" class="layout-theme">metro</li>'
                 +'<li data-layout-theme="silver" class="layout-theme">silver</li>'
+                +'<li data-layout-theme="precog" class="layout-theme">precog</li>'
 
                 +'<li class="k-state-focused">editor theme:</li>'
                 +'<li data-editor-theme="default" class="editor-theme k-state-selected">default</li>'
