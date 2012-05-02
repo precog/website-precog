@@ -40,7 +40,7 @@
     // load mandatory css/scripts
     loadCss(["css/kendoui/kendo.common.min.css", "css/kendoui/kendo.default.min.css", "css/ide/typography.css", "css/ide/controls.css"]);
     //"http://api.reportgrid.com/js/precog.js"
-    loadSyncScript(["http://localhost/rg/js/precog.js", "js/kendoui/kendo.web.min.js", "js/ace/ace.js", "js/ace/mode-quirrel-uncompressed.js"]);
+    loadSyncScript(["http://api.reportgrid.com/js/precog.js", "js/kendoui/kendo.web.min.js", "js/ace/ace.js", "js/ace/mode-quirrel-uncompressed.js"]);
 
 
     var changeIdeTheme = function(skinName) {
