@@ -95,56 +95,52 @@
 							<div class="body-section-breaker"></div>
 							<h2 id="key-concepts-link">Key Concepts</h2>
 
-							<p>There are a few key concepts you should become familiar with: data format, security model, and virtual file system.
+							<p>There are a few key concepts you should become familiar with: data format, virtual file system, and security model.
 
+							
 							<h3>Data Format</h3>
 
-							<p>Precog natively stores data in an enhanced form of JSON (JSON with a few more types and support for metadata). The JSON format allows you to
-								store strings, numbers, arrays, and objects (currently, Precog does not support binary data).</p>
+							<p>Precog natively stores data in an enhanced form of JSON (JSON with a few more types and support for metadata). The JSON format allows you tostore strings, numbers, arrays, and objects (currently, Precog does not support binary data).</p>
+                                                        
+                                                        <h3>Virtual File System</h3>
 
-							<h3>Security Model</h3>
+							<p>Precog uses the metaphor of a file system to help you organize and share data. Any time you store data in Precog, you must choose a particular directory to store the data in.</p>
 
-							<p>UNDER CONSTRUCTION</p>
+							<p>You don't have to create directories manually. Directories are created on-demand whenever you try to put data in a directory that doesn't exist yet.</p>
+                                                        
+                                                        <p class="dev-example">Precog doesn't support the notion of "databases" or "tables" or "collections". Instead, you can use the file system to create however many levels of organization make sense to you.  The file system forms the basis of the security model, so the decision of how to organize your data is not arbitrary (unless you have no intention of sharing access to your data).</p>
 
-							<h3>Virtual File System</h3>
-
-							<p>When you signup for a Precog account, you are given access to a particular directory in the Precog virtual file system. You can store data at this
-								directory or any deeper path.</p>
-
-							<p>The virtual file system can be used to organize your data or your customers data.</p>
-
+							<h3 id="security-model-link">Security Model</h3>
+							<p>In order to interact with the Precog API, you need a <i>token</i>. A token comes with a set of <i>grants</i> that give you permission to interact with different parts of the virtual file system.</p>
+                                                        <p>Every token is uniquely identified by a string of 256 characters, which is called the <i>token id</i>. Token ids are very similar to the API keys used by most APIs. You can think of a token id as a combination of a username and password.</p>
+                                                        <p class="dev-example"><img src="images/icon-exclaim.png"> Because the token id itself confers permissions, you should treat token ids securely, like you would treat passwords. You should never share your token id with anyone else. If you need to give someone access to your data, you can always create a new token for them.</p>
+                                                        <p>Every token is associated with zero or more <i>grants</i>. A grant gives you permission to do something in a specific directory of the virtual file system. Grants are revocable and may expire (just because your token has a grant now, doesn't mean it will always have that grant!).</p>
+                                                        <p>Every grant is uniquely identified by a string of 256 characters, which is called the <i>grant id</i>. Like token ids, it is the grant id itself which confers the permission, so you should treat grant ids as securely as you treat token ids. If you give out a grant id to someone else, they will be able to add that grant to their token to gain its permissions.</p>
+                                                        <div class="dev-bullets">
+                                                            <h2>Precog currently supports the following kinds of grants:</h2>
+                                                            <ul class="normal">
+                                                                <li class="normal">Read grant. This grant lets you read existing data from a directory.</li>
+                                                                <li class="normal">Reduce grant. This grant lets you read reductions of data from a directory (for example, counting the values or doing other operations that reduce the original data set).</li>
+                                                                <li class="normal">Write grant. This grant lets you insert new data in a directory.</li>
+                                                                <li class="normal">Modify grant. This grant lets you modify (update and delete) data in a directory.</li>
+                                                                <li class="normal">Transform grant. This grant lets you apply a transformation to data in a directory, and save the results to some other directory.</li>
+                                                                <li class="normal">Owner grant. This grant gives you "ownership" of a directory. Ownership means you can delete or move data inside the directory, even if you don't own that data.</li>
+                                                            </ul>
+                                                        </div>
+							<p>If you have a grant, you can use that grant to create another grant which is either less powerful than the original grant, or just as powerful as the original grant.</p>
+                                                        <p class="dev-example"><span class="red-hilight">Example-</span> If you have a read grant to /foo/, then you can use that read grant to create another read grant for /foo/bar/ (which is strictly less powerful than the original grant). Or if you have a write grant for /foo/ that does not expire, you could use that write grant to create another write grant for /foo/ that expires in 2 days.</p>
+                                                        <p>If you use a first grant to create a second grant, then you can revoke the second grant at any time. Additionally, if your grant is revoked, then all derived grants are revoked.</p>
+                                                        <p>Every Precog customer gets a master token on signup. The master token comes preloaded with all possible grants to your root directory (including ownership). Because Precog issues these grants to you when you signup for an account, Precog is the only one who can revoke them.</p>
+                                                        <p>If you store data in Precog using a given token, that token is considered the owner of the data, and the only one who is allowed to read that data (unless you issue others a read grant).</p>
+                                                        <p class="dev-example"><span class="red-hilight">Example-</span> If Bob gives you a write grant to /bob/, and you store data in their directory, then you are the owner of that data. Bob can't read the data without a read grant from you. (Of course, if Bob has ownership of the directory, he can still choose to delete your data even if he can't read it.)</p>
+                                                        <p>Data is sometimes owned by more than one token. For example, if you transform data from someone else's directory (using the transform API), then both you and the original writer of that data will be considered owners of the data.</p>
+                                                        <p>To manage security, you can use the authorization API. To use this API, you need to specify a token in the query string (tokenId=XYZ). This token is referrred to as the <i>authentication token</i>, because it's used to authorize your operations.</p>
 							<div class="body-section-breaker">
 							</div>
 							<h2  id="get-started-link">Getting Started</h2>
 							<p>It's super easy to get started with Precog. Just <a href="pricing.html">signup</a> for an account.</p>
 							<p>Signing up will give you access to a token that you can use to interact with the API. The token keeps your data safe and secure, accessible only to you.</p>
 							<p>Once you have your token, head over to the <a href="api-documentation.html">API documentation</a> page to learn what to do with it!</p>
-                                                        <div class="body-section-breaker">
-							</div>
-                                                        <h2  id="security-model-link">Security Model</h2>
-                                                        <p>In order to interact with the Precog API, you need a token. A token gives you permissions for a particular location in the virtual file system, including all descendent directories. This location is referred to as the <i>token directory</i>.</p>
-                                                        <p>Every token is uniquely identified by a string of 256 characters, which is called the <i>token id</i>. Token ids are very similar to the API keys used by most APIs. The token id itself is what confers permissions, so you should treat token ids securely, like you would treat passwords.</p>
-                                                        <p>All tokens can be used to create other tokens. When a first token is used to create a second token, the second token is referred to as a child of the first token. Child tokens can confer the same or more restrictive permissions as held by parent tokens (but never broader permissions).</p>
-                                                        <p>Every Precog customer has a root token. A root token establishes you as the unique owner of a particular directory (called your <i>root directory</i>). A root token is not created by any other token, and therefore does not have a parent token. Root tokens have ultimate authority over the directory they own.</p>
-                                                        <p>All tokens except root tokens have an owner. The owner is defined to be the root token that ultimately granted the token its permissions. The owner of a token always has the ability to modify the permissions of the token.</p>
-                                                        <p class="dev-example"><span class="red-hilight">Example-</span> Let's say Bob owns the directory /bob/. If Bob creates a write token for Alice for /bob/, and then Alice uses the permissions of that token to create a write token for Tom for /bob/, then Tom's write token for /bob/ will still be owned by Bob, even though Alice created it.</p>
-                                                        <p>Root tokens own data. If you own the /foo/ directory, and write data to /foo/, then you also own that data. However, if Alice owns the /foo/ directory, and you write data to /foo/, then both you and Alice own the data. Thus, data is owned both by the root of the write token, and by the owner of the target directory. In the common case, these are one and the same, so data has a single owner (the root of the write token).</p>
-                                                        <p class="dev-example"><span class="red-hilight">Example-</span> In the above example, if Tom writes to /bob/ using his write token, then both Tom and Bob will own the data, because Bob owns the /bob/ directory, and Tom created the data. Thus, for Tom to access the data, he needs read permission from Bob, and for Bob to access the data, he needs read permission from Tom. This flexible permission model lies at the core of the Precog enrichment system.</p>
-                                                        <h2>Any given token may have several permissions:</h2>
-                                                        <ul class="normal">
-                                                            <li class="normal">Read permission. This permission lets you read the subset of  data in the directory that is owned by the root of the token. For example, Bob can create read tokens for Alice to /foo/, even if there is no data owned by Bob in /foo/. In this sense, a pure read token just means, "I don't care if you read data owned by me if it happens to be located in the directory."</li>
-                                                            <li class="normal">Write permission. This permission lets you insert new data inside the directory. This permission is valid for as long as the parent of the token has permission to write to the directory.</li>
-                                                            <li class="normal">Modify permission. This permission lets you modify (update and delete) data inside the directory. This permission is valid for as long as the parent of the token has permission to modify the directory.</li>
-                                                            <li class="normal">Owner permission. This permission gives you ownership of the specified path. Only root tokens have ownership permissions. Ownership permission implies read (for self-owned data), write, and modify permissions.</li>
-                                                        </ul>
-							<p>In addition, tokens have an optional expiration date. If a token has an expiration date, then it confers no permissions once the current time is greater than the expiration date.</p>
-                                                        <p>Inside any directory in the virtual file system, there may exist data which is owned by many different root tokens. In order to read all the data in a directory, you need tokens which give you read permissions from all the data owners.</p>
-                                                        <p class="dev-example"><span class="red-hilight">Example-</span> If Bob creates a write token for Alice for /foo/, then Alice will be able to read any data in /foo/ that is owned by Bob. However, if Tom also owns data in /foo/, then Alice won't be able to read that data unless she has a read token from Tom for /foo/.</p>
-                                                        <p>In many cases, you'll want to combine tokens together. For example, if you want to read all data in a directory, and all the data in the directory was created by Tom and Bob, then you might want to combine a read token from Tom with a read token from Bob, and use the composite token to read from the directory.</p>
-                                                        <p>To allow tokens to be combined, every token has a <i>ring</i>. The token itself is a member of the ring, and you can add any number of other tokens to the ring. This confers the permissions of those tokens on the primary token.</p>
-                                                        <p>To manage tokens, you can use the token management API. To use the token management API, you need to specify a token in the query string (tokenId=XYZ). This token is referrred to as the <i>authentication token</i>, because it's used to authorize your operations.</p>
-                                                        <div class="body-section-breaker">
-							</div>
 						</div>
 						<div class="developer-section-sliding-panel" id="console-link">
 							<h1 class="body-title-alt">REPL</h1>
@@ -954,8 +950,8 @@
                                                             <ul>
                                                                 <li class="right-menu-link-sub" id="dev-home-features-link"><a href="#">features</a></li>
                                                                 <li class="right-menu-link-sub" id="dev-home-key-concepts-link"><a href="#">key concepts</a></li>
-                                                                <li class="right-menu-link-sub" id="dev-home-get-started-link"><a href="#">get started</a></li>
                                                                 <li class="right-menu-link-sub" id="dev-home-security-model-link"><a href="#">security model</a></li>
+                                                                <li class="right-menu-link-sub" id="dev-home-get-started-link"><a href="#">get started</a></li>
                                                             </ul>
 							<li class="right-menu-link" id="dev-console-link"><p>console</p></li>
 							<li class="right-menu-link" id="dev-queries-link"><p>queries</p></li>

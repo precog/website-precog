@@ -1861,9 +1861,14 @@ h1 {
     left: 0px;
 }
 
+.dev-bullets {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 .developer-section-sliding-panel {
     width: 780px;
-    height: 2880px;
+    height: 2800px;
     float: left;
     padding-right: 460px;
 }
