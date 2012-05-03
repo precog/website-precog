@@ -1862,13 +1862,13 @@ h1 {
 }
 
 .dev-bullets {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .developer-section-sliding-panel {
     width: 780px;
-    height: 2800px;
+    height: 3040px;
     float: left;
     padding-right: 460px;
 }
@@ -1980,6 +1980,12 @@ h1 {
     padding-top: 20px !important;
     margin-bottom: 20px;
     line-height: 1.6 !important;
+}
+
+.dev-example-image {
+    position: absolute;
+    left: 0px;
+    top: -10px;
 }
 
 .red-hilight {
