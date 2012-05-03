@@ -7,8 +7,6 @@
 * GNU General Public License (GPL) version 3.
 * For GPL requirements, please review: http://www.gnu.org/copyleft/gpl.html
 */
-/* Kendo skin */
-/* main colors */
 .k-widget {
   background-color: #1e2226;
 }
@@ -53,7 +51,7 @@
 .k-dropdown-wrap,
 .k-tooltip,
 .k-progress {
-  border-color: #282e33;
+  border-color: #323a40;
 }
 .k-group,
 .k-toolbar,
@@ -99,7 +97,7 @@ div.k-picker-wrap.k-state-active,
 span.k-numeric-wrap.k-state-active,
 .k-numeric-wrap.k-state-focused,
 .k-numeric-wrap.k-state-focused:hover {
-  border-color: #282e33;
+  border-color: #323a40;
   background-color: #282e33;
 }
 .k-autocomplete .k-input,
@@ -108,7 +106,7 @@ span.k-numeric-wrap.k-state-active,
 .k-dropdown-wrap.k-state-focused .k-input,
 .k-picker-wrap.k-state-focused .k-input,
 .k-numeric-wrap.k-state-focused .k-input {
-  border-color: #282e33;
+  border-color: #323a40;
 }
 .k-input,
 .k-textbox {
@@ -191,12 +189,12 @@ span.k-numeric-wrap.k-state-active,
 .k-button.k-state-disabled:hover,
 .k-state-disabled .k-button:hover,
 .k-draghandle {
-  border-color: #282e33;
+  border-color: #323a40;
   background-color: #3c454d;
 }
 .k-button:hover,
 .k-draghandle:hover {
-  border-color: #222222;
+  border-color: #617280;
   background-color: #617280;
 }
 /* states */
@@ -210,7 +208,7 @@ span.k-numeric-wrap.k-state-active,
 .k-state-focused {
   color: #ffffff;
   background-color: #617280;
-  border-color: #222222;
+  border-color: #617280;
 }
 .k-state-selected,
 .k-list > .k-state-selected,
@@ -239,7 +237,7 @@ span.k-numeric-wrap.k-state-active,
 .k-marquee {
   color: #ffffff;
   background-color: #617280;
-  border-color: #222222;
+  border-color: #617280;
 }
 .k-state-hover > .k-link,
 .k-other-month.k-state-hover .k-link {
@@ -313,7 +311,7 @@ span.k-numeric-wrap.k-state-active,
 }
 /* Upload */
 .k-progress-status {
-  border-color: #222222 transparent;
+  border-color: #617280 transparent;
 }
 /* ImageBrowser */
 .k-tile {
@@ -321,7 +319,7 @@ span.k-numeric-wrap.k-state-active,
 }
 .k-textbox:hover,
 .k-tiles li.k-state-hover {
-  border-color: #222222;
+  border-color: #617280;
 }
 .k-tiles li.k-state-selected {
   border-color: #1a1a1a;
