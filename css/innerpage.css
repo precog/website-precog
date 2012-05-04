@@ -1868,7 +1868,7 @@ h1 {
 
 .developer-section-sliding-panel {
     width: 780px;
-    height: 3040px;
+    height: 3280px;
     float: left;
     padding-right: 460px;
 }
@@ -1982,20 +1982,34 @@ h1 {
     line-height: 1.6 !important;
 }
 
-.dev-example-image {
-    position: absolute;
-    left: 0px;
-    top: -10px;
+.dev-example-icon {
+    height: 28px;
+    width: 160px;
+    background-color: #14171A;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    padding: 6px 10px 6px 10px;
+    left: 10px;
+    top: 10px;
 }
 
-.red-hilight {
-    color: #CC3E22;
+.float-left {
+    float: left;
+}
+
+.dev-example-icon p {
+    color: #505D66;
+    float: left;
+    padding-left: 10px;
+}
+
+.dev-example {
+    clear: both;
 }
 
 #body-content-left-dev-cntr ul li a {
     color: #C0E1FF;
 }
-
 
 #body-content-right-dev-cntr {
     padding-top: 34px;

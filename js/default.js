@@ -301,7 +301,7 @@ $("#dev-home-link").click(function(){
     scrollTop: $("#console-devcntr").offset().top
     }, 500);
     $(".developer-section-sliding-panel").css({
-        'height': '3040px'
+        'height': '3280px'
         }, {queue: false}
         );
     }
