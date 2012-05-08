@@ -121,7 +121,8 @@
                             code : "",
                             result : null,
                             error : null,
-                            output : "table"
+                            output : "table",
+                            uid : "query #1"
                         }
                     }
                 };
