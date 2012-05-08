@@ -587,7 +587,7 @@ h1 {
 }
 
 #body-add-ons .add-on-pricing-options p {
-    font-family: questrial;
+    font-family: questrial, sans-serif;
     font-size: 11pt;
     padding-top: 14px;
     padding-left: 17.5pt;
@@ -2175,7 +2175,7 @@ h1 {
     color: #51bbce;
 }
 .console .jquery-console-message.error {
-    color: #c63846;
+    color: #C63846;
     white-space: pre;
 }
 
