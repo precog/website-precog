@@ -132,3 +132,70 @@
 .pg-main-bar .pg-right-bar li {
     border: 0;
 }
+
+.pg-editors.k-tabstrip,
+.pg-editors.k-tabstrip .k-content,
+.pg-editors.k-tabstrip .k-content.k-state-active {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.pg-editor-toolbar {
+    position: absolute;
+    z-index: 10;
+    overflow: visible !important;
+}
+
+.pg-editor-toolbar a {
+    float: right;
+    margin: 3px 5px 0 0;
+}
+
+
+.k-icon.pg-sprite.pg-icon.pg-close.pg-tab-close {
+    margin-left: 5px;
+    margin-right: 0;
+}
+
+/* SPRITES */
+
+.pg-download {
+    background-position:0px 0px;
+}
+
+.pg-help {
+    background-position:0px -16px;
+}
+
+.pg-new {
+    background-position:0px -32px;
+}
+
+.pg-minimize {
+    background-position:0px -48px;
+}
+
+.pg-close {
+    background-position:0px -64px;
+}
+
+.pg-duplicate {
+    background-position:0px -80px;
+}
+
+.pg-maximize {
+    background-position:0px -96px;
+}
+
+.pg-folder {
+    background-position:0px -112px;
+}
+
+.pg-query {
+    background-position:0px -128px;
+}
+
+.pg-settings {
+    background-position:0px -144px;
+}
