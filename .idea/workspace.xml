@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0e112e2e-94f7-45cc-882e-34919a90c5b4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/homepage.css" afterPath="$PROJECT_DIR$/css/homepage.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/innerpage.css" afterPath="$PROJECT_DIR$/css/innerpage.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="website-precog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,19 +24,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="176" column="24" selection-start="9851" selection-end="9851" vertical-scroll-proportion="9.375">
+            <state line="9" column="16" selection-start="553" selection-end="553" vertical-scroll-proportion="0.021563342">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homepage.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="homepage.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/homepage.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="763" column="20" selection-start="15951" selection-end="15951" vertical-scroll-proportion="0.6006006">
+            <state line="697" column="20" selection-start="14754" selection-end="14754" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -76,8 +73,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="527" />
-    <option name="y" value="138" />
+    <option name="x" value="416" />
+    <option name="y" value="193" />
     <option name="width" value="1536" />
     <option name="height" value="896" />
   </component>
@@ -170,12 +167,22 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="preferences.editor" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
+    <configuration default="false" name="index.html" type="JavascriptDebugSession" factoryName="Local" temporary="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" value="file://$PROJECT_DIR$/index.html" />
+      </JSDebuggerConfigurationSettings>
+      <RunnerSettings RunnerId="JavascriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
+      <method />
+    </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
       <JSDebuggerConfigurationSettings>
         <option name="engineId" value="embedded" />
@@ -183,7 +190,9 @@
       </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
-    <list size="0" />
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+    </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
@@ -213,13 +222,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="527" y="138" width="1536" height="896" extended-state="0" />
-    <editor active="true" />
+    <frame x="416" y="193" width="1536" height="896" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32980832" sideWeight="0.997351" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32486978" sideWeight="0.997351" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -292,35 +301,27 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/developer-center.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="52" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.02173913">
-          <folding />
-        </state>
+        <state line="28" column="52" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.02173913" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/innerpage.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2176" column="32" selection-start="44572" selection-end="44572" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/default.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="439" column="3" selection-start="10646" selection-end="10646" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="176" column="24" selection-start="9851" selection-end="9851" vertical-scroll-proportion="9.375">
-          <folding />
-        </state>
+        <state line="2176" column="32" selection-start="44572" selection-end="44572" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/homepage.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="763" column="20" selection-start="15951" selection-end="15951" vertical-scroll-proportion="0.6006006">
+        <state line="697" column="20" selection-start="14754" selection-end="14754" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/default.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="439" column="3" selection-start="10646" selection-end="10646" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="16" selection-start="553" selection-end="553" vertical-scroll-proportion="0.021563342">
           <folding />
         </state>
       </provider>

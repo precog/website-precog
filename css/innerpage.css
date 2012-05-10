@@ -1390,6 +1390,10 @@ h1 {
 }
 
 /*jobs*/
+.button-contactus-lg {
+    height: 90px;
+}
+
 .button-contactus-lg a {
     display: block;
     background-image: url("../images/button-contactus-lg.png");
@@ -1441,6 +1445,54 @@ h1 {
     color: #4B5660;
     line-height: 1.30;
     padding-top: 0px;
+}
+
+#body-content-left ul#job-list {
+    padding-top: 10px;
+    list-style-image: url(../images/button-ul-li.png) !important;
+    padding-left: 0px !important;
+    padding-bottom: 10px;
+}
+
+#body-content-left li.job-section {
+    height: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#body-content-left li.job-section span{
+    color: #C13707;
+    font-size: 11pt;
+}
+
+#body-content-left li.job-section h2 {
+    font-family: questrial, sans-serif;
+    font-size: 11pt;
+    font-weight: lighter;
+    color: #4B87C6;
+    letter-spacing: 1px;
+    height: 20px;
+    overflow: hidden;
+    text-decoration: underline;
+}
+
+#body-content-left li.job-section p {
+    font-family: helvetica, sans-serif;
+    font-size: 10pt;
+    line-height: 1.6;
+}
+
+#body-content-left li.job-section ul {
+    padding-top: 0px;
+}
+
+#body-content-left li.job-section ul li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.attr-height {
+    height: auto !important;
 }
 
 /*success stories*/
@@ -1936,7 +1988,7 @@ h1 {
     font-weight: normal;
 }
 
-#body-content-left-dev-cntr h3, .body-content-left-admin h3 {
+#body-content-left-dev-cntr h3, .body-content-left-admin h3, #body-content-left h3 {
     font-size: 15px;
     color: #fff;
     padding-bottom: 4px;

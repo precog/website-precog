@@ -274,14 +274,13 @@ $("#scrolling-scroll-panel").mouseover(function(){
 }
 );
 
-//JOBS
-$("#scrolling-scroll-panel").mouseover(function(){
-  $(".scrolling-right-panel-newsletter").animate({
-        'left': '-1230'
-        }, 17500
-        );
-}
-);
+$(".job-section").click(function(){
+  $(".job-section").removeClass("attr-height");
+  $(this).toggleClass("attr-height");
+  $('html,body').animate({
+    scrollTop: $(this).offset().top
+    }, 500);
+})
 
 //DEVELOPER CENTER
 $(".dev-center-api-docs").mouseover(function(){
