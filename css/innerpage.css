@@ -1460,6 +1460,11 @@ h1 {
     cursor: pointer;
 }
 
+#body-content-left ul.jobs-req li {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+}
+
 #body-content-left li.job-section span{
     color: #C13707;
     font-size: 11pt;
