@@ -1,0 +1,653 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+  <head>
+    <title>
+      Api Documentation
+    </title>
+    <link rel="stylesheet" type="text/css" href="css/innerpage.css">
+    <link rel="shortcut icon" href="http://precog.io/images/icon-favicon.ico" mce_href="http://precog.io/images/icon-favicon.ico"><!--[if (gte IE 6)&(lte IE 8)]>
+                <script type="text/javascript" src="js/selectivizr.js"></script>
+                <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
+        <![endif]-->
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js">
+</script>
+    <script type="text/javascript" src="js/default.js">
+</script>
+    <script type="text/javascript" src="js/jquery.console.js">
+</script>
+    <script type="text/javascript" src="js/console.js">
+</script>
+  </head>
+  <body>
+    <div id="sticker-precog-beta">
+      <a href="mailto:contact@precog.io"></a>
+    </div>
+    <div id="contact-us">
+      <a href="contact-us.html"></a>
+    </div>
+    <div id="support">
+      <a href="http://support.precog.io/"></a>
+    </div>
+    <div id="background-top">
+      <div id="header">
+        <div id="header-logo">
+          <a href="./index.html"><img alt="precog" src="images/logo-precog.png"></a>
+        </div>
+        <div id="header-menu">
+          <ul>
+            <li>
+              <a href="how-it-works.html">how it works</a>
+            </li>
+            <li>
+              <a href="pricing.html">pricing</a>
+            </li>
+            <li>
+              <a href="add-ons.html">add-ons</a>
+            </li>
+            <li>
+              <a href="developer-center.html">dev center</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="background-main1">
+      <div id="body">
+        <div id="body-navbar">
+          <a class="bodynav-devcenter" href="developer-center.html">dev center</a> <a class="bodynav-support" href="http://support.precog.io/">support</a> <a class="bodynav-status" href="http://status.precog.io/">status</a>
+        </div>
+        <div id="body-content-left-dev-cntr">
+          <h1 class="body-title">
+            API DOCUMENTATION
+          </h1>
+          <div class="api-language">
+            <div class="language-json">
+                <p>JSON</p>
+            </div>
+          </div>
+          <div class="api-info">
+            <table>
+              <tr>
+                <td class="api-text-name">
+                  GET
+                </td>
+                <td class="api-text-description">
+                  http://api.precog.io/v1/vfs/[path]?tokenId=[your token]
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  description
+                </td>
+                <td>
+                  <p>
+                    Retrieves a list of the children of the specified path. You must have permission to read from the path.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  query parameters
+                </td>
+                <td>
+                  <ul>
+                      <li>
+                          <p>token<p>
+                      </li>
+                      <li>
+                          <p>[yourtoken]<p>
+                      </li>
+                      <li>
+                          <p>example<p>
+                      </li>
+                  </ul>
+                </td>
+              </tr>
+                <tr>
+                    <td class="api-code">
+                      response
+                    </td>
+                    <td class="api-wide">
+                      <ul>
+                          <li>
+                              <p>["/foo", "/bar"] This is a test of the emergency broadcasting system.<p>
+                          </li>
+                      </ul>
+                    </td>
+                </tr>
+            </table>
+          </div>
+          <div class="api-language">
+            <div class="language-json">
+                <p>JSON</p>
+            </div>
+          </div>
+          <div class="api-info">
+            <table>
+              <tr>
+                <td class="api-text-name">
+                  POST
+                </td>
+                <td class="api-text-description">
+                  http://api.precog.io/v1/vfs/[path]?tokenId=[your token]
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  description
+                </td>
+                <td>
+                  <p>
+                    Uploads a JSON value to the specified path. You must have permission to write to the path.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  request body
+                </td>
+                <td>
+                  <p>
+                    The content you want to upload to the specified path.
+                  </p>
+                  <div class="font-code">
+                    <pre>
+  {"user": "jdoe", "age": 23, "income": 89221.00}
+  </pre>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  query parameters
+                </td>
+                <td>
+                  <ul>
+                      <li>
+                          <p>token<p>
+                      </li>
+                      <li>
+                          <p>[yourtoken]<p>
+                      </li>
+                      <li>
+                          <p>example<p>
+                      </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  response
+                </td>
+                <td class="api-wide">
+                  <ul>
+                      <li>
+                          <p>HTTP 200</p>
+                      </li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="api-language">
+            <div class="language-json">
+                <p>JSON</p>
+            </div>
+          </div>
+          <div class="api-info">
+            <table>
+              <tr>
+                <td class="api-text-name">
+                  GET
+                </td>
+                <td class="api-text-description">
+                  http://api.precog.io/v1/vfs/[path]?tokenId=[your token]&amp;q=[query]
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  description
+                </td>
+                <td>
+                  <p>
+                    Performs a fast-running query with respect to the specified base path. You must have permission to read from the path.
+                  </p>
+                  <p>
+                    The query must be expressed in <a href="queries.html">Quirrel</a>.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  query parameters
+                </td>
+                <td>
+                  <ul>
+                      <li>
+                          <p>token<p>
+                      </li>
+                      <li>
+                          <p>[yourtoken]<p>
+                      </li>
+                      <li>
+                          <p>example<p>
+                      </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                </td>
+                <td>
+                  <ul>
+                      <li>
+                          <p>q<p>
+                      </li>
+                      <li>
+                          <p>[your query]<p>
+                      </li>
+                      <li>
+                          <p>example<p>
+                      </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  response
+                </td>
+                <td>
+                  <p>
+                    The JSON results of executing the query.
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="api-language">
+            <div class="language-json">
+                <p>JSON</p>
+            </div>
+          </div>
+          <div class="api-info">
+            <table>
+              <tr>
+                <td class="api-text-name">
+                  DELETE
+                </td>
+                <td class="api-text-description">
+                  http://api.precog.io/v1/vfs/[path]?tokenId=[your token]
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  description
+                </td>
+                <td>
+                  <p>
+                    Deletes an entire path. USE WITH CAUTION!
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  query parameters
+                </td>
+                <td>
+                  <ul>
+                      <li>
+                          <p>token<p>
+                      </li>
+                      <li>
+                          <p>[yourtoken]<p>
+                      </li>
+                      <li>
+                          <p>example<p>
+                      </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  response
+                </td>
+                <td class="api-wide">
+                  <ul>
+                      <li>
+                          <p>HTTP 200<p>
+                      </li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="api-language">
+            <div class="language-json">
+                <p>JSON</p>
+            </div>
+          </div>
+          <div class="api-info">
+            <table>
+              <tr>
+                <td class="api-text-name">
+                  POST
+                </td>
+                <td class="api-text-description">
+                  http://api.precog.io/v1/jobs/?tokenId=[your token]
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  description
+                </td>
+                <td>
+                  <p>
+                    Creates a new long-running job. There are three kinds of jobs you can create:
+                  </p>
+                  <div class="api-info-bullet">
+                    <ul>
+                      <li>
+                        <em>A delete job</em>. A delete job is a request to delete all the events matching a specified query.
+                      </li>
+                      <li>
+                        <em>A transform job</em>. A transform job is a request to save the results of some query to a specified path.
+                      </li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  request body
+                </td>
+                <td>
+                  <p>
+                    Create a delete job:
+                  </p>
+                  <div class="font-code">
+                    <pre>
+  {
+  "type":  "delete",
+  "query": "[query]"
+  }
+                        </pre>
+                  </div>
+                  <div class="clear">
+                  </div>
+                  <p>
+                    Create a transform job:
+                  </p>
+                  <div class="font-code">
+                    <pre>
+  {
+  "type":  "transform",
+  "query": "[query]",
+  "path":  "/results/"
+  }
+  </pre>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  query parameters
+                </td>
+                <td>
+                  <ul>
+                      <li>
+                          <p>token<p>
+                      </li>
+                      <li>
+                          <p>[yourtoken]<p>
+                      </li>
+                      <li>
+                          <p>example<p>
+                      </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                </td>
+                <td>
+                  <ul>
+                      <li>
+                          <p>q<p>
+                      </li>
+                      <li>
+                          <p>[your query]<p>
+                      </li>
+                      <li>
+                          <p>example<p>
+                      </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  response
+                </td>
+                <td class="api-wide">
+                  <p>
+                    A job id that can be used to poll for the status of the job.
+                  </p>
+                  <ul>
+                      <li>
+                          <p>9869823123<p>
+                      </li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="api-language">
+            <div class="language-json">
+                <p>JSON</p>
+            </div>
+          </div>
+          <div class="api-info">
+            <table>
+              <tr>
+                <td class="api-text-name">
+                  GET
+                </td>
+                <td class="api-text-description">
+                  http://api.precog.io/v1/jobs/[job id]/status
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  description
+                </td>
+                <td>
+                  <p>
+                    Polls for the status of some long-running job.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  query parameters
+                </td>
+                <td>
+                  <ul>
+                      <li>
+                          <p>token<p>
+                      </li>
+                      <li>
+                          <p>[yourtoken]<p>
+                      </li>
+                      <li>
+                          <p>example<p>
+                      </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  query parameters
+                </td>
+                <td>
+                  <ul>
+                      <li>
+                          <p>job id<p>
+                      </li>
+                      <li>
+                          <p>[the id of the long-running job]<p>
+                      </li>
+                      <li>
+                          <p>example<p>
+                      </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td class="api-code">
+                  response
+                </td>
+                <td class="api-wide">
+                  <p>
+                    The status of the long-running job.
+                  </p>
+                  <ul>
+                      <li>
+                          <p>{"status": "running", "start": 1332165118, "elapsed": 96422, "progress": 0.23}<p>
+                      </li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="body-section-breaker"></div>
+        </div>
+        <div id="body-content-right-dev-cntr">
+          <div id="content-right-menu">
+            <ul>
+              <li>
+                <a href="developer-center.html">overview</a>
+              </li>
+              <li>
+                <a href="console.html">console</a>
+              </li>
+              <li>
+                <a href="queries.html">queries</a>
+              </li>
+              <li class="dev-center-api-docs">
+                <a href="api-documentation.html">api documentation</a>
+              </li><!--
+                                <ul>
+                                    <li class="dev-center-api-doc"><a href="">doc 1</a></li>
+                                </ul>
+                                -->
+              <li>
+                <a href="developer-center-addons.html">add-ons</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="atrib-clear-left"></div>
+      </div>
+    </div>
+    <div id="background-footer">
+      <div id="footer">
+        <div id="footer-menu">
+          <ul>
+            <li>Precog
+            </li>
+            <li>
+              <a href="about.html">about</a>
+            </li>
+            <li>
+              <a href="contact-us.html">contact</a>
+            </li>
+            <li>
+              <a href="jobs.html">jobs</a>
+            </li>
+          </ul>
+          <ul>
+            <li>Business
+            </li>
+            <li>
+              <a href="why-precog.html">why precog?</a>
+            </li>
+            <li>
+              <a href="success-stories.html">success stories</a>
+            </li>
+            <li>
+              <a href="dev-partner.html">dev partners</a>
+            </li>
+            <li>
+              <a href="add-on-partner.html">add-on partners</a>
+            </li>
+            <li>
+              <a href="news-and-events.html">news &amp; events</a>
+            </li>
+            <li>
+              <a href="blog.html">blog</a>
+            </li>
+          </ul>
+          <ul>
+            <li>Platform
+            </li>
+            <li>
+              <a href="how-it-works.html">how it works?</a>
+            </li>
+            <li>
+              <a href="pricing.html">pricing</a>
+            </li>
+            <li>
+              <a href="add-ons.html">add-ons</a>
+            </li>
+          </ul>
+          <ul>
+            <li>Resources
+            </li>
+            <li>
+              <a href="developer-center.html">dev center</a>
+            </li>
+            <li>
+              <a href="http://support.precog.io/">support</a>
+            </li>
+            <li>
+              <a href="http://status.precog.io/">status</a>
+            </li>
+          </ul>
+        </div>
+        <div id="phone-number">
+          <p>
+            (888) 673-9958
+          </p>
+        </div>
+        <div id="icon-facebook">
+          <a href="http://www.facebook.com/pages/Precog/136686693120257?sk=wall" target="_blank"></a>
+        </div>
+        <div id="icon-twitter">
+          <a href="https://twitter.com/#!/@PrecogIO" target="_blank"></a>
+        </div>
+        <div id="copyrights">
+          <p>
+            Copyright © 2012 ReportGrid, Inc. All Rights Reserved
+          </p><a href="privacy-terms.html">privacy : terms of use</a>
+        </div>
+      </div>
+    </div><script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-589893-15']);
+    _gaq.push(['_setDomainName', 'precog.io']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    </script>
+  </body>
+</html>
