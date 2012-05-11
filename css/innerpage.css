@@ -2089,6 +2089,10 @@ h1 {
     cursor: pointer;
 }
 
+li.right-menu-sticker {
+    background-color: transparent !important;
+}
+
 .right-menu-link-sub {
     display: block;
 }
@@ -2245,13 +2249,8 @@ h1 {
     top: 40px;
 }
 
-#sticker-whatisquirrel {
-    width: 141px;
-    height: 66px;
-    position: fixed;
-    z-index: 10;
-    right: 198px;
-    bottom: 40px;
+#content-right-menu img.sticker-whatisquirrel {
+    padding-top: 10px;
 }
 
 .console-execute {

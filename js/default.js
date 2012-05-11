@@ -368,7 +368,7 @@ $("#dev-addons-link").click(function(){
         }, {queue: false}
         );
     $(".developer-section-sliding-panel").css({
-        'height': '300px'
+        'height': '380px'
         }, {queue: false}
         );
     }
