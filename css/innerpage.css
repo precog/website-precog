@@ -1450,12 +1450,11 @@ h1 {
 #body-content-left ul#job-list {
     padding-top: 10px;
     list-style-image: url(../images/button-ul-li.png) !important;
-    padding-left: 0px !important;
+    padding-left: 0px;
     padding-bottom: 10px;
 }
 
 #body-content-left li.job-section {
-    height: 20px;
     overflow: hidden;
     cursor: pointer;
 }
