@@ -510,26 +510,67 @@ $(".yh").mouseleave(function(){
     );
 
 //ADMIN
-$("#admin-your-info").click(function(){
+$("#admin-profile-link").click(function(){
     $("#body-content-admin-slider").animate({
         'left': '0px'
         }, {queue: false}
         );
-    }
-    );
-$("#admin-your-pa").click(function(){
-    $("#body-content-admin-slider").animate({
-      'left': '-1240px'
-   }, {queue: false});
-});
+    $('html,body').animate({
+    scrollTop: $("body").offset().top
+    }, 500);
+  }
+);
 
-$("#admin-your-tokens").click(function(){
+$("#admin-planaddons-link").click(function(){
+    $("#body-content-admin-slider").animate({
+        'left': '-1240px'
+        }, {queue: false}
+        );
+    $('html,body').animate({
+    scrollTop: $("body").offset().top
+    }, 500);
+  }
+);
+
+$("#admin-tokens-link").click(function(){
     $("#body-content-admin-slider").animate({
         'left': '-2480px'
         }, {queue: false}
         );
+    $('html,body').animate({
+    scrollTop: $("body").offset().top
+    }, 500);
+  }
+);
+
+$(".in-body-links-e-ma").click(function(){
+    $('html,body').animate({
+    scrollTop: $("#email-link").offset().top
+    }, 500);
     }
     );
+
+$(".in-body-links-pass").click(function(){
+    $('html,body').animate({
+    scrollTop: $("#password-link").offset().top
+    }, 500);
+    }
+    );
+
+$(".in-body-links-cont").click(function(){
+    $('html,body').animate({
+    scrollTop: $("#contact-info-link").offset().top
+    }, 500);
+    }
+    );
+
+$(".in-body-links-bill").click(function(){
+    $('html,body').animate({
+    scrollTop: $("#billing-link").offset().top
+    }, 500);
+    }
+    );
+
 
 $(function() {
     $( "#admin-your-default-stack" ).sortable({
