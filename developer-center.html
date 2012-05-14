@@ -53,7 +53,7 @@
 				<div id="header-menu">
 					<ul>
 						<li><a href="how-it-works.html">how it works</a></li>
-						<li><a href="pricing.html">pricing</a></li>
+			in-body-nav-links			<li><a href="pricing.html">pricing</a></li>
 						<li><a href="add-ons.html">add-ons</a></li>
 						<li><a href="developer-center.html">dev center</a></li>
 					</ul>
@@ -74,8 +74,19 @@
 							<h2>Overview</h2>
 							<p>Precog is designed to be used by developers who are building applications, and who need to capture, enrich, and analyze data to power intelligent, insightful features inside their applications. Precog is ideal for doing advanced analytics, statistics, and predictive modeling across large, multi-structured data sets.</p>
 							<p>The primary interface to Precog is through the <a href="api-documentation.html">REST API</a>. However, Precog develops and maintains a growing roster of client libraries for common programming languages. These libraries make it easier to use the REST API, and some of them add higher-level functions to perform common operations in analytics and statistics.</p>
-							<div class="body-section-breaker"></div>
-							<h2 id="features">Features</h2>
+							<div class="in-body-nav-links">
+                                                        <h2>page index</h2>
+                                                        <ul>
+                                                            <li class="in-body-links-feat">features</li>
+                                                            <li class="in-body-links-key">key concepts</li>
+                                                            <li class="in-body-links-data">data format</li>
+                                                            <li class="in-body-links-virt">virtual file system</li>
+                                                            <li class="in-body-links-secu">security model</li>
+                                                            <li class="in-body-links-gett">getting started</li>
+                                                        </ul>
+                                                        </div>
+                                                        <div class="body-section-breaker"></div>
+							<h2 id="features-link">Features</h2>
 							<ul>
 								<li class="feature-circle"><em>JSON</em>. Precog uses JSON as the native underlying representation (although you can store XML or tabular data, too).</li>
 								<li class="feature-vfs"><em>VFS</em>. Precog lets you organize data into a <em>virtual file system</em>, which has a strong capability-based security model.</li>
@@ -98,11 +109,11 @@
 							<p>There are a few key concepts you should become familiar with: data format, virtual file system, and security model.
 
 							
-							<h3>Data Format</h3>
+							<h3 id="data-format-link">Data Format</h3>
 
 							<p>Precog natively stores data in an enhanced form of JSON (JSON with a few more types and support for metadata). The JSON format allows you tostore strings, numbers, arrays, and objects (currently, Precog does not support binary data).</p>
                                                         
-                                                        <h3>Virtual File System</h3>
+                                                        <h3 id="virtual-file-system-link">Virtual File System</h3>
 
 							<p>Precog uses the metaphor of a file system to help you organize and share data. Any time you store data in Precog, you must choose a directory to store the data in.</p>
                                                         <p>You don't have to create directories manually. Directories are created on-demand whenever you try to put data in a directory that doesn't exist yet.</p>
@@ -141,7 +152,7 @@
                                                         <p>To manage security, you can use the authorization API. To use this API, you need to specify a token in the query string (tokenId=XYZ). This token is referrred to as the <i>authentication token</i>, because it's used to authorize your operations.</p>
 							<div class="body-section-breaker">
 							</div>
-							<h2  id="get-started-link">Getting Started</h2>
+							<h2  id="getting-started-link">Getting Started</h2>
 							<p>It's super easy to get started with Precog. Just <a href="pricing.html">signup</a> for an account.</p>
 							<p>Signing up will give you access to a token that you can use to interact with the API. The token keeps your data safe and secure, accessible only to you.</p>
 							<p>Once you have your token, head over to the <a href="api-documentation.html">API documentation</a> page to learn what to do with it!</p>

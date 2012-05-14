@@ -289,7 +289,7 @@ $("#dev-home-link").click(function(){
         }, {queue: false}
         );
     $('html,body').animate({
-    scrollTop: $("#console-devcntr").offset().top
+    scrollTop: $("body").offset().top
     }, 500);
     $(".developer-section-sliding-panel").css({
         'height': '3280px'
@@ -298,39 +298,14 @@ $("#dev-home-link").click(function(){
     }
     );
 
-$("#dev-home-features-link").click(function(){
-    $('html,body').animate({
-    scrollTop: $("#features").offset().top
-    }, 500);
-    }
-    );
-
-$("#dev-home-key-concepts-link").click(function(){
-    $('html,body').animate({
-    scrollTop: $("#key-concepts-link").offset().top
-    }, 500);
-    }
-    );
-
-$("#dev-home-get-started-link").click(function(){
-    $('html,body').animate({
-    scrollTop: $("#get-started-link").offset().top
-    }, 500);
-    }
-    );
-
-$("#dev-home-security-model-link").click(function(){
-    $('html,body').animate({
-    scrollTop: $("#security-model-link").offset().top
-    }, 500);
-    }
-    );
-
 $("#dev-console-link").click(function(){
     $("#developer-body-slider").animate({
         'left': '-1240px'
         }, {queue: false}
         );
+    $('html,body').animate({
+    scrollTop: $("body").offset().top
+    }, 500);
     $(".developer-section-sliding-panel").css({
         'height': '860px'
         }, {queue: false}
@@ -343,6 +318,9 @@ $("#dev-queries-link").click(function(){
         'left': '-2480px'
         }, {queue: false}
         );
+    $('html,body').animate({
+    scrollTop: $("body").offset().top
+    }, 500);
     $(".developer-section-sliding-panel").css({
         'height': 'auto'
         }, {queue: false}
@@ -355,6 +333,9 @@ $("#dev-api-link").click(function(){
         'left': '-3720px'
         }, {queue: false}
         );
+    $('html,body').animate({
+    scrollTop: $("body").offset().top
+    }, 500);
     $(".developer-section-sliding-panel").css({
         'height': '2840px'
         }, {queue: false}
@@ -367,6 +348,9 @@ $("#dev-addons-link").click(function(){
         'left': '-4960px'
         }, {queue: false}
         );
+    $('html,body').animate({
+    scrollTop: $("body").offset().top
+    }, 500);
     $(".developer-section-sliding-panel").css({
         'height': '380px'
         }, {queue: false}
@@ -382,19 +366,45 @@ $(".console-execute-button").click(function(){
     }
     );
 
-$("li.right-menu-link").click(function(){
-      $("li.right-menu-link-sub").css({
-        'display': 'none'
-        }, {queue: false}
-        );
+$(".in-body-links-feat").click(function(){
+    $('html,body').animate({
+    scrollTop: $("#features-link").offset().top
+    }, 500);
     }
     );
 
-$("#dev-home-link").click(function(){
-      $("li.right-menu-link-sub").css({
-        'display': 'block'
-        }, {queue: false}
-        );
+$(".in-body-links-key").click(function(){
+    $('html,body').animate({
+    scrollTop: $("#key-concepts-link").offset().top
+    }, 500);
+    }
+    );
+
+$(".in-body-links-data").click(function(){
+    $('html,body').animate({
+    scrollTop: $("#data-format-link").offset().top
+    }, 500);
+    }
+    );
+
+$(".in-body-links-virt").click(function(){
+    $('html,body').animate({
+    scrollTop: $("#virtual-file-system-link").offset().top
+    }, 500);
+    }
+    );
+
+$(".in-body-links-secu").click(function(){
+    $('html,body').animate({
+    scrollTop: $("#security-model-link").offset().top
+    }, 500);
+    }
+    );
+
+$(".in-body-links-gett").click(function(){
+    $('html,body').animate({
+    scrollTop: $("#getting-started-link").offset().top
+    }, 500);
     }
     );
 
