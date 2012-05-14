@@ -1916,7 +1916,7 @@ h1 {
     padding-left: 0px !important;
     margin-left: 0px !important;
     list-style-type: square !important;
-    margin-bottom: 30px !important;
+    margin-bottom: 40px !important;
 }
 
 #body-content-left-dev-cntr .in-body-nav-links ul li{
@@ -1926,7 +1926,7 @@ h1 {
     float: left;
     cursor: pointer;
     padding-left: 0px;
-    padding-right: 20px;
+    padding-right: 30px;
 }
 
 #body-content-left-dev-cntr .in-body-nav-links ul li:hover {
