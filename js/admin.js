@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+$(function()
+{
+	$('#admin-your-stacks').jScrollPane();
+});
+
 $('.sticker-repl-main').click(function () {
     window.open('queries.html','_self');
 });
@@ -566,6 +571,10 @@ $(function() {
     $( ".admin-your-default-stack" ).sortable();
     $( ".admin-your-default-stack" ).disableSelection();
 });
+
+$(function() {
+		$("#admin-slider").slider();
+	});
 
 /*tokens add remove*/
 $('.admin-token-delete').live('click', function() {
