@@ -50,77 +50,92 @@
                             <div class="in-body-nav-links">
                                 <h2>page index</h2>
                                 <ul>
-                                    <li class="in-body-links-e-ma">e-mail address</li>
-                                    <li class="in-body-links-pass">password</li>
-                                    <li class="in-body-links-cont">contact information</li>
-                                    <li class="in-body-links-bill">billing</li>
+                                    <li class="in-body-links" id="link-email">e-mail address</li>
+                                    <li class="in-body-links" id="link-passw">password</li>
+                                    <li class="in-body-links" id="link-conta">contact information</li>
+                                    <li class="in-body-links" id="link-billi">billing</li>
                                 </ul>
-                                </div>
+                            </div>
                             <h2 id="your-info-link">Your Information</h2>
                             <p>Your slice of the Precog platform. Change your plan, update personal information, select addons from our marketplace, track your usage, its all here!</p>
                             <div id="admin-information">
-                                <h2 id="email-link">E-mail Address</h2>
+                                <h2 id="anchor-email">E-mail Address</h2>
                                 <div class="admin-left-fields">
                                     <div class="field-group">
                                         <form id="currentemail" action="" method="">
-                                           <p>Current Email Address</p><input type="email" name="email" tabindex="1">
-                                            <input type="submit" id="submitemail" class="admin-update-button" value="" tabindex="3">
-                                    </div>
-                                </div>
-                                <div class="admin-right-fields">
-                                    <div class="field-group">
-                                           <p>Change Email to:</p><input type="email" name="email" tabindex="2">
+                                            <fieldset class="admin-left-fields">
+                                                <p>Current Email Address</p>
+                                                <input type="email" name="email" tabindex="1">
+                                                <input type="submit" id="submitemail" class="admin-update-button" value="" tabindex="3">
+                                            </fieldset>
+                                            <fieldset class="admin-right-fields">
+                                                <p>Change Email to:</p>
+                                                <input type="email" name="email" tabindex="2">
+                                            </fieldset>
                                        </form>
                                     </div>
                                 </div>
                                 <div class="atrib-clear-left">
                                 </div>
                                 <div class="body-section-breaker"></div>
-                                <h2  id="password-link">Password</h2>
+                                <h2  id="anchor-passw">Password</h2>
                                 <p class="admin-normal">To change your current password provide the following information.</p>
                                 <div class="admin-left-fields">
                                     <div class="field-group">
                                         <form id="changepassword" action="" method="">
-                                           <p>Current Password:</p><input type="password" name="oldpassword" autocomplete="off" tabindex="4">
-                                           <p>New Password:</p><input type="password" name="password" autocomplete="off" tabindex="5">
-                                           <input type="submit" id="submitpassword" class="admin-update-button" value="" tabindex="7">
-                                    </div>
-                                </div>
-                                <div class="admin-right-fields">
-                                    <div class="field-group">
-                                            <p class="card-height-adjust">Password Confirm:</p><input type="password" name="confirmpassword" autocomplete="off" tabindex="6">
+                                            <fieldset class="admin-left-fields">
+                                                <p>Current Password:</p>
+                                                <input type="password" name="oldpassword" autocomplete="off" tabindex="4">
+                                                <p>New Password:</p>
+                                                <input type="password" name="password" autocomplete="off" tabindex="5">
+                                                <input type="submit" id="submitpassword" class="admin-update-button" value="" tabindex="7">
+                                            </fieldset>
+                                            <fieldset class="admin-right-fields">
+                                                <p class="card-height-adjust">Password Confirm:</p>
+                                                <input type="password" name="confirmpassword" autocomplete="off" tabindex="6">
+                                            </fieldset>
                                         </form>
                                     </div>
                                 </div>
                                 <div class="atrib-clear-left">
                                 </div>
                                 <div class="body-section-breaker"></div>
-                                <h2 id="contact-info-link">Contact Information</h2>
-                                <form id="changeaccount" class="rgform" action="" method="">
-                                   <div class="admin-left-fields">
-                                        <div class="field-group">
-                                            <p>First Name:</p><input type="text" name="firstName" tabindex="8">
-                                            <p>Company:</p><input type="text" name="company" tabindex="10">
-                                            <p>Address:</p><input type="text" name="street" tabindex="12">
-                                            <p>State:</p><input type="text" name="state" tabindex="14">
-                                            <p>Phone Number:</p><input type="text" name="phone" tabindex="16">
-                                            <input type="submit" id="submitaccount" class="admin-update-button" value="" tabindex="18">
-                                        </div>
-                                   </div>
-                                   <div class="admin-right-fields">
-                                        <div class="field-group">
-                                            <p>Last Name:</p><input type="text" name="lastName" tabindex="9">
-                                            <p>Title:</p><input type="text" name="title" tabindex="11">
-                                            <p>City:</p><input type="text" name="city" tabindex="13">
-                                            <p>ZipCode:</p><input type="text" name="postalCode" tabindex="15">
-                                            <p>Website:</p><input type="text" name="website" tabindex="17">
-                                        </div>
-                                   </div>
-                                   <div class="atrib-clear-left">
-                                   </div>
-                               </form>
+                                <h2 id="anchor-conta">Contact Information</h2>
+                                <div class="admin-left-fields">
+                                    <div class="field-group">
+                                        <form id="changeaccount" class="rgform" action="" method="">
+                                            <fieldset class="admin-left-fields">
+                                                <p>First Name:</p>
+                                                <input type="text" name="firstName" tabindex="8">
+                                                <p>Company:</p>
+                                                <input type="text" name="company" tabindex="10">
+                                                <p>Address:</p>
+                                                <input type="text" name="street" tabindex="12">
+                                                <p>State:</p>
+                                                <input type="text" name="state" tabindex="14">
+                                                <p>Phone Number:</p>
+                                                <input type="text" name="phone" tabindex="16">
+                                                <input type="submit" id="submitaccount" class="admin-update-button" value="" tabindex="18">
+                                            </fieldset>
+                                            <fieldset class="admin-right-fields">
+                                                <p>Last Name:</p>
+                                                <input type="text" name="lastName" tabindex="9">
+                                                <p>Title:</p>
+                                                <input type="text" name="title" tabindex="11">
+                                                <p>City:</p>
+                                                <input type="text" name="city" tabindex="13">
+                                                <p>ZipCode:</p>
+                                                <input type="text" name="postalCode" tabindex="15">
+                                                <p>Website:</p>
+                                                <input type="text" name="website" tabindex="17">
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                               </div>
+                               <div class="atrib-clear-left">
+                               </div>
                                 <div class="body-section-breaker"></div>
-                               <h2 id="billing-link">Billing</h2>
+                               <h2 id="anchor-billi">Billing</h2>
                                <div class="admin-left-fields" id="current-billing-info">
                                     <div class="field-group">
                                         <p class="admin-normal">Payments are done using the following information:</p>
@@ -131,38 +146,59 @@
                                 </div>
                                <div class="admin-left-fields" id="no-billing-info">
                                     <div class="field-group">
-                                        <p>Credit Card Number:</p><input class="blacktext" type="text" name="cardNumber" autocomplete="off" tabindex="18">
-                                        <p>Expiration Month</p><input type="text" name="cardExpMonth" placeholder="mm" autocomplete="off" tabindex="20">
-                                        <p>Expiration Year</p><input type="text" name="cardExpYear" placeholder="yyyy" autocomplete="off" tabindex="22">
-                                        <input type="submit" id="submitcreditcard" class="admin-update-button" value="" tabindex="24">
-                                    </div>
-                                </div>
-                               <div class="admin-right-fields" id="no-billing-info">
-                                    <div class="field-group">
-                                        <p>CCV Code:</p><input id="cardsecurecode" class="blacktext" type="text" name="cardCCV" autocomplete="off" tabindex="19">
-                                        <p>Name of Card Holder:</p><input id="cardnameon" class="blacktext" type="text" name="cardHolder" autocomplete="off" tabindex="21">
-                                        <p>Zip Code:</p><input type="text" name="postalCode" autocomplete="off" tabindex="23">
+                                        <form>
+                                            <fieldset class="admin-left-fields">
+                                                <p>Credit Card Number:</p>
+                                                <input class="blacktext" type="text" name="cardNumber" autocomplete="off" tabindex="18">
+                                                <p>Expiration Month</p>
+                                                <input type="text" name="cardExpMonth" placeholder="mm" autocomplete="off" tabindex="20">
+                                                <p>Expiration Year</p>
+                                                <input type="text" name="cardExpYear" placeholder="yyyy" autocomplete="off" tabindex="22">
+                                                <input type="submit" id="submitcreditcard" class="admin-update-button" value="" tabindex="24">
+                                            </fieldset>
+                                            <fieldset class="admin-right-fields">
+                                                <p>CCV Code:</p>
+                                                <input id="cardsecurecode" class="blacktext" type="text" name="cardCCV" autocomplete="off" tabindex="19">
+                                                <p>Name of Card Holder:</p>
+                                                <input id="cardnameon" class="blacktext" type="text" name="cardHolder" autocomplete="off" tabindex="21">
+                                                <p>Zip Code:</p>
+                                                <input type="text" name="postalCode" autocomplete="off" tabindex="23">
+                                            </fieldset>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="body-content-left-admin">
                             <h1 class="body-title">YOUR PLANS & ADD-ONS</h1>
+                            <div class="in-body-nav-links">
+                                <h2>page index</h2>
+                                <ul>
+                                    <li class="in-body-links" id="link-yplan">your plan</li>
+                                    <li class="in-body-links" id="link-yapps">your apps</li>
+                                    <li class="in-body-links" id="link-stack">your add-on stack</li>
+                                    <li class="in-body-links" id="link-addon">your addons</li>
+                                </ul>
+                            </div>
                             <p>Your slice of the Precog platform. Change your plan, update personal information, select addons from our marketplace, track your usage, its all here!</p>
-                            <h2>Your Plan</h2>
+                            <h2 id="anchor-yplan">Your Plan</h2>
                             <div id="admin-your-plan">
                                 <div class="admin-your-plan-icon your-plan-starter">
+                                    <h1>plan tier</h1>
+                                    <p>gold</p>
                                 </div>
                                 <div class="admin-your-plan-details">
-                                    <p>Size:<span>100MB</span></p>
-                                    <div id="admin-plan-usage">
-                                        <div class="admin-plan-usage-current">
-                                        </div>
+                                    <h1>total memory</h1>
+                                    <p>99</p>
+                                    <h2>150 mb cap</h2>
+                                    <div class="admin-meter-needle">
                                     </div>
-                                    <p>APUs<span>10</span></p>
-                                    <div id="admin-apu-usage">
-                                        <div class="admin-apu-gauge">
-                                        </div>
+                                </div>
+                                <div class="admin-your-plan-details">
+                                    <h1>apu cap</h1>
+                                    <p>10</p>
+                                    <h2>p/s</h2>
+                                    <div class="admin-meter-needle">
                                     </div>
                                 </div>
                                 <div class="atrib-clear-left">
@@ -170,7 +206,7 @@
                             </div>
                             <div class="body-section-breaker"></div>
                             <div id="admin-your-apps">
-                                <h2>Your Apps</h2>
+                                <h2 id="anchor-yapps">Your Apps</h2>
                                 <div class="admin-apps">
                                 </div>
                                 <div class="admin-apps">
@@ -186,40 +222,40 @@
                             </div>
                             <div class="body-section-breaker"></div>
                             <div class="default-stack">
-                                <h2>Your Add-on Stack</h2>
+                                <h2 id="anchor-stack">Your Add-on Stack</h2>
                                 <div id="admin-your-stacks">
                                     <div class="admin-stacks-holder">
                                         <div class="admin-addon-stack">
-                                            <div class="ui-header">
+                                            <div class="stack-header">
                                                 <form>
                                                     <input class="stack-current" type="text" name="ringname" value="default">
                                                     <input type="submit" class="admin-stack-delete" value=""/>
                                                 </form>
                                                 <p>your data in</p>
                                             </div>
-                                            <ul id="admin-your-default-stack" class="connectedSortable">
-                                                <li class="ui-state-default"><p>Demographics</p></li>
-                                                <li class="ui-state-default"><p>Geo</p></li>
-                                                <li class="ui-state-default"><p>Visualization Engine</p></li>
+                                            <ul class="admin-your-default-stack">
+                                                <li class="stack-state-default"><p>Demographics</p></li>
+                                                <li class="stack-state-default"><p>Geo</p></li>
+                                                <li class="stack-state-default"><p>Visualization Engine</p></li>
                                             </ul>
-                                            <div class="ui-footer"><p>your data out</p></div>
+                                            <div class="stack-footer"><p>your data out</p></div>
                                         </div>
                                         <div class="admin-addon-stack">
-                                            <div class="ui-header">
+                                            <div class="stack-header">
                                                 <form>
                                                     <input class="stack-current" type="text" name="ringname" value="default">
                                                     <input type="submit" class="admin-stack-delete" value=""/>
                                                 </form>
                                                 <p>your data in</p>
                                             </div>
-                                            <ul id="admin-your-default-stack" class="connectedSortable">
-                                                <li class="ui-state-default"><p>Demographics</p></li>
-                                                <li class="ui-state-default"><p>Visualization Engine</p></li>
+                                            <ul class="admin-your-default-stack">
+                                                <li class="stack-state-default"><p>Demographics</p></li>
+                                                <li class="stack-state-default"><p>Visualization Engine</p></li>
                                             </ul>
-                                            <div class="ui-footer"><p>your data out</p></div>
+                                            <div class="stack-footer"><p>your data out</p></div>
                                         </div>
                                         <div class="admin-addon-stack">
-                                            <div class="ui-new">
+                                            <div class="stack-new">
                                                 <form>
                                                     <input class="stack-current" type="text" name="ringname" placeholder="new stack">
                                                     <input type="submit" class="admin-stack-new" value=""/>
@@ -233,13 +269,13 @@
                                 </div>
                             </div>
                             <div class="body-section-breaker"></div>
-                            <h2>Your Add-ons</h2>
+                            <h2 id="anchor-addon">Your Add-ons</h2>
                             <div class="your-apps">
-                                <ul id="admin-your-apps">
-                                    <li class="ui-state-highlight"><p>Demographics</p></li>
-                                    <li class="ui-state-highlight"><p>Visualization Engine</p></li>
-                                    <li class="ui-state-highlight"><p>Geo</p></li>
-                                    <li class="ui-state-highlight"><p>Sentiment</p></li>
+                                <ul class="admin-your-apps">
+                                    <li><p>Demographics</p></li>
+                                    <li><p>Visualization Engine</p></li>
+                                    <li><p>Geo</p></li>
+                                    <li><p>Sentiment</p></li>
                                 </ul>
                             </div>
                             <div class="atrib-clear-left">
@@ -252,53 +288,6 @@
                             <h1 class="body-title">YOUR TOKENS</h1>
                             <h2>Your Rings</h2>
                             <p>These are your rings and the tokens associated with them.</p>
-                            <div id="admin-rings">
-                                <ul>
-                                    <li><p>default</p><div class="admin-ring-delete"></div></li>
-                                    <li><p>subscription</p><div class="admin-ring-delete"></div></li>
-                                    <li><p>base-masks</p><div class="admin-ring-delete"></div></li>
-                                    <li>
-                                        <form>
-                                            <input type="text" name="ringName" placeholder="new ring">
-                                            <input type="submit" class="admin-ring-new" value="">
-                                        </form>
-                                    </li>
-                                </ul>
-                                <div class="atrib-clear-left">
-                                </div>
-                            </div>
-                            <div class="body-section-breaker"></div>
-                            <div id="admin-circle-holder">
-                                <div class="admin-circle-panel">
-                                    <div class="admin-circle-panel-top">
-                                        <div class="circle-icon">
-                                        </div>
-                                        <div class="circle-details">
-                                            <ul>
-                                                <li><h1>ring name:</h1><p>default</p></li>
-                                                <li><h1>ring token:</h1><p>eine-anei-klnx-znid</p></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="atrib-clear-left">
-                                    </div>
-                                    <div class="admin-circle-panel-bottom">
-                                        <h1>tokens within this ring</h1>
-                                        <div class="circle-tokens">
-                                            <ul>
-                                                <li><p>9814-8919-7384-4381</p><div class="admin-token-delete"></div></li>
-                                                <li><p>9814-8919-7384-4381</p><div class="admin-token-delete"></div></li>
-                                                <li><p>9814-8919-7384-4381</p><div class="admin-token-delete"></div></li>
-                                                <li><p>9814-8919-7384-4381</p><div class="admin-token-delete"></div></li>
-                                                <li><form>
-                                                    <input type="text" name="tokenName" placeholder="new token">
-                                                    <input type="submit" class="admin-token-new" value=""/>
-                                                </form></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <div class="atrib-clear-left">
                         </div>

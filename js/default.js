@@ -366,47 +366,13 @@ $(".console-execute-button").click(function(){
     }
     );
 
-$(".in-body-links-feat").click(function(){
-    $('html,body').animate({
-    scrollTop: $("#features-link").offset().top
+$(".in-body-links").click(function(){
+  var adminLink = $(this).attr('id');
+  var adminLinkUniform = adminLink.slice(-5);
+  $('html,body').animate({
+    scrollTop: $("#anchor-" + adminLinkUniform).offset().top
     }, 500);
-    }
-    );
-
-$(".in-body-links-key").click(function(){
-    $('html,body').animate({
-    scrollTop: $("#key-concepts-link").offset().top
-    }, 500);
-    }
-    );
-
-$(".in-body-links-data").click(function(){
-    $('html,body').animate({
-    scrollTop: $("#data-format-link").offset().top
-    }, 500);
-    }
-    );
-
-$(".in-body-links-virt").click(function(){
-    $('html,body').animate({
-    scrollTop: $("#virtual-file-system-link").offset().top
-    }, 500);
-    }
-    );
-
-$(".in-body-links-secu").click(function(){
-    $('html,body').animate({
-    scrollTop: $("#security-model-link").offset().top
-    }, 500);
-    }
-    );
-
-$(".in-body-links-gett").click(function(){
-    $('html,body').animate({
-    scrollTop: $("#getting-started-link").offset().top
-    }, 500);
-    }
-    );
+});
 
 $(function() {
     $.fn.scrollBottom = function() {

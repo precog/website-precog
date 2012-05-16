@@ -42,60 +42,86 @@
 }
 
 .admin-your-plan-icon {
-    width: 260px;
-    height: 260px;
+    width: 246px;
+    height: 246px;
     background-color: #15181A;
     background-position: center;
     background-repeat: no-repeat;
     float: left;
 }
 
-.admin-your-plan-details {
-    float: left;
-    width: 500px;
-    margin-left: 20px;
-}
-
-#admin-plan-usage {
-    width: 100%;
-    height: 30px;
-    background-image: linear-gradient(left , #61B1DC 0%, rgb(237,28,35) 100%);
-    background-image: -o-linear-gradient(left , #61B1DC 0%, rgb(237,28,35) 100%);
-    background-image: -moz-linear-gradient(left , #61B1DC 0%, rgb(237,28,35) 100%);
-    background-image: -webkit-linear-gradient(left , #61B1DC 0%, rgb(237,28,35) 100%);
-    background-image: -ms-linear-gradient(left , #61B1DC 0%, rgb(237,28,35) 100%);
-}
-
-#admin-apu-usage {
-    width: 500px;
-}
-
-.admin-apu-gauge { 
-    border-right: 30px solid #C13707;
-    border-top: 30px solid #E5692A;
-    border-left: 30px solid #E4A848;
-    border-top-left-radius: 200px;
-    border-top-right-radius: 200px;
-    height:100px;
-    width:200px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-#admin-plan-usage .admin-plan-usage-current {
-    background-color: #000;
-    opacity: 0.5;
-    width: 30%;
-    height: 30px;
-    right: 0px;
-    position: absolute;
-}
-
 .your-plan-starter {
-    background-image: url("../images/your-plan-starter.png");
+    background-image: url("../images/graphic-pricing-gold.png");
 }
 
+.admin-your-plan-details {
+    background-image: url("../images/graphic-meter-background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 246px;
+    height: 246px;
+    background-color: #15181A;
+    background-position: center;
+    background-repeat: no-repeat;
+    float: left;
+    margin-left: 10px;
+}
 
+.admin-your-plan-details h1, .admin-your-plan-icon h1 {
+    font-family: questrial, sans-serif;
+    font-size: 16pt;
+    font-weight: lighter;
+    color: #fff;
+    padding-left: 20px;
+    letter-spacing: 1px;
+}
+
+.admin-your-plan-details h2 {
+    font-family: questrial, sans-serif;
+    font-size: 12pt;
+    color: #666766;
+    text-align: center;
+    padding-top: 0px;
+}
+
+.admin-your-plan-details p, .admin-your-plan-icon p {
+    font-family: questrial, sans-serif;
+    font-size: 24pt;
+    letter-spacing: 1px;
+    color: #fff;
+    text-align: center;
+    padding-top: 120px;
+    padding-bottom: 0px;
+}
+
+.admin-meter-needle {
+    background-image: url("../images/graphic-meter-needle.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 80px;
+    left: 119px;
+    width: 7px;
+    height: 94px;
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+}
+
+.admin-meter-needle:hover {
+    transform: rotate(45deg);
+    transform-origin: center bottom;
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -ms-transform-origin: center bottom; /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Safari and Chrome */
+    -webkit-transform-origin: center bottom; /* Safari and Chrome */
+    -moz-transform: rotate(45deg); /* Firefox */
+    -moz-transform-origin: center bottom; /* Firefox */
+    -o-transform: rotate(45deg); /* Opera */
+    -o-transform-origin: center bottom; /* Opera */
+}
+
+/*admin stacks*/
 .admin-apps {
     width: 100px;
     height: 100px;
@@ -121,7 +147,7 @@
     padding-left: 20px;
 }
 
-.ui-header {
+.stack-header {
     background-image: url("../images/background-admin-stack-header.png");
     font-size: 1.2em;
     margin: 0px 0px 0px 5px;
@@ -132,13 +158,13 @@
     text-align: center;
 }
 
-.ui-footer p {
+.stack-footer p {
     padding-top: 14px;
     color: #E5692A;
     font-family: questrial;
 }
 
-.ui-footer {
+.stack-footer {
     background-image: url("../images/background-admin-stack-footer.png");
     font-size: 1.2em;
     margin: 0px 0px 0px 5px;
@@ -149,12 +175,12 @@
     text-align: center;
 }
 
-.ui-header p {
+.stack-header p {
     color: #E5692A;
     font-family: questrial;
 }
 
-.ui-new {
+.stack-new {
     background-color: #223E4D;
     font-size: 1.2em;
     margin: 0px 0px 0px 5px;
@@ -164,7 +190,7 @@
     text-align: center;
 }
 
-.ui-new p {
+.stack-new p {
     color: #000;
     font-size: 22pt;
     font-family: questrial;
@@ -184,7 +210,7 @@ input.admin-stack-new {
     cursor: pointer;
 }
 
-.ui-header input.stack-current, .ui-new input.stack-current {
+.stack-header input.stack-current, .stack-new input.stack-current {
     background-color: #000;
     width: 206px;
     height: 28px;
@@ -208,12 +234,12 @@ input.admin-stack-new {
     cursor: pointer;
 }
 
-#admin-your-default-stack {
+.admin-your-default-stack {
     list-style-type: none;
     margin: 0;
 }
 
-#admin-your-default-stack li {
+.admin-your-default-stack li {
     background-image: url("../images/background-admin-stack.png");
     margin: 0 0 0px 5px;
     font-size: 1.2em;
@@ -223,7 +249,7 @@ input.admin-stack-new {
     text-align: center;
 }
 
-#admin-your-default-stack li p {
+.admin-your-default-stack li p {
     font-family: questrial;
     font-size: 11pt;
     padding-top: 20px;
@@ -232,7 +258,7 @@ input.admin-stack-new {
     text-transform: lowercase;
 }
 
-#admin-your-apps {
+.admin-your-apps {
     list-style-type: none;
     margin: 0;
     padding: 0 0 2.5em;
@@ -240,7 +266,7 @@ input.admin-stack-new {
     margin-right: 10px;
 }
 
-#admin-your-apps li {
+.admin-your-apps li {
     background-color: #000;
     margin: 0 5px 5px 5px;
     padding: 5px;
@@ -252,7 +278,7 @@ input.admin-stack-new {
     border-radius: 6px;
 }
 
-#admin-your-apps li p {
+.admin-your-apps li p {
     font-family: helvetica;
     font-size: 10pt;
     color: #fff;
@@ -288,6 +314,10 @@ input.admin-stack-new {
     padding: 10px 0px 10px 0px;
 }
 
+#admin-information .field-group {
+    
+}
+
 #admin-information .field-group input{
     background-color: #000;
     border-width: 1px;
@@ -319,17 +349,18 @@ input.admin-stack-new {
 
 .admin-update-button:hover {
     background-image: url("../images/button-update-m-alt.png");
-    background-color: transparent !important;
-    width: 139px !important;
-    height: 48px !important;
 }
 
-#admin-information .admin-left-fields {
+.admin-update-button:focus {
+    background-image: url("../images/button-update-m-alt.png");
+}
+
+#admin-information fieldset.admin-left-fields {
     width: 390px;
     float: left;
 }
 
-#admin-information .admin-right-fields {
+#admin-information fieldset.admin-right-fields {
     width: 390px;
     float: left;
 }

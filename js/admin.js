@@ -543,65 +543,31 @@ $("#admin-tokens-link").click(function(){
   }
 );
 
-$(".in-body-links-e-ma").click(function(){
-    $('html,body').animate({
-    scrollTop: $("#email-link").offset().top
+$(".in-body-links").click(function(){
+  var adminLink = $(this).attr('id');
+  var adminLinkUniform = adminLink.slice(-5);
+  $('html,body').animate({
+    scrollTop: $("#anchor-" + adminLinkUniform).offset().top
     }, 500);
-    }
-    );
-
-$(".in-body-links-pass").click(function(){
-    $('html,body').animate({
-    scrollTop: $("#password-link").offset().top
-    }, 500);
-    }
-    );
-
-$(".in-body-links-cont").click(function(){
-    $('html,body').animate({
-    scrollTop: $("#contact-info-link").offset().top
-    }, 500);
-    }
-    );
-
-$(".in-body-links-bill").click(function(){
-    $('html,body').animate({
-    scrollTop: $("#billing-link").offset().top
-    }, 500);
-    }
-    );
-
-
-$(function() {
-    $( "#admin-your-default-stack" ).sortable({
-            connectWith: ".connectedSortable"
-    }).disableSelection();
 });
 
+/*draggable stacks items*/
 $(function() {
-    $( "#admin-your-apps" ).sortable({
-            connectWith: ".connectedSortable",
-            helper: function(e,li) {
-                    copyHelper= li.clone().insertAfter(li);
-                    return li.clone();
+    $(".admin-your-apps").sortable({
+      connectWith: ['.admin-your-default-stack'],
+      remove: function(event, ui) {
+                ui.item.clone().appendTo('.admin-your-apps');
             }
-    }).disableSelection();
+     });
+    $(".admin-your-apps").disableSelection();
 });
 
-$('.admin-apps').sortable({  
-    connectWith: '.admin-apps',  
-    handle: 'h2',  
-    cursor: 'move',  
-    placeholder: 'placeholder',  
-    forcePlaceholderSize: true,  
-    opacity: 0.4
-})
-.disableSelection(); 
-
-$('.admin-ring-delete').live('click', function() {
-    $(this).closest('li').remove();
+$(function() {
+    $( ".admin-your-default-stack" ).sortable();
+    $( ".admin-your-default-stack" ).disableSelection();
 });
 
+/*tokens add remove*/
 $('.admin-token-delete').live('click', function() {
     $(this).closest('li').remove();
 });
@@ -634,6 +600,37 @@ $("#admin-your-tokens").click(function(){
     }
     );
 
+$(function() {
+    $.fn.scrollBottom = function() {
+        return $(document).height() - this.scrollTop() - this.height();
+    };
+
+    var $el = $('#content-right-menu');
+    var $window = $(window);
+
+    $window.bind("scroll resize", function() {
+        var gap = $window.height() - $el.height() - 10;
+        var visibleFoot = 172 - $window.scrollBottom();
+        var scrollTop = $window.scrollTop()
+
+        if(scrollTop < 172 + 10){
+            $el.css({
+                top: (172 - scrollTop) + "px",
+                bottom: "auto"
+            });
+        }else if (visibleFoot > gap) {
+            $el.css({
+                top: "auto",
+                bottom: visibleFoot + "px"
+            });
+        } else {
+            $el.css({
+                top: 0,
+                bottom: "auto"
+            });
+        }
+    });
+});
 
 //NEWS AND EVENTS
 $("#news-items-only").click(function(){
