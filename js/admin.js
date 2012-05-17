@@ -564,8 +564,11 @@ $(function() {
                 ui.item.clone().appendTo('.admin-your-apps');
                 
                 var adminStackHeight = $(".admin-stacks-holder").height();
+                var adminStackValue = $(".admin-stacks-holder .stack-state-default").text();
                 
-                console.log(adminStackHeight);
+                console.log(adminStackValue);
+                
+                
                 
                 $( ".jspContainer" ).css({'height': adminStackHeight + 40});
             }

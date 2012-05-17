@@ -807,6 +807,7 @@ ul.home-usecases li img {
 #background-main2 {
     background-color: #0A0B0D;
     width: 100%;
+    padding-bottom: 40px;
 }
 
 #home-comparison {
