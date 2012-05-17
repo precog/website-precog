@@ -179,10 +179,7 @@
 }
 
 #admin-your-stacks {
-    overflow-y:hidden;
-    overflow-x:scroll;
-    padding-left: 0px;
-    padding-right: 0px;
+    overflow-x: scroll;
 }
 
 .stack-new {

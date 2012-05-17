@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 $(function()
 {
-	$('#admin-your-stacks').jScrollPane();
+  $('#admin-your-stacks').jScrollPane();
 });
 
 $('.sticker-repl-main').click(function () {
@@ -562,6 +562,12 @@ $(function() {
       connectWith: ['.admin-your-default-stack'],
       remove: function(event, ui) {
                 ui.item.clone().appendTo('.admin-your-apps');
+                
+                var adminStackHeight = $(".admin-stacks-holder").height();
+                
+                console.log(adminStackHeight);
+                
+                $( ".jspContainer" ).css({'height': adminStackHeight + 40});
             }
      });
     $(".admin-your-apps").disableSelection();
