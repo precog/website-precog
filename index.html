@@ -37,6 +37,39 @@
             })
         })
         </script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            var getGoodieName = (function() {
+                var whitelist = [{
+                    pattern : /techcrunch/i,
+                    name : 'TechCrunch'
+                }, {
+                    pattern : /tekhne/i,
+                    name : 'Tekhne'
+                }];
+                for(var i = 0; i < whitelist.length; i++){
+                    var pattern = whitelist[i].pattern,
+                        name = whitelist[i].name;
+                    if(pattern.test(document.referrer))
+                        return name;
+                }
+                return null;
+            })();
+            
+            if (getGoodieName === null) {
+                $("#goodie-popup").css({
+                'left': '-1200px'
+                }
+                );
+            } else {
+                $("#goodie-popup").css({
+                'left': '0px'
+                }
+                );
+                $("#previous-site-name").text(getGoodieName);
+            };
+        })
+        </script>
     </head>
     <body>
         <div id="login-screen">
@@ -52,7 +85,7 @@
         </div>
         <div id="goodie-screen">
             <div id="goodie-popup">
-                <h1>Did you learn about our Series A from <span class="previous-site-name">TechCrunch</span>?</h1>
+                <h1>Did you learn about our Series A from <span id="previous-site-name">TechCrunch</span>?</h1>
                 <p>Congratulations, you qualify for a special virtual goodie bag!</p>
                 <a href="goodies.html" id="bag-page-subscribe"></a>
             </div>

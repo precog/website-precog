@@ -48,6 +48,9 @@ $('#report-grid-link').click(function () {
     window.open('http://reportgrid.com/charts.html#pricing-anchor');
 });
 
+//INDEX GOODIES
+
+
   // HOW IT WORKS
   $(".capture-lg").mouseover(function(){
       $("#hiw-panel-slider").animate({
