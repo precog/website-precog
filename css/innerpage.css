@@ -2590,6 +2590,22 @@ li.right-menu-sticker {
     background-image: url("../images/button-subscribe-lg-alt.png");
 }
 
+#bag-page-subscribe {
+    background-image: url("../images/button-claimbag-m.png");
+    display: block;
+    width: 203px !important;
+    height: 60px;
+    background-color: transparent !important;
+    cursor: pointer;
+    float: right;
+    top: -150px;
+    left: 20px;
+}
+
+#bag-page-subscribe:hover {
+    background-image: url("../images/button-claimbag-m-alt.png");
+}
+
 .asterisk {
     color: #fff;
 }
