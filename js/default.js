@@ -49,7 +49,13 @@ $('#report-grid-link').click(function () {
 });
 
 //INDEX GOODIES
-
+$("#newsletter-close").click(function(){
+      $("#goodie-screen").css({
+        'display': 'none'
+        }, {queue: false}
+        );
+    }
+    );
 
   // HOW IT WORKS
   $(".capture-lg").mouseover(function(){
