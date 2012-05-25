@@ -137,68 +137,6 @@ h1 {
     border-color: #748899;
 }
 
-/*goodiebag*/
-#goodie-screen {
-    width: 100%;
-    position: fixed;
-    top: 120px;
-    text-align: left;
-}
-
-#goodie-popup {
-    padding: 30px 40px 26px 40px;
-    width: 300px;
-    background-color: #282E33;
-    z-index: 300;
-    left: -1200px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-#goodie-popup h1 {
-    font-size: 16pt !important;
-    padding-top: 0px;
-}
-
-#goodie-popup p {
-    font-family: helvetica, sans-serif;
-    font-weight: 100;
-    font-size: 12pt;
-    color: #808080;
-}
-
-#bag-page-subscribe {
-    background-image: url("../images/button-claimbag-m.png");
-    display: block;
-    width: 203px !important;
-    height: 60px;
-    background-color: transparent !important;
-    cursor: pointer;
-    margin-top: 20px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-#bag-page-subscribe:hover {
-    background-image: url("../images/button-claimbag-m-alt.png");
-}
-
-.previous-site-name {
-    font-weight: bold;
-    color: #C13707;
-}
-
-#newsletter-close {
-    background-image: url("../images/x-mark.png");
-    float: right;
-    display: block;
-    top: -6px;
-    right: -6px;
-    width: 10px;
-    height: 11px;
-    z-index: 6;
-}
-
 #sticker-precog-beta a {
     background-image: url("../images/sticker-precog-beta.png");
     width: 168px;

@@ -37,66 +37,6 @@
             })
         })
         </script>
-        <script type="text/javascript">
-        $(document).ready(function(){
-            var getGoodieName = (function() {
-                var whitelist = [{
-                    pattern : /techcrunch/i,
-                    name : 'TechCrunch'
-                }, {
-                    pattern : /tekhne/i,
-                    name : 'Tekhne' 
-                }, {
-                    pattern : /startupweekend/i,
-                    name : 'Startup Weekend'
-                }, {
-                    pattern : /thenextweb/i,
-                    name : 'The Next Web'
-                }, {
-                    pattern : /kdnuggets/i,
-                    name : 'KDnuggets'
-                }, {
-                    pattern : /venturecapitalreporter/i,
-                    name : 'Venture Capital Reporter'
-                }, {
-                    pattern : /whogotfunded/i,
-                    name : 'Who Got Funded'
-                }, {
-                    pattern : /startups.alltop/i,
-                    name : 'Alltop'
-                }, {
-                    pattern : /topix/i,
-                    name : 'Topix'
-                }, {
-                    pattern : /venturebeat/i,
-                    name : 'Venture Beat'
-                }, {
-                    pattern : /twitter/i,
-                    name : 'Twitter'
-                }];
-                for(var i = 0; i < whitelist.length; i++){
-                    var pattern = whitelist[i].pattern,
-                        name = whitelist[i].name;
-                    if(pattern.test(document.referrer))
-                        return name;
-                }
-                return null;
-            })();
-            
-            if (getGoodieName === null) {
-                $("#goodie-popup").css({
-                'left': '-1200px'
-                }
-                );
-            } else {
-                $("#goodie-popup").css({
-                'left': '0px'
-                }
-                );
-                $("#previous-site-name").text(getGoodieName);
-            };
-        })
-        </script>
     </head>
     <body>
         <div id="login-screen">
@@ -109,14 +49,6 @@
                 </fieldset>
                 <input type="submit" value="" id="password-login-button"/>
             </form>
-        </div>
-        <div id="goodie-screen">
-            <div id="goodie-popup">
-                <a id="newsletter-close" href="#" title="Email Us"></a>
-                <h1>Did you learn about our Series A from <span id="previous-site-name">TechCrunch</span>?</h1>
-                <p>Congratulations, you qualify for a special virtual goodie bag!</p>
-                <a href="goodies.html" id="bag-page-subscribe"></a>
-            </div>
         </div>
         <div id="sticker-precog-beta">
             <a href="mailto:contact@precog.io"></a>
