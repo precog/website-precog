@@ -77,6 +77,46 @@ h1 {
     width: 57px;
 }
 
+#share-twitter a{
+    background-image: url("../images/button-sharetwitter-side.png");
+    background-position: right;
+    width: 28px;
+    height: 30px;
+    z-index: 1;
+    top: 420px;
+    left: 0px;
+    position: fixed;
+    -webkit-transition: .2s ease;
+    -moz-transition: .2s ease;
+    -o-transition: .2s ease;
+    -ms-transition: .2s ease;
+    transition: .2s ease;
+}
+
+#share-twitter a:hover{
+    width: 83px;
+}
+
+#share-facebook a{
+    background-image: url("../images/button-sharefacebook-side.png");
+    background-position: right;
+    width: 28px;
+    height: 30px;
+    z-index: 1;
+    top: 462px;
+    left: 0px;
+    position: fixed;
+    -webkit-transition: .2s ease;
+    -moz-transition: .2s ease;
+    -o-transition: .2s ease;
+    -ms-transition: .2s ease;
+    transition: .2s ease;
+}
+
+#share-facebook a:hover{
+    width: 83px;
+}
+
 
 /*login popup*/
 #login-screen {
