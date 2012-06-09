@@ -1,7 +1,7 @@
 define(["util/storagemonitor"], function(createStore) {
     var CONFIG_KEY = "pg-quirrel-ide-config",
         defaults = {
-            theme : "default",
+            theme : "gray",
             indentUsingSpaces : false,
             tabWidth : 2,
             disableClientCache : true,
