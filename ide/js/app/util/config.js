@@ -3,7 +3,8 @@ define(["util/storagemonitor"], function(createStore) {
         defaults = {
             theme : "gray",
             indentUsingSpaces : false,
-            tabWidth : 2,
+            tabSize : 2,
+            softTabs : true,
             disableClientCache : true,
             ioPanesVertical : true
         };

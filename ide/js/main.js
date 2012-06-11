@@ -28,6 +28,7 @@ function(config, createLayout, editors, buildBarMain, buildBarEditor, buildBarSt
     precog.cache.disable();
 
     var layout = createLayout(config.get("ioPanesVertical"));
+    layout.container.hide();
 
     buildBarMain(layout.getBarMain());
     buildBarEditor(layout.getBarEditor());
@@ -45,7 +46,6 @@ function(config, createLayout, editors, buildBarMain, buildBarEditor, buildBarSt
     });
 
     var editor = buildEditor(layout.getCodeEditor(), config.get("ioPanesVertical"));
-
     editor.setTabSize(config.get("tabSize"));
     editor.setUseSoftTabs(config.get("softTabs"));
 
@@ -120,16 +120,19 @@ function(config, createLayout, editors, buildBarMain, buildBarEditor, buildBarSt
         editor.triggerExecute();
     });
 
+    theme.set(config.get("theme", "franco"));
+
     editors.load();
     if(!editors.count()) editors.add();
-    editors.activate(0);
+    setTimeout(function() {
+        editors.activate(0); // prevents bug in safari
+    }, 15)
+
 
     $(output).on("optionsChanged", function(_, options) {
 //console.log("SAVING OPTIONS " + JSON.stringify(options));
         editors.setOutputOptions(options);
     });
-
-    theme.set(config.get("theme", "franco"));
 
     config.monitor.bind("theme", function(e, name) {
         theme.set(name);
@@ -144,4 +147,6 @@ function(config, createLayout, editors, buildBarMain, buildBarEditor, buildBarSt
 //console.log("from config tabSize " + value);
         editor.setTabSize(value);
     });
+
+    layout.container.show();
 });
