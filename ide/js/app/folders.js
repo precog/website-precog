@@ -77,7 +77,6 @@ function(precog, ui, tplToolbar){
                     subpath = base + subpath;
                     addFolder(subpath.split("/").pop(), subpath, function(){
                         if(levels > 1) {
-                            var $this = $(this);
                             loadAtPath(subpath, levels-1, this);
                         }
                     }, parent || -1);
