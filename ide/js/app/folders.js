@@ -3,6 +3,8 @@ define([
     , "util/md5"
     , "util/storagemonitor"
     , "util/ui"
+    , "util/utils"
+    , "util/notification"
     , "util/dialog-lineinput"
     , "text!templates/toolbar.folders.html"
     , "text!templates/menu.context.system.node.html"
@@ -11,8 +13,9 @@ define([
     , "order!jlib/jstree/jstree"
     , "order!jlib/jstree/jstree.themes"
 ],
-    function(precog, md5, createStore, ui, openRequestInputDialog, tplToolbar, tplNodeContextMenut, tplRootContextMenut){
-        var STORE_KEY = "pg-quirrel-virtualpaths-"+md5(precog.config.tokenId),
+    function(precog, md5, createStore, ui,  utils, notification, openRequestInputDialog, tplToolbar, tplNodeContextMenut, tplRootContextMenut){
+        var UPLOAD_SERVICE = "upload.php",
+            STORE_KEY = "pg-quirrel-virtualpaths-"+md5(precog.config.tokenId),
             basePath = precog.config.basePath || "/",
             store = createStore(STORE_KEY, { virtuals : { }});
 
@@ -55,6 +58,7 @@ define([
                 elContext = el.find(".pg-toolbar-context"),
                 elRoot = el.find(".pg-tree").append('<div class="pg-root"></div>').find(".pg-root"),
                 elFolders = el.find(".pg-tree").append('<div class="pg-structure"></div>').find(".pg-structure");
+                elUploader = el.append('<div style="display: none"><input name="files" type="file" multiple></div>').find('input[type=file]');
             elActions.html("folders");
             var tree = elFolders.jstree({
                 plugins : [
@@ -157,7 +161,8 @@ define([
                     zIndex : e.currentTarget.style.zIndex + 100
                 }).show();
                 menuselected = e.currentTarget;
-            })
+            });
+            wireFileUpload(elRoot.get(0));
 
             function addFolder(name, path, callback, parent) {
                 if(!parent) parent = -1;
@@ -191,7 +196,9 @@ define([
                                 menu.hide();
                                 e.preventDefault(); return false;
                             });
-                        if(callback) callback.apply(el, [path]);
+                        wireFileUpload(el, path);
+                        if(callback)
+                            callback.apply(el, [path]);
                         return false;
                     }
                 );
@@ -240,8 +247,177 @@ define([
                 }
             };
 
-            wrapper.refresh();
+            // uploading logic
+            elUploader.on("change", function() {
+                e.preventDefault(); return false;
+            });
 
+            function pollStatus(noty, id) {
+                $.ajax({
+                    url: UPLOAD_SERVICE,
+                    data: { uuid : id },
+                    success: function(data) {
+                        if(data.done === data.total) {
+                            var message;
+                            if(data.failures) {
+                                if(data.total - data.failures === 0) {
+                                    message = 'all of the ' +data.failures+ ' events failed to be stored';
+                                } else {
+                                    message = (data.total - data.failures) + ' events have been stored correctly and ' + data.failures + ' failed to be stored';
+                                }
+                                noty.progressError(message);
+                            } else {
+                                message = 'all of the ' + data.total + ' events have been stored correctly and can now be used in your queries';
+                                noty.progressComplete(message);
+                            }
+
+                        } else {
+                            if(data.total > 0) {
+                                noty.el.find(".pg-ingest-message").html(
+                                    "ingested " + data.done + " events" + (data.failures ? " (" + data.failures + " failures)" : "") + " of " + data.total
+                                );
+                            }
+                            noty.progressStep(data.done / data.total);
+                            setTimeout(function() {
+                                pollStatus(noty, id);
+                            }, 500);
+                        }
+                    },
+                    error : function(e) {
+                        noty.progressError("An error occurred while uploading your file. No events will be stored in Precog: " + err.error);
+                    },
+                    dataType: "json"
+                });
+            }
+
+            function uploadFile(file, path) {
+                if(!file) return;
+
+                var filename = file.fileName || file.name,
+                    id = utils.guid();
+
+                var noty = { text : "starting upload of '" + filename+"'" };
+
+                notification.progress("upload file", noty);
+
+                function progressHandlingFunction(e) {
+                    noty.progressStep(e.loaded / e.total);
+                }
+                function beforeSendHandler() {
+                    noty.progressStart('<div class="pg-ingest-phase">Phase 1 of 2</div><div class="pg-ingest-message">' + "uploading '" + filename + "'</div>");
+                }
+                function completeHandler() {
+                    noty.progressComplete("'"+filename+"' has been uploaded to the path '<var>"+path+"</var>'. Now your data will be ingested and you will receive a notification as soon as it is ready for consumption.");
+                    noty.progressStart('<div class="pg-ingest-phase">Phase 2 of 2</div><div class="pg-ingest-message">storing events</div>');
+                    pollStatus(noty, id);
+                }
+                function errorHandler(e) {
+                    var err = JSON.parse(e.responseText);
+                    noty.progressError("An error occurred while uploading your file. No events will be stored in Precog: " + err.error);
+                }
+
+                var formData = new FormData();
+                formData.append("file", file);
+
+                $.ajax({
+                    url: UPLOAD_SERVICE,  //server script to process data
+                    type: 'POST',
+                    xhr: function() {  // custom xhr
+                        myXhr = $.ajaxSettings.xhr();
+                        if(myXhr.upload){ // check if upload property exists
+                            myXhr.upload.addEventListener('progress',progressHandlingFunction, false); // for handling the progress of the upload
+                        }
+                        return myXhr;
+                    },
+                    //Ajax events
+                    beforeSend: beforeSendHandler,
+                    success: completeHandler,
+                    error: errorHandler,
+                    // Form data
+                    data: formData,
+                    headers : {
+//                          "Content-Type"     : "multipart/form-data"
+                          "X-File-Name"      : filename
+                        , "X-File-Size"      : file.fileSize || file.size
+                        , "X-File-Type"      : file.type
+                        , "X-Precog-Path"    : path
+                        , "X-Precog-UUID"    : id
+                        , "X-Precog-Token"   : precog.config.tokenId
+                        , "X-Precog-Service" : precog.config.analyticsService
+                    },
+                    //Options to tell JQuery not to process data or worry about content-type
+                    cache: false,
+                    contentType: false,
+                    processData: false
+                });
+
+            }
+            function traverseFiles (files, path) {
+                if (typeof files !== "undefined") {
+                    for (var i=0, l=files.length; i<l; i++) {
+                        uploadFile(files[i], path);
+                    }
+                }
+                else {
+                    fileList.innerHTML = "No support for the File API in this web browser";
+                }
+            }
+
+            var dragnoty;
+
+            function removeDragNotification() {
+                if(!dragnoty) return;
+                dragnoty.hide();
+                dragnoty.remove();
+                dragnoty = null;
+            }
+
+            var $pgide = $(el).parents(".pg-ide")
+                .on("dragenter", function(e) {
+                    if(dragnoty) return;
+                    dragnoty = notification.success("Drag your file on a folder to upload data", {
+                          hide : false
+                        , history : false
+                    });
+                    e.preventDefault(); return false;
+                })
+                .on("dragleave", function(e) {
+                    var x = e.originalEvent.pageX, y = e.originalEvent.pageY;
+                    var pos = $pgide.offset(),
+                        w = $pgide.outerWidth(),
+                        h = $pgide.outerHeight();
+                    if(x <= pos.left || (x >= pos.left + w) || (y <= pos.top) || (y >= pos.top + h)) {
+                        removeDragNotification();
+                    }
+                })
+                .on("dragover", function (e) {
+                    e.preventDefault(); return false;
+                })
+                .on("drop", function(e) {
+                    removeDragNotification();
+                    e.preventDefault(); return false;
+                });
+
+
+            function wireFileUpload(el, path) {
+                path = path || "/";
+                $(el).on("dragleave", function (e) {
+                    $(this).removeClass("ui-state-active");
+                    e.preventDefault(); return false;
+                }).on("dragenter", function (e) {
+                    $(this).addClass("ui-state-active");
+                    e.preventDefault(); return false;
+                }).on("dragover", function (e) {
+                    e.preventDefault(); return false;
+                }).on("drop", function (e) {
+                    $(this).removeClass("ui-state-active");
+                    traverseFiles(e.originalEvent.dataTransfer.files, path);
+                    removeDragNotification();
+                    e.preventDefault(); return false;
+                });
+            }
+
+            wrapper.refresh();
 
             store.monitor.bind("virtuals", function(_, paths) {
                 var current = getAllVirtualPaths(),
