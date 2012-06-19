@@ -15,6 +15,7 @@ define([
 ],
     function(precog, md5, createStore, ui,  utils, notification, openRequestInputDialog, tplToolbar, tplNodeContextMenut, tplRootContextMenut){
         var UPLOAD_SERVICE = "upload.php",
+//var UPLOAD_SERVICE = "https://appserver07.reportgrid.com/services/viz/precog/ide/upload.php",
             STORE_KEY = "pg-quirrel-virtualpaths-"+md5(precog.config.tokenId),
             basePath = precog.config.basePath || "/",
             store = createStore(STORE_KEY, { virtuals : { }});
@@ -133,20 +134,24 @@ define([
                 menu = ui.contextmenu(tplNodeContextMenut),
                 menuRoot = ui.contextmenu(tplRootContextMenut);
 
-            menu.find(".pg-toggle").click(function() {
+            menu.find(".pg-toggle").click(function(e) {
                 tree.jstree("toggle_node", menuselected);
+                e.preventDefault(); return false;
             });
-            menu.find(".pg-query").click(function() {
+            menu.find(".pg-query").click(function(e) {
                 triggerQuery(pathFromSelectedNode());
+                e.preventDefault(); return false;
             });
-            menu.find(".pg-create").click(function() {
+            menu.find(".pg-create").click(function(e) {
                 var path = pathFromSelectedNode();
                 requestNodeCreationAt(path);
+                e.preventDefault(); return false;
             });
 
-            menuRoot.find(".pg-create").click(function() {
+            menuRoot.find(".pg-create").click(function(e) {
                 var path = pathFromSelectedNode();
                 requestNodeCreationAt(path);
+                e.preventDefault(); return false;
             });
 
             elRoot.find("a").click(function(e) {
@@ -161,6 +166,7 @@ define([
                     zIndex : e.currentTarget.style.zIndex + 100
                 }).show();
                 menuselected = e.currentTarget;
+                e.preventDefault(); return false;
             });
             wireFileUpload(elRoot.get(0));
 
@@ -189,6 +195,7 @@ define([
                                     zIndex : e.currentTarget.style.zIndex + 100
                                 }).show();
                                 menuselected = e.currentTarget;
+                                e.preventDefault(); return false;
                             })
                             .dblclick(function(e) {
                                 var path = $(e.currentTarget).closest("li").attr("data");
