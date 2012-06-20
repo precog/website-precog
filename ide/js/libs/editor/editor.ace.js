@@ -105,6 +105,25 @@ function(require, ace, ui) {
             focus : function() {
                 editor.focus();
             },
+            highlightSyntax : function(row, column, text, type) {
+                // https://github.com/ajaxorg/ace/blob/master/lib/ace/mode/javascript.js
+                // https://groups.google.com/forum/?fromgroups#!topic/ace-discuss/joAFrXwWLX8
+                sess.setAnnotations([{
+                    row : row,
+                    column : column,
+                    text : text,
+                    type : type
+                }]);
+                function removeAnnotations() {
+                    sess.setAnnotations([]);
+                    sess.removeListener("change", removeAnnotations);
+                }
+                sess.on("change", removeAnnotations);
+            },
+            setCursorPosition : function(row, column) {
+                editor.navigateTo(row, column);
+                editor.focus();
+            },
             triggerExecute : execute,
             orientButton : orientButton
         };

@@ -81,6 +81,14 @@ function(config, createLayout, editors, buildBarMain, buildBarEditor, buildBarSt
         output.resize();
     });
 
+    $(output).on("syntaxError", function(_, pos) {
+        editor.highlightSyntax(pos.line - 1, pos.column - 1, pos.text, "error");
+    });
+
+    $(output).on("requestCursorChange", function(_, pos) {
+        editor.setCursorPosition(pos.line - 1, pos.column - 1);
+    });
+
     $(output).on("typeChanged", function(_, type) {
         editors.setOutputType(type);
     });
