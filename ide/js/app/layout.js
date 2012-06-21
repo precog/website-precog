@@ -93,8 +93,9 @@ define([
         layouts.push(container.find('.pg-editor-support').layout({
             defaults : defaults,
             east : {
-                  size : "30%"
-                , initClosed : true
+                  size : "40%"
+                , minsize : "305px" // "240px"
+                , initClosed : false
             }
         }));
 
@@ -188,6 +189,7 @@ define([
             getOutput     : function() { return container.find('.pg-output'); },
             getStatusBar  : function() { return container.find('.pg-statusbar'); },
             getSystem     : function() { return container.find('.pg-folders'); },
+            getSupport    : function() { return container.find('.pg-support'); },
             setIoVertical : buildIO,
             isIoVertical  : function() { return isvertical; }
         };
