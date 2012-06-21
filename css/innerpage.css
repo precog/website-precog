@@ -2393,6 +2393,15 @@ li.right-menu-sticker {
     margin-bottom: 20px;
 }
 
+#sticker-coming-soon {
+    width: 98px;
+    height: 98px;
+    background-image: url("../images/sticker-coming-soon.png");
+    position: absolute;
+    z-index: 100;
+    right: 0px;
+}
+
 /*TUTORIALS*/
 .console-tutorials {
     width: 768px;

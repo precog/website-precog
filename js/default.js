@@ -429,7 +429,6 @@ $(".body-pricing-difference").mouseover(function(){
     );
 
 //ABOUT
-
 $(".about-employee").mouseenter(function(){
       $(".about-contact").animate({
         opacity: 1.0,
