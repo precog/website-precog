@@ -82,10 +82,10 @@ function(config, createLayout, editors, buildBarMain, buildBarEditor, buildBarSt
 
     support.addPanel("tutorial", "http://quirrel-lang.org/tutorial.html");
     support.addPanel("reference", "http://quirrel-lang.org/reference.html");
+    support.addPanel("IRC channel", "https://webchat.freenode.net/?channels=quirrel&uio=Mz1mYWxzZSY5PXRydWU32");
 
 //    support.addPanel("live support", "http://widget.mibbit.com/?settings=3e7a9e32a26494b80748cfe11f66e956&server=irc.mibbit.net&channel=%23precog_test_channel");
 //    support.addPanel("wsirc", "http://wsirc.mobi/mobileChat.aspx?username=u_******&server=binary.ipocalypse.net%3A6667&channel=%23quirrel&autojoin=true&color=%23eeeeee&dark=false");
-
 //    support.addPanel("freenode", "http://webchat.freenode.net?randomnick=1&channels=quirrel&uio=Mz1mYWxzZSY5PXRydWU32");
 
     $(layout).on("resizeCodeEditor", function() {
