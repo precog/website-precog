@@ -1,11 +1,11 @@
 $(document).ready(function(){
 
 $('.sticker-repl-main').click(function () {
-    window.open('developer-center.html#queries-link','_self');
+    window.open('http://api.precog.com/ide/','_blank');
 });
 
 $('.sticker-repl-main-square').click(function () {
-    window.open('developer-center.html#queries-link','_self');
+    window.open('http://api.precog.com/ide/','_blank');
 });
 
 $("#home-machine-learning").mouseleave(function () {
@@ -307,7 +307,7 @@ $("#dev-home-link").click(function(){
     }
     );
 
-$("#dev-console-link").click(function(){
+/*$("#dev-console-link").click(function(){
     $("#developer-body-slider").animate({
         'left': '-1240px'
         }, {queue: false}
@@ -320,7 +320,7 @@ $("#dev-console-link").click(function(){
         }, {queue: false}
         );
     }
-    );
+    );*/
 
 $("#dev-queries-link").click(function(){
     $("#developer-body-slider").animate({
