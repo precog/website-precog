@@ -80,12 +80,12 @@ function(config, createLayout, editors, buildBarMain, buildBarEditor, buildBarSt
 
     var support = buildSupport(layout.getSupport());
 
-    support.addPanel("tutorial", "http://quirrel-lang.org/tutorial.html");
-    support.addPanel("reference", "http://quirrel-lang.org/reference.html");
+    support.addPanel("tutorial", "https://quirrel.precog.com/tutorial.html");
+    support.addPanel("reference", "https://quirrel.precog.com/reference.html");
+    support.addPanel("IRC channel", "https://webchat.freenode.net/?channels=quirrel&uio=Mz1mYWxzZSY5PXRydWU32");
 
 //    support.addPanel("live support", "http://widget.mibbit.com/?settings=3e7a9e32a26494b80748cfe11f66e956&server=irc.mibbit.net&channel=%23precog_test_channel");
 //    support.addPanel("wsirc", "http://wsirc.mobi/mobileChat.aspx?username=u_******&server=binary.ipocalypse.net%3A6667&channel=%23quirrel&autojoin=true&color=%23eeeeee&dark=false");
-
 //    support.addPanel("freenode", "http://webchat.freenode.net?randomnick=1&channels=quirrel&uio=Mz1mYWxzZSY5PXRydWU32");
 
     $(layout).on("resizeCodeEditor", function() {
@@ -123,8 +123,6 @@ function(config, createLayout, editors, buildBarMain, buildBarEditor, buildBarSt
         precog.query(code);
     });
 
-    sync(editor, editors, config);
-
     $(editors).on("activated", function(_, index) {
         var result  = editors.getOutputResult(),
             type    = editors.getOutputType(),
@@ -132,6 +130,8 @@ function(config, createLayout, editors, buildBarMain, buildBarEditor, buildBarSt
 //console.log("LOADED OPTIONS " + JSON.stringify(options));
         output.set(result, type, options);
     });
+
+    sync(editor, editors, config);
 
     var folders = buildFolders(layout.getSystem());
 

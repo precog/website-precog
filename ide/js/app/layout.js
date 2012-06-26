@@ -94,8 +94,10 @@ define([
             defaults : defaults,
             east : {
                   size : "40%"
-                , minsize : "305px" // "240px"
+                , maxSize : 800
+                , minSize : 305 // "240px"
                 , initClosed : false
+                , maskIframesOnResize : true
             }
         }));
 
