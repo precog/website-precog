@@ -1896,7 +1896,8 @@ h1 {
     font-family: abel;
     font-size: 11pt;
     color: #9BB4CC;
-    padding-bottom: 20px;
+    padding-bottom: 14px;
+    padding-right: 4px;
 }
 
 #body-content-pricing .body-pricing-difference h1 {
